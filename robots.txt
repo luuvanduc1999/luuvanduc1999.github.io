@@ -4,6 +4,10 @@ Disallow: /nogooglebot/
 
 # Group 2
 User-agent: *
-Allow: /
+Allow: /$
+
+# Group 3
+User-agent: *
+Disallow: /
 
 Sitemap: http://www.luuvanduc.work/sitemap.xml
