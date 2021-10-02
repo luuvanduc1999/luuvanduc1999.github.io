@@ -33,7 +33,7 @@ function addWrong(status)
 
 
 function check(){
-    if (($("#kyhoc").val()=="Hãy chọn") || (($("#malop").val()).length !=6 ) || ((($("#malop").val())[0]!="E" )))
+    if (($("#kyhoc").val()=="Hãy chọn") || (($("#malop").val()).length !=6 ) || ((($("#malop").val())[0]=="E" )))
         addWrong("Kiểm tra lại các mục nhập, không đúng định dạng.")
     else {
         data="7|0|10|https://qldt.hust.ed.vn/soicteducationstudent/|64A3D74A7F505C8AE0C51B09092739A7|com.soict.edu.core.client.DataService|searchClasses|java.lang.String/2004016611|java.lang.Long/4227064769|java.util.List|"+$("#kyhoc").val()+"|java.util.Arrays$ArrayList/2507071751|"+$("#malop").val()+"|1|2|3|4|4|5|6|6|7|8|6|QzaRkAAAA|6|P__________|9|1|5|10|"
