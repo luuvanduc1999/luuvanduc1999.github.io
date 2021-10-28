@@ -5,7 +5,7 @@
     <title>SET | GetTeamsCode</title>
     <link rel="icon" href="/static/img/logo.png">
     <meta charset="utf-8" />
-    <meta name="description" content="Công cụ lấy code lớp MSTeams các mã lớp viện ĐTVT.">
+    <meta name="description" content="Công cụ import Monday to PowerBI.">
     <meta name="keywords" content="Lưu Văn Đức, Đức Lưu Văn, 1999, Luu Van Duc">
     <meta name="author" content="Đức Lưu Văn">
     <meta property="og:image" content="/static/img/thumb.png">
@@ -34,7 +34,7 @@
 
         gtag('config', 'G-9QPGMP7X42');
     </script>
-    <script src="static/js/get-teams-code.js"></script>
+    <script src="static/js/monday-to-powerbi.js"></script>
 </head>
 
 <body>
@@ -94,39 +94,68 @@
 
     <div class="main container-fluid">
         <div class="card text-dark border-success bg-warning">
-            <div class="card-header">Get MSTeams Code</div>
+            <div class="card-header">Generated Code import Monday to PowerBI</div>
             <div class="card-body">
-                <h5 class="card-title"><b>Công cụ lấy code Teams theo mã lớp</b></h5>
-                <p class="card-text">Chỉ hỗ trợ viện ĐTVT, lất mã lớp để tra HP bằng QLĐT.
-                    <br>Chọn kỳ học (các kỳ online gần đây bao gồm 20192, 20202, 20203, 20211) và nhập vào mã lớp, không
-                    phải tất cả đều tìm được code (chỉ có link).
+                <h5 class="card-title"><b>Công cụ tạo Query code</b></h5>
+
+                <p class="card-text">
+                    
+                    <br>Nhập toàn bộ các trường dưới đây. Để xác định số record, collapse tất cả các group lại rồi cộng số item. 
+                    <a href="/static/img/monday.png" target="_blank">
+                        <button type="button" class="btn btn-primary" >
+                            Chi tiết
+                        </button>
+                    </a>
+                                        
+                    <br>Code tự động được sao chép vào clipboard.
                 </p>
                 <div class="card">
                     <div class="card-body">
                         <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Kỳ học</label>
-                            <select id="kyhoc" class="form-select" aria-label="Default select example">
-                                <option selected>Hãy chọn</option>
-                                <option value="20192">20192</option>
-                                <option value="20202">20202</option>
-                                <option value="20203">20203</option>
-                                <option value="20211">20211</option>
-                            </select>
+                            <label for="exampleFormControlTextarea1" class="form-label">Token</label>
+                            <input type="text" class="form-control" id="token" placeholder="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx">
+                        </div> 
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Board id</label>
+                            <input type="text" class="form-control" id="board-id" placeholder="xxxxxxxxxx">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Mã lớp</label>
-                            <input type="text" class="form-control" id="malop" placeholder="xxxxxxx">
+                            <label for="exampleFormControlTextarea1" class="form-label">Số lượng Record</label>
+                            <input type="text" class="form-control" id="size" placeholder="0000">
                         </div>
                         <div id="alert-range">
                         </div>
-                        <button id="check" type="button" class="btn btn-success" onclick="check();">Check</button>
-                       
+                        <button id="check" type="button" class="btn btn-success" onclick="check();">GetCode</button>
+                        
+
+                         <textarea id="Result"></textarea>
+                        
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+    <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Monday</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <img width="100%" src="static/img/monday.png"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <div class="foot">
         © Designed by LuuVanDuc, 2021
     </div>
