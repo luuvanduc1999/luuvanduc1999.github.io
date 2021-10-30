@@ -37,19 +37,18 @@ main =
                     #"Content-Type"="application/json",\n\
                     #"Authorization"="Bearer " & Key\n\
                 ],\n\
-                Content=Text.ToBinary("{""query"": ""query { boards(ids: " & Board & ") { items (page:${index}, limit: 50) { name, updated_at, group { title }, columns: column_values { id, text } } } }""}")\n\
+                Content=Text.ToBinary("{""query"": ""query { boards(ids: " & Board & ") { items { name, group { title }, columns: column_values { title, text } } } }""}")\n\
             ]\n\
     ),\n\
-    Data${index} = Table.FromList(Json.Document(Source${index})[data][boards]{0}[items], Record.FieldValues, {"Title", "UpdatedAt", "Group", "Columns"}),\n'
+    Data${index} = Table.FromList(Json.Document(Source${index})[data][boards]{0}[items], Record.FieldValues, {"Title", "Group", "Columns"}),\n'
 
 last='\
     Result=  Table.Combine({${listData}}),\n\
     #"Monday" = Table.FromRecords(Table.TransformRows(Result, each \n\
     List.Accumulate([Columns], [\n\
         Title = [Title],\n\
-        UpdateDate = [UpdatedAt],\n\
         Group = [Group][title]\n\
-    ], (state, current) => Record.AddField(state, current[id], current[text]) ) \n\
+    ], (state, current) => Record.AddField(state, current[title], current[text]) ) \n\
 ))\n\
 in\n\
     #"Monday"'
