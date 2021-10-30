@@ -37,7 +37,7 @@ main =
                     #"Content-Type"="application/json",\n\
                     #"Authorization"="Bearer " & Key\n\
                 ],\n\
-                Content=Text.ToBinary("{""query"": ""query { boards(ids: " & Board & ") { items { name, group { title }, columns: column_values { title, text } } } }""}")\n\
+                Content=Text.ToBinary("{""query"": ""query { boards(ids: " & Board & ") { items(page:${index}, limit:50) { name, group { title }, columns: column_values { title, text } } } }""}")\n\
             ]\n\
     ),\n\
     Data${index} = Table.FromList(Json.Document(Source${index})[data][boards]{0}[items], Record.FieldValues, {"Title", "Group", "Columns"}),\n'
