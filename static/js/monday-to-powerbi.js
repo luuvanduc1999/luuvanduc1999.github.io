@@ -46,7 +46,7 @@ last='\
     Result=  Table.Combine({${listData}}),\n\
     #"Monday" = Table.FromRecords(Table.TransformRows(Result, each \n\
     List.Accumulate([Columns], [\n\
-        Title = [Title],\n\
+        TopTitle = [Title],\n\
         Group = [Group][title]\n\
     ], (state, current) => Record.AddField(state, current[title], current[text]) ) \n\
 ))\n\
