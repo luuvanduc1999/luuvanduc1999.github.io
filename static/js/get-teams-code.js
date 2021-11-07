@@ -55,10 +55,10 @@ function check() {
     });
 
     j = c.responseText
-    if (j.indexOf("Số SV") == -1) addWrong("Mã lớp không tồn tại trong kỳ học này");
+    if (j.indexOf("TeacherCourse") == -1) addWrong("Mã lớp không tồn tại trong kỳ học này");
     start = j.indexOf('["java')
-    end = j.indexOf('Số SV"')
-    k = j.substr(start, end - start - 2) + ']'
+    end = j.indexOf('HashMap')
+    k = j.substr(start, end - start - 2) + '"]'
 
     code = JSON.parse(k)[2]
     link = ""
