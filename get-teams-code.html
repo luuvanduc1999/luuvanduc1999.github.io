@@ -97,12 +97,20 @@
             <div class="card-header">Get MSTeams Code</div>
             <div class="card-body">
                 <h5 class="card-title"><b>Công cụ lấy code Teams theo mã lớp</b></h5>
-                <p class="card-text">Chỉ hỗ trợ viện ĐTVT, lất mã lớp để tra HP bằng QLĐT.
+                <p class="card-text">Hiện chỉ hỗ trợ viện CNTT và ĐTVT, lất mã lớp để tra HP bằng QLĐT.
                     <br>Chọn kỳ học (các kỳ online gần đây bao gồm 20192, 20202, 20203, 20211) và nhập vào mã lớp, không
                     phải tất cả đều tìm được code (chỉ có link).
                 </p>
                 <div class="card">
                     <div class="card-body">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Viện</label>
+                            <select id="vien" class="form-select" aria-label="Default select example">
+                                <option selected>Hãy chọn</option>
+                                <option value="CNTT">CNTT</option>
+                                <option value="ĐTVT">ĐTVT</option>
+                            </select>
+                        </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Kỳ học</label>
                             <select id="kyhoc" class="form-select" aria-label="Default select example">
