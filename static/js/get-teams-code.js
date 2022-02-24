@@ -7,10 +7,10 @@ $(document).ready(function () {
   })
 });
 
-function addSuccess(code, link) {
+function addSuccess(gv, code, link) {
   var str = '<div class="alert alert-success  alert-dismissible fade show"  role="alert" id="success-check" >\
     <div>\
-    <strong>Code Teams:</strong> '+ code + '. <strong>Link Teams:</strong> ' + link + '.\
+    <strong>Email giảng viên: </strong>' + gv + '.<strong>Code Teams:</strong> '+ code + '. <strong>Link Teams:</strong> ' + link + '.\
     </div>\
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>\
   </div>';
@@ -66,9 +66,14 @@ function check() {
 
     code = JSON.parse(k)[2]
     link = ""
-    for (var i = 0; i < JSON.parse(k).length; i++)
+    for (var i = 0; i < JSON.parse(k).length; i++){
+      console.log(JSON.parse(k)[i])
       if (JSON.parse(k)[i].indexOf("https://") > -1) link = JSON.parse(k)[i];
+  
+    }
+    myRe = /([a-zA-Z\.0-9])+@hust\.edu\.vn/g;
+    gv = myRe.exec(j)[0];
 
-    addSuccess(code, link)
+    addSuccess(gv,code, link)
   }
 }
