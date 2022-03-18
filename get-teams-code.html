@@ -103,33 +103,49 @@
                 </p>
                 <div class="card">
                     <div class="card-body">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Viện</label>
-                            <select id="vien" class="form-select" aria-label="Default select example">
-                                <option selected>Hãy chọn</option>
-                                <option value="CNTT">CNTT</option>
-                                <option value="ĐTVT">ĐTVT</option>
-                                <option value="DIEN">ĐIỆN</option>
-                            </select>
+                        <form action="javascript:void(0);">
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label for="exampleFormControlInput1" class="form-label">Viện</label>
+                                <select id="vien" class="form-select" aria-label="Default select example">
+                                    <option selected>Hãy chọn</option>
+                                    <option value="CNTT">CNTT</option>
+                                    <option value="ĐTVT">ĐTVT</option>
+                                    <option value="DIEN">ĐIỆN</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="exampleFormControlInput1" class="form-label">Kỳ học</label>
+                                <select id="kyhoc" class="form-select" aria-label="Default select example">
+                                    <option selected>Hãy chọn</option>
+                                    <option value="20192">20192</option>ren
+                                    <option value="20202">20202</option>
+                                    <option value="20203">20203</option>
+                                    <option value="20211">20211</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="exampleFormControlTextarea1" class="form-label">Nội dung tìm kiếm</label>
+                                <input type="text" class="form-control" id="malop" placeholder="xxxxxxx">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="exampleFormControlInput1" class="form-label">Tìm theo</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="searchType" id="searchType1" value="ML" checked>
+                                    <label class="form-check-label" for="searchType1">Mã lớp</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="searchType" id="searchType2" value="HP">
+                                    <label class="form-check-label" for="searchType2">Mã học phần</label>
+                                </div>
+                            </div>
+                            <div id="alert-range">
+                            </div>
+                            <button id="check" type="submit" class="btn btn-success" onclick="check()">Check</button>
+                           
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Kỳ học</label>
-                            <select id="kyhoc" class="form-select" aria-label="Default select example">
-                                <option selected>Hãy chọn</option>
-                                <option value="20192">20192</option>ren
-                                <option value="20202">20202</option>
-                                <option value="20203">20203</option>
-                                <option value="20211">20211</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Mã lớp</label>
-                            <input type="text" class="form-control" id="malop" placeholder="xxxxxxx">
-                        </div>
-                        <div id="alert-range">
-                        </div>
-                        <button id="check" type="button" class="btn btn-success" onclick="check();">Check</button>
-                       
+                    </form>
                     </div>
                 </div>
 
