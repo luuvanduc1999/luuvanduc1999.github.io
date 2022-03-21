@@ -85,7 +85,14 @@ function rq(malop)
 
 
 function check() {
-  if (($("#vien").val() == "Hãy chọn") || ($("#kyhoc").val() == "Hãy chọn") || (($("#malop").val()).length != 6) || (($("#searchType1")[0].checked==true) && (/[a-zA-Z]/g.exec($("#malop").val()).length>0)))
+  if (
+          ($("#vien").val() == "Hãy chọn") || 
+          ($("#kyhoc").val() == "Hãy chọn") || 
+          (($("#malop").val()).length != 6) || 
+          (
+              ($("#searchType1")[0].checked==true) && (isNaN(/[a-zA-Z]/g.exec($("#malop").val()) ))
+          )
+      )
     addWrong("Kiểm tra lại các mục nhập, không đúng định dạng.")
   else {
     
