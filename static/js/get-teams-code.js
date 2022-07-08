@@ -56,14 +56,14 @@ $(document).ready(function () {
   
   function rq(malop)
   {
-    data = {
-      
+    data = {      
       "CKHI": "7|0|10|https://qldt.hust.edu.vn/soicteducationstudent/|24BB66A05737A1AE4ACF715344A52298|com.soict.edu.core.client.DataService|searchClasses|java.lang.String/2004016611|java.lang.Long/4227064769|java.util.List|" + $("#kyhoc").val() + "|java.util.Arrays$ArrayList/2507071751|" + malop + "|1|2|3|4|4|5|6|6|7|8|6|WTLdoAAAA|6|P__________|9|1|5|10|",
       "ĐTVT": "7|0|10|https://qldt.hust.edu.vn/soicteducationstudent/|64A3D74A7F505C8AE0C51B09092739A7|com.soict.edu.core.client.DataService|searchClasses|java.lang.String/2004016611|java.lang.Long/4227064769|java.util.List|" + $("#kyhoc").val() + "|java.util.Arrays$ArrayList/2507071751|" + malop + "|1|2|3|4|4|5|6|6|7|8|6|QzaRkAAAA|6|P__________|9|1|5|10|",
       "CNTT": "7|0|10|https://qldt.hust.edu.vn/soicteducationstudent/|95AD0BB3329303F1FDC881BF22DC9372|com.soict.edu.core.client.DataService|searchClasses|java.lang.String/2004016611|java.lang.Long/4227064769|java.util.List|" + $("#kyhoc").val() + "|java.util.Arrays$ArrayList/2507071751|" + malop + "|1|2|3|4|4|5|6|6|7|8|6|VjLdoAAAA|6|P__________|9|1|5|10|",
       "DIEN": "7|0|10|https://qldt.hust.edu.vn/soicteducationstudent/|9F211F00436C29DE2DC331C6082A6793|com.soict.edu.core.client.DataService|searchClasses|java.lang.String/2004016611|java.lang.Long/4227064769|java.util.List|" + $("#kyhoc").val() + "|java.util.Arrays$ArrayList/2507071751|" + malop + "|1|2|3|4|4|5|6|6|7|8|6|T6zasAAAA|6|P__________|9|1|5|10|",
       "SAMI": "7|0|10|https://qldt.hust.edu.vn/soicteducationstudent/|24BB66A05737A1AE4ACF715344A52298|com.soict.edu.core.client.DataService|searchClasses|java.lang.String/2004016611|java.lang.Long/4227064769|java.util.List|" + $("#kyhoc").val() + "|java.util.Arrays$ArrayList/2507071751|" + malop + "|1|2|3|4|4|5|6|6|7|8|6|RTaRkAAAA|6|P__________|9|1|5|10|",
-      "SPHAM": "7|0|10|https://qldt.hust.edu.vn/soicteducationstudent/|24BB66A05737A1AE4ACF715344A52298|com.soict.edu.core.client.DataService|searchClasses|java.lang.String/2004016611|java.lang.Long/4227064769|java.util.List|" + $("#kyhoc").val() + "|java.util.Arrays$ArrayList/2507071751|" + malop + "|1|2|3|4|4|5|6|6|7|8|6|UTLdoAAAA|6|P__________|9|1|5|10|"
+      "SPHAM": "7|0|10|https://qldt.hust.edu.vn/soicteducationstudent/|24BB66A05737A1AE4ACF715344A52298|com.soict.edu.core.client.DataService|searchClasses|java.lang.String/2004016611|java.lang.Long/4227064769|java.util.List|" + $("#kyhoc").val() + "|java.util.Arrays$ArrayList/2507071751|" + malop + "|1|2|3|4|4|5|6|6|7|8|6|UTLdoAAAA|6|P__________|9|1|5|10|",
+      "KTHH": "7|0|10|https://qldt.hust.edu.vn/soicteducationstudent/|2CB2C65C223EA5C12BCEA8F68A41D282|com.soict.edu.core.client.DataService|searchClasses|java.lang.String/2004016611|java.lang.Long/4227064769|java.util.List|" + $("#kyhoc").val() + "|java.util.Arrays$ArrayList/2507071751|" + malop + "|1|2|3|4|4|5|6|6|7|8|6|RLwrwAAAA|6|P__________|9|1|5|10|"
     }
     dataSend = data[($("#vien").val())]
     c = $.ajax({
