@@ -2,12 +2,10 @@
 User-agent: Googlebot
 Disallow: /nogooglebot/
 
-# Group 2
-User-agent: *
-Allow: /$
 
 # Group 3
 User-agent: *
-Disallow: /
+Disallow: /van-mau.html
+Disallow: /static/
 
 Sitemap: http://www.luuvanduc.work/sitemap.xml
