@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Upload, FileText, Download, ShieldAlert, X, Loader2 } from 'lucide-react';
 import { Button } from './Button';
 import { PdfViewer } from './PdfViewer';
@@ -6,6 +6,10 @@ import { PageRedactions } from '../types';
 import { saveRedactedPdf, downloadPdf } from '../services/pdfService';
 
 export function Redactor() {
+  useEffect(() => {
+    document.title = "PDF Redactor - Secure & Free";
+  }, []);
+
   const [files, setFiles] = useState<File[]>([]);
   const [currentFileIndex, setCurrentFileIndex] = useState<number>(0);
   const [redactions, setRedactions] = useState<PageRedactions>({});

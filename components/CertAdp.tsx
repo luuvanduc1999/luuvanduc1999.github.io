@@ -3,6 +3,8 @@ import './CertAdp.css';
 
 export const CertAdp: React.FC = () => {
   useEffect(() => {
+    document.title = "UiRPA Dumps - UiPath Certification";
+
     // 1. Add Bootstrap
     const link = document.createElement('link');
     link.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css";
