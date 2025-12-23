@@ -1,0 +1,122 @@
+/* 1. RESET & COMPACT BASE */
+.cert-adp-wrapper {
+    background-color: #f2f4f7;
+    font-size: 13px;
+    line-height: 1.4;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    min-height: 100vh;
+}
+
+/* 2. CỐ ĐỊNH THANH SEARCH */
+.cert-adp-wrapper .header-fixed {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 2000; background: #fff;
+    padding: 10px 0 5px 0; border-bottom: 1px solid #dee2e6;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+/* Tăng margin-top để không bị che nội dung do header cao hơn chút */
+.cert-adp-wrapper .content-wrapper { margin-top: 95px; }
+
+/* BOX SEARCH VỚI NÚT CLEAR MÀU ĐỎ */
+.cert-adp-wrapper .search-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.cert-adp-wrapper #searchInput { flex: 1; border-radius: 6px; }
+
+.cert-adp-wrapper #clearSearch {
+    display: none;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    border: 1px solid #dc3545;
+    background-color: #fff5f5;
+    color: #dc3545;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.cert-adp-wrapper #clearSearch:active {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* 3. CARD CÂU HỎI */
+.cert-adp-wrapper .question-card {
+    border: none; border-radius: 8px;
+    margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    background: #fff;
+}
+.cert-adp-wrapper .card-body { padding: 10px 12px; }
+
+/* 4. NỘI DUNG HTML */
+.cert-adp-wrapper .content-area { word-wrap: break-word; overflow-wrap: break-word; }
+.cert-adp-wrapper .content-area img { max-width: 100% !important; height: auto !important; border-radius: 4px; margin: 5px 0; }
+
+/* 5. ĐÁP ÁN */
+.cert-adp-wrapper .option-item {
+    padding: 6px 10px; border: 1px solid #f0f0f0;
+    border-radius: 6px; margin-bottom: 4px;
+    display: flex; align-items: flex-start;
+    background-color: #fafafa;
+}
+.cert-adp-wrapper .option-prefix { font-weight: bold; margin-right: 8px; color: #0d6efd; min-width: 18px; }
+.cert-adp-wrapper .is-correct { background-color: #eef9f1 !important; border-color: #c3e6cb !important; color: #155724; }
+
+/* 6. GIẢI THÍCH */
+.cert-adp-wrapper .explanation-section {
+    display: none; background-color: #fffef0;
+    padding: 10px 12px; border-top: 1px dashed #ffeeba;
+    font-size: 0.85rem; border-bottom: 1px solid #eee;
+}
+
+.cert-adp-wrapper .btn-toggle-exp {
+    width: 100%; border: none; padding: 8px;
+    font-size: 0.75rem; font-weight: 600;
+    background-color: #fcfcfc; color: #888;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #f0f0f0;
+}
+.cert-adp-wrapper .btn-toggle-exp.active { background-color: #fff3cd; color: #856404; }
+
+/* 7. TAG NEW & FILTER SWITCH */
+.cert-adp-wrapper .badge-new {
+    background-color: #dc3545;
+    color: white;
+    font-size: 9px;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-left: 5px;
+    vertical-align: middle;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Tùy chỉnh kích thước switch cho gọn */
+.cert-adp-wrapper .form-check-input {
+    width: 30px; height: 16px; margin-top: 0.15em;
+    cursor: pointer;
+}
+.cert-adp-wrapper .filter-label {
+    font-size: 11px; font-weight: 600; cursor: pointer; user-select: none;
+}
+
+.cert-adp-wrapper #backToTop {
+    position: fixed; bottom: 15px; right: 15px; display: none;
+    width: 40px; height: 40px; border-radius: 50%; border: none;
+    background: #0d6efd; color: white; opacity: 0.9;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
