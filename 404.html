@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/logo.png" rel="shortcut icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/e39afdc0bc.js" crossorigin="anonymous"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0f172a', // Slate 900
+              accent: '#3b82f6', // Blue 500
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for better UX */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      
+      /* React PDF Canvas responsiveness */
+      .react-pdf__Page__canvas {
+        margin: 0 auto;
+        width: 100% !important;
+        height: auto !important;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      }
+      .react-pdf__Page__textContent {
+        display: none !important; /* We implement visual selection, hiding text layer to avoid confusion */
+      }
+      .react-pdf__Page__annotations {
+        display: none !important;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@19.2.0/",
+    "react": "https://esm.sh/react@19.2.0",
+    "react-dom/": "https://esm.sh/react-dom@19.2.0/",
+    "react-dom": "https://esm.sh/react-dom@19.2.0",
+    "pdf-lib": "https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/+esm",
+    "lucide-react": "https://esm.sh/lucide-react@0.554.0",
+    "react-pdf": "https://esm.sh/react-pdf@10.2.0?deps=pdfjs-dist@4.8.69",
+    "react-pdf/": "https://esm.sh/react-pdf@10.2.0?deps=pdfjs-dist@4.8.69/",
+    "pdfjs-dist": "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/pdf.min.mjs",
+    "pdfjs-dist/": "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.8.69/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-2s0GApbg.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-B8uUW4LL.css">
+</head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-200 selection:text-blue-900">
+    <div id="root"></div>
+</body>
+</html>

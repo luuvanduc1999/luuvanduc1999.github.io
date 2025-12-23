@@ -1,0 +1,55 @@
+/* Clean styles for ADP page */
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #f5f5f5; overflow-x: hidden; }
+h1 { color: #FA4616; text-align: center; margin-bottom: 30px; }
+.question-card { background: #fff; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.question-number { color: #FA4616; font-weight: bold; font-size: 18px; margin-bottom: 10px; }
+.question-content { margin: 15px 0; line-height: 1.6; }
+.question-content img { max-width: 100%; height: auto; margin: 10px 0; }
+.options { margin: 15px 0; }
+.option { padding: 10px; margin: 8px 0; background: #f8f9fa; border-radius: 4px; border-left: 3px solid #ddd; }
+.correct-answer { background: #d4edda; border-left-color: #28a745; font-weight: bold; }
+.answer-label { color: #28a745; font-weight: bold; margin-top: 15px; }
+.explanation { margin-top: 15px; padding: 15px; background: #e7f3ff; border-radius: 4px; border-left: 4px solid #2196F3; }
+.stats { text-align: center; padding: 20px; background: #fff; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.stats h2 { color: #FA4616; margin: 0 0 10px 0; }
+.filter-buttons { text-align: center; margin-bottom: 20px; }
+.filter-btn { padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; background: #FA4616; color: #fff; cursor: pointer; font-size: 14px; }
+.filter-btn:hover { background: #d93d12; }
+.filter-btn.active { background: #2196F3; }
+.search-container { text-align: center; margin-bottom: 20px; }
+.search-box { width: 100%; max-width: 600px; padding: 12px 20px; font-size: 16px; border: 2px solid #ddd; border-radius: 25px; outline: none; }
+.search-box:focus { border-color: #FA4616; }
+.search-results { text-align: center; color: #666; margin-bottom: 15px; }
+
+/* Wrapping and links */
+.question-content, .explanation { overflow-wrap: break-word; word-break: break-word; }
+.explanation { overflow-x: hidden; }
+.explanation * { overflow-wrap: break-word; word-break: break-word; }
+.question-content a, .explanation a { color: #2196F3; text-decoration: none; overflow-wrap: break-word; word-break: break-all; white-space: normal; display: inline-block; max-width: 100%; }
+.question-content a:hover, .explanation a:hover { text-decoration: underline; }
+
+/* Lists */
+.question-content ul, .explanation ul { padding-left: 20px; margin: 8px 0; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  body { padding: 12px; }
+  h1 { font-size: 18px; margin-bottom: 12px; }
+  .stats { padding: 10px; }
+  .stats h2 { font-size: 16px; }
+  .search-box { max-width: 100%; padding: 8px 12px; font-size: 13px; border-width: 1.5px; }
+  .search-results { font-size: 12px; }
+  .filter-buttons { margin-bottom: 10px; }
+  .filter-btn { padding: 6px 10px; font-size: 11.5px; }
+  .question-card { padding: 10px; margin-bottom: 10px; }
+  .question-number { font-size: 15px; margin-bottom: 6px; }
+  .question-content { font-size: 13px; line-height: 1.45; }
+  .question-content img { max-height: 150px; width: 100%; object-fit: contain; }
+  .options { margin: 8px 0; }
+  .option { padding: 7px; margin: 5px 0; font-size: 12.5px; }
+  .answer-label { font-size: 12.5px; margin-top: 8px; }
+  .explanation { padding: 10px; font-size: 12.5px; }
+  .question-content a, .explanation a { display: block; font-size: 12.5px; margin: 4px 0; }
+  .question-content ul, .explanation ul { padding-left: 16px; margin: 6px 0; }
+}
