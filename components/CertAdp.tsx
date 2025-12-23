@@ -150,7 +150,7 @@ export const CertAdp: React.FC = () => {
     }
 
     // Load Data
-    fetch('/cert/adp/output.json')
+    fetch('/static/cert/adp/output.json')
         .then(res => res.json())
         .then(data => {
             allQuestions = data.questions;
