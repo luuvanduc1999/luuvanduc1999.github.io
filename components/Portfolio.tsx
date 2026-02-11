@@ -16,12 +16,12 @@ export function Portfolio() {
       { property: "og:url", content: "https://ducluuvan.com/" },
       { property: "og:title", content: "Duc Luu Van | Software Engineer Portfolio" },
       { property: "og:description", content: "Explore the portfolio of Van Duc Luu, an experienced Java Backend and RPA Developer specializing in automation solutions and scalable backend systems." },
-      { property: "og:image", content: "https://ducluuvan.com/images/preview.png" },
+      { property: "og:image", content: "https://ducluuvan.com/static/images/preview.png" },
       { property: "twitter:card", content: "summary_large_image" },
       { property: "twitter:url", content: "https://ducluuvan.com/" },
       { property: "twitter:title", content: "Duc Luu Van | Software Engineer Portfolio" },
       { property: "twitter:description", content: "Explore the portfolio of Duc Luu Van, an experienced Java Backend and RPA Developer specializing in automation solutions and scalable backend systems." },
-      { property: "twitter:image", content: "https://ducluuvan.com/images/preview.png" }
+      { property: "twitter:image", content: "https://ducluuvan.com/static/images/preview.png" }
     ];
 
     const createdTags: HTMLMetaElement[] = [];

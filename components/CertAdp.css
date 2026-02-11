@@ -56,7 +56,12 @@
 .cert-adp-wrapper .card-body { padding: 10px 12px; }
 
 /* 4. NỘI DUNG HTML */
-.cert-adp-wrapper .content-area { word-wrap: break-word; overflow-wrap: break-word; }
+.cert-adp-wrapper .content-area { 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    word-break: break-word;
+    min-width: 0; 
+}
 .cert-adp-wrapper .content-area img { max-width: 100% !important; height: auto !important; border-radius: 4px; margin: 5px 0; }
 
 /* 5. ĐÁP ÁN */
@@ -65,6 +70,9 @@
     border-radius: 6px; margin-bottom: 4px;
     display: flex; align-items: flex-start;
     background-color: #fafafa;
+}
+.cert-adp-wrapper .option-item .content-area {
+    flex: 1;
 }
 .cert-adp-wrapper .option-prefix { font-weight: bold; margin-right: 8px; color: #0d6efd; min-width: 18px; }
 .cert-adp-wrapper .is-correct { background-color: #eef9f1 !important; border-color: #c3e6cb !important; color: #155724; }
@@ -97,6 +105,24 @@
     vertical-align: middle;
     animation: pulse 2s infinite;
 }
+
+/* 8. PRACTICE MODE */
+.cert-adp-wrapper .practice-option { cursor: pointer; transition: all 0.2s; }
+.cert-adp-wrapper .practice-option:hover:not(.disabled) { background-color: #e9ecef; }
+.cert-adp-wrapper .practice-option.disabled { cursor: default; }
+
+.cert-adp-wrapper .practice-option.user-correct { background-color: #d1e7dd !important; border-color: #badbcc !important; color: #0f5132; }
+.cert-adp-wrapper .practice-option.user-wrong { background-color: #f8d7da !important; border-color: #f5c6cb !important; color: #842029; }
+/* Highlight correct answer if user chose wrong */
+.cert-adp-wrapper .practice-option.real-correct { border: 2px solid #198754 !important; }
+
+.cert-adp-wrapper .btn-practice-choice {
+    margin: 10px; padding: 10px 20px; font-size: 16px; 
+    border-radius: 8px; border: 1px solid #0d6efd; 
+    background: #fff; color: #0d6efd; font-weight: bold;
+}
+.cert-adp-wrapper .btn-practice-choice:hover { background: #0d6efd; color: #fff; }
+
 
 @keyframes pulse {
     0% { opacity: 1; }
