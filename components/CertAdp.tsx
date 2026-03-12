@@ -219,11 +219,19 @@ export const CertAdp: React.FC = () => {
             <div class="text-center mt-5">
                 <h3 class="text-primary mb-4">Chế độ Luyện tập</h3>
                 <p class="mb-4">Chọn số lượng câu hỏi ngẫu nhiên:</p>
-                <div>
+                
+                <div class="mb-4">
                    <button class="btn-practice-choice" onclick="window.startPractice(5)">5 câu</button>
                    <button class="btn-practice-choice" onclick="window.startPractice(10)">10 câu</button>
-                   <button class="btn-practice-choice" onclick="window.startPractice(15)">15 câu</button>
+                   <button class="btn-practice-choice" onclick="window.startPractice(${allQuestions.length})">All in one</button>
                 </div>
+                
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                    <span class="me-2 text-muted" style="font-size:14px">Hoặc nhập số lượng:</span>
+                    <input type="number" id="customCount" class="form-control form-control-sm text-center" style="width: 80px;" value="20" min="1">
+                    <button class="btn btn-sm btn-primary ms-2" onclick="window.startCustomPractice()">Bắt đầu</button>
+                </div>
+                
                 <div class="mt-5">
                     <button class="btn btn-link text-secondary text-decoration-none" style="font-size: 12px;" onclick="window.location.href=window.location.pathname">← Quay về danh sách</button>
                 </div>
@@ -245,6 +253,15 @@ export const CertAdp: React.FC = () => {
         
         setupPracticeHeader();
         renderPracticeQuestion();
+    };
+
+    (window as any).startCustomPractice = () => {
+        const input = document.getElementById('customCount') as HTMLInputElement;
+        if (!input) return;
+        let val = parseInt(input.value);
+        if(!val || val < 1) val = 10; 
+        if(val > allQuestions.length) val = allQuestions.length;
+        (window as any).startPractice(val);
     };
 
     (window as any).togglePracticeExp = () => {
@@ -400,6 +417,7 @@ export const CertAdp: React.FC = () => {
         delete (window as any).clearInput;
         
         delete (window as any).startPractice;
+        delete (window as any).startCustomPractice;
         delete (window as any).checkPracticeAnswer;
         delete (window as any).nextPracticeQuestion;
         delete (window as any).togglePracticeExp;
