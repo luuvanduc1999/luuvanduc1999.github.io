@@ -73,6 +73,7 @@
     { "icon": "fa-solid fa-hammer", "title": "Tools", "desc": "Git, VS Code, Sublime Text, Jupyter, Postman, Studio3T" }
   ],
   "certificates": [
+    { "org": "Power Platform", "year": "2026", "name": "PL-400 Microsoft Certified: Power Platform Developer Associate" },
     { "org": "UiPath", "year": "2025", "name": "UiPath Automation Developer Professional (UiADP) " },
     { "org": "ServiceNow", "year": "2025", "name": "ServiceNow Certified System Administrator (CSA) " },
     { "org": "820 - ETS", "year": "2023", "name": "TOEIC LR" },
