@@ -3,7 +3,7 @@
     "name": "Van Duc, Luu",
     "job": "Java Backend, RPA Developer",
     "avatar": "/static/images/profile.png",
-    "cvLink": "/static/files/CV_LuuVanDuc.pdf",
+    "cvLink": "/static/files/DucLV_RESUME_EN.pdf",
     "details": [
       { "label": "Name", "value": "Van Duc, Luu" },
       { "label": "Birthday", "value": "January 30, 1999" },
@@ -21,7 +21,7 @@
     }
   },
   "about": [
-    "• Automation and backend software engineer with 4+ years of experience developing SaaS and RPA systems to optimize business operations.",
+    "• Automation and backend software engineer with 5+ years of experience developing SaaS and RPA systems to optimize business operations.",
     "• Skilled in building end-to-end automation solutions, backend services (Spring Boot, Python Django), and workflow orchestration with RPA technologies.",
     "• Highly adaptable, continuously learning new technologies to meet evolving business needs.",
     "• TOEIC overall 820 with strong reading comprehension and communication skills."
@@ -73,6 +73,7 @@
     { "icon": "fa-solid fa-hammer", "title": "Tools", "desc": "Git, VS Code, Sublime Text, Jupyter, Postman, Studio3T" }
   ],
   "certificates": [
+    { "org": "Power Platform", "year": "2026", "name": "PL-400 Microsoft Certified: Power Platform Developer Associate" },
     { "org": "UiPath", "year": "2025", "name": "UiPath Automation Developer Professional (UiADP) " },
     { "org": "ServiceNow", "year": "2025", "name": "ServiceNow Certified System Administrator (CSA) " },
     { "org": "820 - ETS", "year": "2023", "name": "TOEIC LR" },

@@ -1,0 +1,405 @@
+/* =============================================
+   PL400 CERT — REDESIGN
+   ============================================= */
+
+:root {
+    --pl-primary: #6366f1;
+    --pl-primary-dark: #4f46e5;
+    --pl-success: #22c55e;
+    --pl-danger: #ef4444;
+    --pl-warning: #f59e0b;
+    --pl-bg: #f1f5f9;
+    --pl-card: #ffffff;
+    --pl-text: #1e293b;
+    --pl-muted: #64748b;
+    --pl-border: #e2e8f0;
+    --pl-radius: 12px;
+    --pl-shadow: 0 1px 4px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04);
+}
+
+/* BASE */
+.cert-adp-wrapper {
+    background-color: var(--pl-bg);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--pl-text);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.cert-adp-wrapper .header-fixed {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 2000;
+    background: #fff;
+    border-bottom: 1px solid var(--pl-border);
+    box-shadow: 0 2px 12px rgba(99,102,241,0.07);
+    padding: 10px 0 8px;
+}
+
+.cert-adp-wrapper .content-wrapper { margin-top: 100px; }
+
+/* Search group */
+.cert-adp-wrapper .search-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.cert-adp-wrapper #searchInput {
+    flex: 1;
+    border-radius: 20px;
+    border: 1.5px solid var(--pl-border);
+    padding: 5px 14px;
+    font-size: 13px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+.cert-adp-wrapper #searchInput:focus {
+    border-color: var(--pl-primary);
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+}
+
+.cert-adp-wrapper #clearSearch {
+    display: none;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-radius: 20px;
+    border: 1.5px solid var(--pl-danger);
+    background: #fff5f5;
+    color: var(--pl-danger);
+    transition: all 0.15s;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.cert-adp-wrapper #clearSearch:hover { background: var(--pl-danger); color: #fff; }
+
+/* Status bar */
+.cert-adp-wrapper .header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+}
+
+/* ── QUESTION CARDS ── */
+.cert-adp-wrapper .question-card {
+    border: 1px solid var(--pl-border);
+    border-radius: var(--pl-radius);
+    margin-bottom: 14px;
+    box-shadow: var(--pl-shadow);
+    background: var(--pl-card);
+    transition: box-shadow 0.2s;
+    overflow: hidden;
+}
+.cert-adp-wrapper .question-card:hover {
+    box-shadow: 0 4px 20px rgba(99,102,241,0.1);
+}
+
+.cert-adp-wrapper .card-body { padding: 12px 14px 10px; }
+
+/* Question number pill */
+.cert-adp-wrapper .q-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--pl-primary);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 1px 8px;
+    letter-spacing: 0.3px;
+}
+
+/* Answer badge */
+.cert-adp-wrapper .ans-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--pl-success);
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 2px 8px;
+}
+
+/* ── CONTENT AREA ── */
+.cert-adp-wrapper .content-area {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    min-width: 0;
+}
+.cert-adp-wrapper .content-area img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 6px;
+    margin: 6px 0;
+    border: 1px solid var(--pl-border);
+}
+
+/* ── OPTIONS ── */
+.cert-adp-wrapper .option-item {
+    padding: 8px 12px;
+    border: 1.5px solid var(--pl-border);
+    border-radius: 8px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: flex-start;
+    background: #fafbfc;
+    transition: border-color 0.15s, background 0.15s;
+}
+.cert-adp-wrapper .option-item .content-area { flex: 1; }
+
+.cert-adp-wrapper .option-prefix {
+    font-weight: 700;
+    margin-right: 10px;
+    color: var(--pl-primary);
+    min-width: 18px;
+    font-size: 12px;
+}
+
+.cert-adp-wrapper .is-correct {
+    background: #f0fdf4 !important;
+    border-color: #86efac !important;
+    color: #166534;
+}
+.cert-adp-wrapper .is-correct .option-prefix { color: var(--pl-success); }
+
+/* ── EXPLANATION ── */
+.cert-adp-wrapper .explanation-section {
+    display: none;
+    background: #fefce8;
+    padding: 12px 14px;
+    border-top: 1px dashed #fde68a;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: #78350f;
+}
+
+.cert-adp-wrapper .btn-toggle-exp {
+    width: 100%;
+    border: none;
+    padding: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background: #f8fafc;
+    color: var(--pl-muted);
+    border-top: 1px solid var(--pl-border);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+.cert-adp-wrapper .btn-toggle-exp:hover { background: #f1f5f9; color: var(--pl-text); }
+.cert-adp-wrapper .btn-toggle-exp.active { background: #fef9c3; color: #92400e; }
+
+/* ── BADGES ── */
+.cert-adp-wrapper .badge-new {
+    background: var(--pl-danger);
+    color: #fff;
+    font-size: 9px;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-left: 5px;
+    vertical-align: middle;
+    animation: pl-pulse 2s infinite;
+}
+
+/* ── TOGGLE SWITCH ── */
+.cert-adp-wrapper .form-check-input {
+    width: 30px; height: 16px; margin-top: 0.15em;
+    cursor: pointer;
+}
+.cert-adp-wrapper .filter-label {
+    font-size: 11px; font-weight: 600; cursor: pointer; user-select: none;
+}
+
+/* ── PRACTICE MODE ── */
+.cert-adp-wrapper .practice-option {
+    cursor: pointer;
+    transition: all 0.15s;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+}
+.cert-adp-wrapper .practice-option:hover:not(.disabled) {
+    background: #eff6ff !important;
+    border-color: #93c5fd !important;
+    transform: translateX(3px);
+}
+.cert-adp-wrapper .practice-option.disabled { cursor: default; }
+
+.cert-adp-wrapper .practice-option.user-correct {
+    background: #dcfce7 !important;
+    border-color: #86efac !important;
+    color: #166534;
+}
+.cert-adp-wrapper .practice-option.user-wrong {
+    background: #fee2e2 !important;
+    border-color: #fca5a5 !important;
+    color: #991b1b;
+}
+.cert-adp-wrapper .practice-option.real-correct {
+    border: 2px solid var(--pl-success) !important;
+    background: #f0fdf4 !important;
+}
+
+/* Practice intro buttons */
+.cert-adp-wrapper .btn-practice-choice {
+    margin: 6px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid var(--pl-primary);
+    background: #fff;
+    color: var(--pl-primary);
+    transition: all 0.15s;
+    cursor: pointer;
+}
+.cert-adp-wrapper .btn-practice-choice:hover {
+    background: var(--pl-primary);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99,102,241,0.25);
+}
+
+/* Practice progress bar */
+.cert-adp-wrapper .practice-progress {
+    height: 3px;
+    background: var(--pl-border);
+    border-radius: 2px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+.cert-adp-wrapper .practice-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--pl-primary), #a5b4fc);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Result card */
+.cert-adp-wrapper .result-card {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 40px 24px;
+    text-align: center;
+    margin: 20px 0;
+}
+.cert-adp-wrapper .result-percent {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+/* ── EMBEDDED EXAM QUESTION HTML ── */
+.cert-adp-wrapper .exam-question ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0 0;
+}
+.cert-adp-wrapper .exam-question .multi-choice-item {
+    padding: 8px 12px;
+    border: 1.5px solid var(--pl-border);
+    border-radius: 8px;
+    margin-bottom: 6px;
+    background: #fafbfc;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.cert-adp-wrapper .exam-question .correct-hidden {
+    background: #f0fdf4 !important;
+    border-color: #86efac !important;
+    color: #166534;
+}
+.cert-adp-wrapper .exam-question .multi-choice-letter {
+    font-weight: 700;
+    color: var(--pl-primary);
+    font-size: 12px;
+    margin-right: 4px;
+}
+.cert-adp-wrapper .exam-question .correct-hidden .multi-choice-letter { color: var(--pl-success); }
+.cert-adp-wrapper .exam-question .voted-answers-tally { display: none !important; }
+.cert-adp-wrapper .exam-question img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 6px;
+    border: 1px solid var(--pl-border);
+    margin: 6px 0;
+    display: block;
+}
+.cert-adp-wrapper .exam-question p { margin-bottom: 5px; }
+.cert-adp-wrapper .exam-question br + br { display: none; }
+
+/* ── AI VERIFICATION BADGES ── */
+.cert-adp-wrapper .badge-verified {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px; height: 16px;
+    background: #dcfce7;
+    color: #16a34a;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 700;
+    border: 1px solid #86efac;
+}
+.cert-adp-wrapper .badge-ai {
+    display: inline-flex;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 1px 6px;
+}
+.cert-adp-wrapper .badge-ai.gpt { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+.cert-adp-wrapper .badge-ai.gem { background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; }
+
+/* ── BACK TO TOP ── */
+.cert-adp-wrapper #backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 16px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: var(--pl-primary);
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 0 4px 16px rgba(99,102,241,0.35);
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.cert-adp-wrapper #backToTop:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99,102,241,0.45);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes pl-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+@keyframes pl-fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.cert-adp-wrapper .question-card {
+    animation: pl-fade-in 0.2s ease both;
+}

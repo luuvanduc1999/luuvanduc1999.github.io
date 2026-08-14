@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Portfolio } from './components/Portfolio';
 import { Redactor } from './components/Redactor';
 import { CertAdp } from './components/CertAdp';
+import { CertPl400 } from './components/CertPl400';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Portfolio />} />
         <Route path="/redact" element={<Redactor />} />
         <Route path="/cert/adp" element={<CertAdp />} />
+        <Route path="/cert/pl400" element={<CertPl400 />} />
       </Routes>
     </Router>
   );
