@@ -447,6 +447,7 @@ end`},aR=function(){for(var i=[],t=0;t<arguments.length;t++)i[t]=arguments[t];re
                 <div class="mb-4">
                    <button class="btn-practice-choice" onclick="window.startPractice(5)">5 câu</button>
                    <button class="btn-practice-choice" onclick="window.startPractice(10)">10 câu</button>
+                   <button class="btn-practice-choice" onclick="window.startPractice(40)">40 câu</button>
                    <button class="btn-practice-choice" onclick="window.startPractice(${l.length})">All in one</button>
                 </div>
                 
