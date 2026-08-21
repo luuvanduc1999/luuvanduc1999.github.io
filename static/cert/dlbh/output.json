@@ -447,7 +447,7 @@
     {
       "examQue": "<p>Chọn phương án sai về nghĩa vụ của doanh nghiệp bảo hiểm đối với bảo hiểm bắt buộc trách nhiệm dân sự đối với chủ xe cơ giới</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Pháp luật nghiêm cấm doanh nghiệp bảo hiểm chi trả cho đại lý các khoản hỗ trợ ngoài mức hoa hồng tối đa theo quy định để tránh cạnh tranh không lành mạnh.",
       "options": [
         "Bán bảo hiểm theo đúng quy tắc, biểu phí và mức trách nhiệm theo quy định",
         "Chi hỗ trợ đại lý bán bảo hiểm ngoài mức hoa hồng mà đại lý được thưởng",
@@ -460,7 +460,7 @@
     {
       "examQue": "<p>Theo đơn bảo hiểm TNDS của chủ xe cơ giới đối với hàng hóa trên xe, trong quá trình vận chuyển xe bị tai nạn làm hàng hóa trên xe bị tổn thất, chi phí nào sau đây DNBH sẽ bồi thường cho người được bảo hiểm?</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Doanh nghiệp bảo hiểm chỉ bồi thường các chi phí hợp lý nhằm giảm thiểu tổn thất cho hàng hóa bị nạn như xếp dỡ và lưu kho. Chi phí thuê xe chở hàng còn tốt tiếp tục hành trình không thuộc phạm vi bảo hiểm.",
       "options": [
         "Chi phí xếp dỡ hàng hóa tổn thất",
         "Chi phí lưu kho hàng hóa tổn thất",
@@ -474,7 +474,7 @@
     {
       "examQue": "<p>Người được bảo hiểm tham gia HĐBH sức khỏe với quyền lợi tử vong do tai nạn, chọn PA đúng nhất về cách thức DNBH giải quyết trong trường hợp NĐBH tử vong do tai nạn</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Bảo hiểm con người áp dụng nguyên tắc khoán (chi trả 100% số tiền bảo hiểm khi tử vong) và doanh nghiệp bảo hiểm không được phép thế quyền đòi người thứ ba bồi hoàn.",
       "options": [
         "Chi trả 100% số tiền bảo hiểm",
         "Chi trả theo nguyên tắc bồi thường",
@@ -488,7 +488,7 @@
     {
       "examQue": "<p>Theo luật KDBH, đại lý bảo hiểm được phép thực hiện các hoạt động nào sau đây, theo ủy quyền của DNBH</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, đại lý được ủy quyền tư vấn, chào bán và thu xếp giao kết hợp đồng nhưng không có quyền thay mặt doanh nghiệp bảo hiểm trực tiếp ký kết hợp đồng.",
       "options": [
         "Tư vấn sản phẩm bảo hiểm, giới thiệu, chào bán sản phẩm bảo hiểm, thu xếp việc giao kết HĐBH",
         "Thay mặt DNBH ký kết HĐ với bên mua bảo hiểm",
@@ -500,7 +500,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, đối với bảo hiểm trách nhiệm, trách nhiệm của DNBH phát sinh khi?</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, trách nhiệm của doanh nghiệp bảo hiểm đối với bảo hiểm trách nhiệm chỉ phát sinh khi người thứ ba có yêu cầu người được bảo hiểm bồi thường thiệt hại.",
       "options": [
         "Ngay khi người được bảo hiểm gây ra thiệt hại cho người thứ 3",
         "Người thứ 3 yêu cầu người được bảo hiểm bồi thường có hành vi gây ra thiệt hại cho người thứ 3 trong thời hạn bảo hiểm",
@@ -513,7 +513,7 @@
     {
       "examQue": "<p>Theo pháp luật VN về KD bảo hiểm, tỷ lệ hoa hồng đại lý bảo hiểm tối đa đối với HĐBH tín dụng và rủi ro tài chính là?</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định của pháp luật về kinh doanh bảo hiểm, tỷ lệ hoa hồng đại lý tối đa đối với bảo hiểm tín dụng và rủi ro tài chính là 10% (0.1).",
       "options": [
         "0.05",
         "0.1",
@@ -526,7 +526,7 @@
     {
       "examQue": "<p>Theo luật KDBH, đối với bảo hiểm tài sản, đáp án nào đúng khi điền vào chỗ … dưới đây \"… là số tiền mà bên mua bảo hiểm và DNBH thỏa thuận trong HĐBH để bảo hiểm tài sản và thiệt hại trên cơ sở yêu cầu của bên mua bảo hiểm\"</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, số tiền bảo hiểm chính là mức tiền thỏa thuận giữa hai bên để bảo hiểm cho tài sản và thiệt hại trên cơ sở yêu cầu của bên mua.",
       "options": [
         "Phí bảo hiểm",
         "Số tiền bồi thường",
@@ -539,7 +539,7 @@
     {
       "examQue": "<p>Theo pháp luật VN về KD bảo hiểm, tỷ lệ hoa hồng đại lý bảo hiểm tối đa đối với HĐBH hàng hóa vận chuyển là?</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định hiện hành, tỷ lệ hoa hồng đại lý bảo hiểm tối đa được phép chi trả cho nghiệp vụ bảo hiểm hàng hóa vận chuyển là 10% (0.1).",
       "options": [
         "0.05",
         "0.1",
@@ -552,7 +552,7 @@
     {
       "examQue": "<p>Trường hợp người được bảo hiểm không áp dụng các biện pháp đảm bảo an toàn cho đối tượng bảo hiểm thì DNBH có quyền:</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, doanh nghiệp bảo hiểm phải ấn định thời hạn để khách hàng thực hiện biện pháp an toàn trước khi áp dụng quyền tăng phí hoặc đơn phương chấm dứt hợp đồng.",
       "options": [
         "Đơn phương chấm dứt HĐBH ngay tại thời điểm thấy tăng nguy cơ rủi ro đối với đối tượng bảo hiểm",
         "Tăng phí bảo hiểm ngay tại thời điểm thấy tăng nguy cơ rủi ro đối với đối tượng bảo hiểm",
@@ -565,7 +565,7 @@
     {
       "examQue": "<p>Khi tham gia BHSK với quyền lợi bảo hiểm tai nạn, NĐBH không may bị tại nạn khi tham gia vào các cuộc thi đấu có tính chất chuyên nghiệp như đua ngựa, đua xe (HĐBH không có điểu khoản sửa đổi bổ sung về bảo hiểm rủi ro tai nạn khi tham gia vào các cuộc thi đấu có tính chất chuyên nghiệp), phương án giải quyết QLBH nào sau đây đúng?</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Tai nạn do tham gia thi đấu thể thao chuyên nghiệp (đua xe, đua ngựa...) là rủi ro bị loại trừ theo quy tắc bảo hiểm sức khỏe tiêu chuẩn nếu không có thỏa thuận bổ sung.",
       "options": [
         "Số tiển bảo hiểm theo tỷ lệ thương tật hoặc tai nạn",
         "Chi phí y tế điều trị tai nạn",
@@ -578,7 +578,7 @@
     {
       "examQue": "<p>Rủi ro là khả năng xảy ra biến cố bất thường có hậu quả thiệt hại hoặc mang lại kết quả không như mong đợi, trong trường hợp người chịu ảnh hưởng của rủi ro vừa có thể gặp hậu quả xấu nhưng cũng có thể đạt được sự gia tăng lợi ích thì rủi ro này được hiểu là:</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Rủi ro đầu cơ là loại rủi ro mang lại cả hai khả năng: có thể dẫn đến tổn thất hoặc tạo ra lợi nhuận cho người chịu rủi ro.",
       "options": [
         "Rủi ro thuần túy",
         "Rủi ro đầu cơ",
@@ -591,7 +591,7 @@
     {
       "examQue": "<p>Chọn PA đúng nhất: Phạm vi bảo hiểm là:</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Phạm vi bảo hiểm là giới hạn trách nhiệm của người bảo hiểm, quy định rõ những rủi ro và tổn thất nào sẽ được bồi thường khi sự kiện bảo hiểm xảy ra.",
       "options": [
         "Phạm vi giới hạn những rủi ro tổn thất và chi phí phát sinh mà theo đó người bảo hiểm sẽ phải chịu trách nhiệm nếu xảy ra sự kiện bảo hiểm",
         "Phạm vi giới hạn những rủi ro tổn thất và chi phí phát sinh mà theo đó người được bảo hiểm và người bảo hiểm cùng chịu trách nhiệm nếu xảy ra sự kiện bảo hiểm",
@@ -604,7 +604,7 @@
     {
       "examQue": "<p>Theo HĐBH trách nhiệm, trên cơ sở tổn thất phát sinh DNBH sẽ bồi thường cho những sự kiện bảo hiểm nào sau đây</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo nguyên tắc bồi thường trên cơ sở tổn thất phát sinh, chỉ cần sự kiện bảo hiểm xảy ra trong thời hạn hợp đồng thì doanh nghiệp bảo hiểm sẽ chịu trách nhiệm, bất kể thời điểm khiếu nại.",
       "options": [
         "Sự kiện bảo hiểm xảy ra trước ngày bắt đầu hiệu lực của HĐBH và khiếu nại của bên thứ 3 được lập trong thời hạn của HĐBH",
         "Sự kiện bảo hiểm xảy ra trong thời hạn của HĐBH và khiếu nại của bên thứ 3 có thể được lập sau thời hạn của HĐBH",
@@ -616,7 +616,7 @@
     {
       "examQue": "<p>Theo luật KDBH, HĐ bảo hiểm trùng trong bảo hiểm tài sản là trường hợp có từ 2 HĐBH trở lên và tổng số tiền bảo hiểm vượt quá giá trị thị trường của tài sản, được bảo hiểm tại thời điểm giao kết HĐBH để bảo hiểm cho:</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, hợp đồng bảo hiểm trùng phải hội tụ đủ các yếu tố: cùng đối tượng, cùng phạm vi, cùng sự kiện và cùng thời hạn bảo hiểm.",
       "options": [
         "Cùng phạm vi, đối tượng bảo hiểm",
         "Cùng thời hạn bảo hiểm",
@@ -629,7 +629,7 @@
     {
       "examQue": "<p>Theo đơn hỏa hoản và các rủi ro đặc biệt của Vương quốc Anh (ABI), nếu bảo hiểm rủi ro từ A đến G thiệt hại nào sau đây thuộc phạm vi bảo hiểm?</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo đơn ABI, thiệt hại do nước mưa chỉ thuộc phạm vi bảo hiểm nếu nước lọt vào nhà thông qua các lỗ hổng do tác động trực tiếp của giông bão gây ra.",
       "options": [
         "Nước tràn vào nhà do vỡ đường ống nước",
         "Nước mưa tràn vào nhà thông qua các chỗ hở trên phần kết cấu của tòa nhà và những chỗ hở này được tạo ra bởi tác động trực tiếp của giông bão",
@@ -642,7 +642,7 @@
     {
       "examQue": "<p>Theo pháp luật VN về KDBH, thời gian chờ trong BHSK được hiểu là:</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định, thời gian chờ là khoảng thời gian nhất định kể từ khi hợp đồng có hiệu lực mà nếu sự kiện bảo hiểm xảy ra, doanh nghiệp bảo hiểm sẽ không phải bồi thường hay chi trả quyền lợi.",
       "options": [
         "Khoảng thời gian mà các sự kiện bảo hiểm xảy ra sẽ được DNBH chi trả đối với 1 số quyền lợi bảo hiểm sức khỏe",
         "Khoảng thời gian mà các sự kiện bảo hiểm xảy ra sẽ không được DNBH chi trả đối với 1 số quyền lợi bảo hiểm sức khỏe",
@@ -656,7 +656,7 @@
     {
       "examQue": "<p>Chọn PA đúng nhất: Theo luật KDBH DNBH được chủ động cung cấp sản phẩm bảo hiểm dưới các hình thức sau đây</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Luật Kinh doanh bảo hiểm cho phép doanh nghiệp bảo hiểm đa dạng hóa kênh phân phối, bao gồm cung cấp trực tiếp, thông qua đại lý/môi giới bảo hiểm hoặc qua hình thức đấu thầu.",
       "options": [
         "Trực tiếp",
         "Thông qua đại lý bảo hiểm hoặc môi giới bảo hiểm",
@@ -669,7 +669,7 @@
     {
       "examQue": "<p>Theo luật KDBH trong trường hợp đại lý bảo hiểm vi phạm HĐ đại lý bảo hiểm gây thiệt hại đến quyền lợi ích hợp pháp của NĐBH thì:</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Doanh nghiệp bảo hiểm vẫn phải đảm bảo quyền lợi cho khách hàng theo hợp đồng đã giao kết, sau đó đại lý vi phạm có trách nhiệm bồi hoàn lại số tiền doanh nghiệp đã chi trả do lỗi của mình.",
       "options": [
         "DNBH vẫn phải chịu trách nhiệm thực hiện các nghĩa vụ theo thỏa thuận trong HĐBH do đại lý bảo hiểm thu xếp giao kết",
         "HĐ đại lý bảo hiểm tự động chấm dứt",
@@ -682,7 +682,7 @@
     {
       "examQue": "<p>Theo luật KDBH, phát biểu nào sau đấy đúng về các trường hợp chuyển giao danh mục HĐBH</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Việc chuyển giao danh mục hợp đồng bảo hiểm được pháp luật quy định áp dụng trong các trường hợp doanh nghiệp thu hẹp phạm vi hoạt động hoặc tổ chức lại như chia tách, sáp nhập, hợp nhất, giải thể.",
       "options": [
         "Thu hẹp ND, phạm vi hoạt động",
         "Chia tách, sáp nhập, hợp nhất, giải thể hoạt động",
@@ -695,7 +695,7 @@
     {
       "examQue": "<p>Theo luật KDBH sản phẩm nào sau đây không phải là bảo hiểm bắt buộc (chọn PA đúng nhất)</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Các loại bảo hiểm trách nhiệm công cộng, trách nhiệm sản phẩm và trách nhiệm nghề nghiệp môi giới đều là bảo hiểm tự nguyện, không thuộc danh mục bảo hiểm bắt buộc theo quy định của pháp luật.",
       "options": [
         "BH bắt buộc trách nhiệm công cộng",
         "BH bắt buộc trách nhiệm sản phẩm",
@@ -708,7 +708,7 @@
     {
       "examQue": "<p>Chọn PA đúng nhất: Rủi ro được coi là rủi ro có thể được bảo hiểm phải đáp ứng đồng thời các điều kiện:</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Rủi ro có thể bảo hiểm phải đáp ứng các tiêu chí cơ bản như tính ngẫu nhiên, đo lường được bằng tiền, tuân theo quy luật số lớn và không vi phạm chuẩn mực đạo đức xã hội.",
       "options": [
         "Tổn thất phải ngẫu nhiên bất ngờ hậu quả có thể xác định được thành tiền",
         "Tổn thất không lường trước được, xác định được tần suất xuất hiện, và mức độ trầm trọng của rủi ro, hậu quả phải đo được, định lượng được về tài chính",
@@ -721,7 +721,7 @@
     {
       "examQue": "<p>Chọn PA đúng nhất: Theo pháp luật Việt Nam về KDBH trong bảo hiểm bắt buộc TNDS của chủ xe cơ giới, mức bồi thường cụ thể về sức khỏe, tính mạng được xác định theo từng loại thương tật, thiệt hại theo:</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định pháp luật, mức bồi thường sức khỏe, tính mạng được xác định dựa trên Bảng quy định trả tiền bồi thường hoặc thỏa thuận giữa các bên nhưng không vượt quá mức luật định.",
       "options": [
         "Bảng quy định trả tiền bồi thường về sức khỏe, tính mạng theo quy định của pháp luật",
         "Thỏa thuận (nếu có) giữa người được bảo hiểm và người bị thiệt hại hoặc người thừa kế của người bị thiệt hại hoặc đại diện của người bị thiệt hại nhưng không vượt quá mức bồ thường quy đinh của pháp luật",
@@ -734,7 +734,7 @@
     {
       "examQue": "<p>Theo luật KDBH, một trong các đối tượng bảo hiểm của HĐBH tài sản là:</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, đối tượng của hợp đồng bảo hiểm tài sản bao gồm vật có thực, tiền, giấy tờ trị giá được bằng tiền và các quyền tài sản.",
       "options": [
         "TNDS của người được bảo hiểm",
         "Quyền tài sản",
@@ -747,7 +747,7 @@
     {
       "examQue": "<p>Theo luật KDBH, bảo hiểm bắt buộc không bao gồm:</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Bảo hiểm thiệt hại vật chất xe ô tô là loại hình bảo hiểm thương mại tự nguyện do chủ xe tự quyết định tham gia, không thuộc danh mục bảo hiểm bắt buộc.",
       "options": [
         "Bảo hiểm bắt buộc thất nghiệp",
         "Bảo hiểm bắt buộc thiệt hại vật chất xe ô tô",
@@ -760,7 +760,7 @@
     {
       "examQue": "<p>Theo pháp luật Việt Nam về KDBH, trong bảo hiểm cháy nổ bắt buộc đối với cơ sở có nguy hiểm về cháy nổ (trừ cơ sở hạt nhân) trường hợp nào sau đây thuộc trách nhiệm bảo hiểm:</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định về bảo hiểm cháy nổ bắt buộc, thiệt hại do sét đánh trực tiếp gây cháy nổ thuộc phạm vi bảo hiểm, còn núi lửa, đốt rừng hay dữ liệu phần mềm thuộc điểm loại trừ.",
       "options": [
         "Núi lửa phun",
         "Sét đánh trực tiếp vào tài sản được bảo hiểm gây cháy nổ",
@@ -773,7 +773,7 @@
     {
       "examQue": "<p>Theo luật DKBH, Đại lý bảo hiểm có nghĩa vụ nào sau đây?</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, đại lý bảo hiểm có nghĩa vụ chịu sự kiểm tra, giám sát của doanh nghiệp bảo hiểm; đồng thời hành vi chi trả hoa hồng cho bên mua là hành vi bị cấm.",
       "options": [
         "Chịu sự kiểm tra giám sát của DNBH",
         "Thực hiện đẩy đủ nghĩa vụ tài chính theo quy định của pháp luật",
@@ -786,7 +786,7 @@
     {
       "examQue": "<p>Vai trò xã hội của bảo hiểm là:</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Bảo hiểm đóng vai trò toàn diện đối với xã hội thông qua việc đảm bảo an toàn nền kinh tế, tạo việc làm, khuyến khích tiết kiệm và mang lại sự an tâm cho người dân.",
       "options": [
         "Góp phẩn đảm bảo an toàn cho nền kinh tế xã hội",
         "Tạo thêm việc làm cho xã hội",
@@ -799,7 +799,7 @@
     {
       "examQue": "<p>Theo đơn bảo hiểm thiệt hại VCX cơ giới, trường hợp chủ xe tham gia bảo hiểm dưới giá trị bị tổn thất toàn bộ khoản thiền thu được từ việc thanh lý xác xe có thển được phân bổ cho DNBH và NĐBH theo tỷ lệ tham gia bảo hiểm dưới giá trị không</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Khi tham gia bảo hiểm dưới giá trị, doanh nghiệp bảo hiểm chỉ bồi thường theo tỷ lệ, do đó số tiền thu được từ thanh lý xác xe cũng được phân bổ cho các bên theo đúng tỷ lệ này để đảm bảo công bằng.",
       "options": [
         "Có",
         "Không"
@@ -810,7 +810,7 @@
     {
       "examQue": "<p>Theo luật KDBH, câu trả lời nào sau đây đúng nhất về HĐBH trùng</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định, hợp đồng bảo hiểm trùng phải thỏa mãn điều kiện có từ 2 hợp đồng trở lên cho cùng đối tượng, sự kiện, thời hạn và tổng số tiền bảo hiểm phải vượt quá giá trị thị trường của tài sản.",
       "options": [
         "HĐBH trùng là trường hợp bên mua bảo hiểm giao kết HĐBH với 2 DNBH trở lên để bảo hiểm cho cùng một đối tượng bảo hiểm",
         "HĐBH trùng là trường hợpb bên mua bảo hiểm giao kết nhiều HĐBH với DNBH để bảo hiểm cho cùng một đối tượng bảo hiểm",
@@ -823,7 +823,7 @@
     {
       "examQue": "<p>Theo luật KDBH, Đại lý bảo hiểm có quyền:</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Đại lý bảo hiểm có quyền tự do lựa chọn và giao kết hợp đồng đại lý với doanh nghiệp bảo hiểm; họ không được tự ý giảm phí hay thay mặt doanh nghiệp ký hợp đồng bảo hiểm nếu không được ủy quyền.",
       "options": [
         "Lựa chọn và giao kết HĐ đại lý bảo hiểm với DNBH theo QĐ của pháp luật",
         "Thay mặt DNBH ký kết HĐ với bên mua bảo hiểm",
@@ -836,7 +836,7 @@
     {
       "examQue": "<p>Theo luật KDBH chọn phương án đúng điển vào chỗ … trong câu sau: HĐBH trùng là trường hợp có từ 2 HĐBH trở lên để bảo hiểm cho cùng phạm vi ... thời hạn và sự kiện bảo hiểm mà tổng số tiền bảo hiểm vượt quá giá thị trưởng của tài sản được bảo hiểm tại thời điểm giao kết HĐBH</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, hợp đồng bảo hiểm trùng là khi có từ 2 hợp đồng trở lên bảo hiểm cho cùng một đối tượng, sự kiện và thời hạn bảo hiểm.",
       "options": [
         "Bên mua bảo hiểm",
         "Đối tượng",
@@ -849,7 +849,7 @@
     {
       "examQue": "<p>Theo pháp luật VN về KD bảo hiểm, DNBH có quyền từ chối bán bảo hiểm bắt buộc trong hoạt động đầu tư xây dựng trong trường hợp nào dưới đây:</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định, doanh nghiệp bảo hiểm được quyền từ chối bán bảo hiểm bắt buộc trong xây dựng nếu bên mua không đáp ứng đủ điều kiện năng lực hoạt động xây dựng theo Luật Xây dựng.",
       "options": [
         "Bên mua bảo hiểm không đủ điều kiện năng lực hoạt động xây dựng, năng lực hành nghề xây dựng quy định tại luật xây dựng",
         "Bên mua bảo hiểm không đáp ứng đầy đủ điều kiện năng lực hoạt động xây dựng quy định tại luật xây dựng và các VB hướng dẫn thi hành",
@@ -862,7 +862,7 @@
     {
       "examQue": "<p>Nguyên tắc khoán được áp dụng cho</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Nguyên tắc khoán được áp dụng cho bảo hiểm nhân thọ vì tính mạng và sức khỏe con người không thể định giá chính xác bằng tiền như tài sản.",
       "options": [
         "BH nhân thọ",
         "Bảo hiểm tài sản",
@@ -875,7 +875,7 @@
     {
       "examQue": "<p>Chọn PA đúng nhất: BHSK có thể bảo hiểm cho các rủi ro nào sau đây</p>",
       "examAns": "E",
-      "examAnsDesc": "",
+      "examAnsDesc": "Bảo hiểm sức khỏe bao gồm các quyền lợi bảo hiểm cho trường hợp người được bảo hiểm gặp rủi ro do tai nạn, ốm đau, bệnh tật và cả thai sản.",
       "options": [
         "Tai nạn",
         "Ốm đau bệnh tật",
@@ -889,7 +889,7 @@
     {
       "examQue": "<p>Chọn PA đúng nhất: Theo Pháp luật Việt Nam về KDBH dự phòng nghiệp vụ của bảo hiểm sức khỏe bao gồm:</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định pháp luật, dự phòng nghiệp vụ của bảo hiểm sức khỏe bắt buộc bao gồm dự phòng phí chưa được hưởng và dự phòng bồi thường.",
       "options": [
         "Dự phòng tổn thất, dự phòng đảm bảo cân đối",
         "Dự phòng phí chưa được hưởng, dự phòng bồi thường",
@@ -903,7 +903,7 @@
     {
       "examQue": "<p>Theo luật KDBH, đại lý bảo biểm không có các nghĩa vụ nào sau đây:</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Đại lý bảo hiểm chỉ là bên trung gian được ủy quyền, nghĩa vụ thực hiện cam kết bồi thường hoặc trả tiền trong hợp đồng bảo hiểm thuộc về chính doanh nghiệp bảo hiểm.",
       "options": [
         "Thực hiện cam kết trong HĐBH được ký giữa DNBH và bên mua bảo hiểm",
         "Ký quỹ hoặc thế chấp tài sản cho DNBH nếu có thỏa thuận trong HĐ đại lý bảo hiểm",
@@ -916,7 +916,7 @@
     {
       "examQue": "<p>Theo luật KDBH, trường hợp bên mua bảo hiểm cố ý cung cấp không đầy đủ thông tin nhằm giao kết HĐBH để được bồi thường trả tiền bảo hiểm thì DNBH có quyền:</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, khi bên mua có hành vi gian dối, cố ý cung cấp sai thông tin nhằm trục lợi thì doanh nghiệp bảo hiểm có quyền hủy bỏ hợp đồng bảo hiểm.",
       "options": [
         "Đơn phương đình chỉ hợp đồng và thu phí đến thời điểm phát hiện hành vi gian dối của bên mua",
         "Đơn phương đình chỉ thực hiện hợp đồng và hoàn lại phí tương ứng với thời gian còn lại cho bên mua bảo hiểm",
@@ -929,7 +929,7 @@
     {
       "examQue": "<p>Theo luật KDBH, DNBH có quyền</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Doanh nghiệp bảo hiểm có quyền kiểm tra, giám sát hoạt động của đại lý để đảm bảo tuân thủ hợp đồng; các phương án B và C đều sai quy định pháp luật.",
       "options": [
         "Kiểm tra, giám sát việc thực hiện HĐ đại lý bảo hiểm",
         "Chấp thuận mà không cần văn bản khi đại lý bảo hiểm của DNBH mình đồng thời làm đại lý bảo hiểm cho nhiều DNBH khác",
@@ -942,7 +942,7 @@
     {
       "examQue": "<p>Theo pháp luật VN về kinh doanh bảo hiểm, phát biểu nào sau đây là đúng nhất về HĐBH sức khỏe:</p>",
       "examAns": "E",
-      "examAnsDesc": "",
+      "examAnsDesc": "Cả ba phương án A, B, C đều phản ánh chính xác các quy định của pháp luật hiện hành về điều kiện, quyền lợi và số tiền bảo hiểm trong hợp đồng bảo hiểm sức khỏe.",
       "options": [
         "Quyển lợi bảo hiểm, phạm vi bảo hiểm và các điều khoản loại trừ bảo hiểm phải được thể hiện rõ ràng trong quy tắc điều kiện, điều khoản bảo hiểm",
         "Trường hợp DHBH cung cấp bảo hiểm có điều kiện (cung cấp bảo hiểm trong trường hợp điều kiện tham gia bảo hiểm của NĐBH dưới chuẩn theo quy định của DNBH) thì nội dung này cần thể hiện rõ tại HĐBH",
@@ -956,7 +956,7 @@
     {
       "examQue": "<p>Khi giao kết HĐBH, bên mua bảo hiểm có quyền và nghĩa vụ</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, bên mua bảo hiểm có quyền được giải thích điều khoản, đồng thời bắt buộc phải thực hiện nghĩa vụ kê khai trung thực và đóng phí đầy đủ.",
       "options": [
         "Có quyền yêu cầu DNBH giải thích điều khoản, điều kiện liên quan đến HĐBH",
         "Có nghĩa vụ kê khai đầy đủ, trung thực mọi thông tin liên quan đến HĐBH theo yêu cầu của DNBH",
@@ -969,7 +969,7 @@
     {
       "examQue": "<p>Phát biểu sau đây là đúng hay sai : Theo luật KDBH trường hợp HĐBH có điều khoản không rõ ràng dẫn đến cách hiểu khách nhau thì điều khoản đó được giải thích có lợi cho DNBH\"</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, nếu hợp đồng có điều khoản không rõ ràng thì phải được giải thích theo hướng có lợi cho bên mua bảo hiểm, không phải doanh nghiệp bảo hiểm.",
       "options": [
         "Đúng",
         "Sai"
@@ -980,7 +980,7 @@
     {
       "examQue": "<p>Theo luật Kinh doanh bảo hiểm, đại lý bảo hiểm có các quyền nào sau đây</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Đại lý bảo hiểm có quyền lựa chọn giao kết hợp đồng đại lý và yêu cầu hoàn trả ký quỹ, nhưng tuyệt đối không có quyền tự ý sửa đổi điều khoản hợp đồng bảo hiểm.",
       "options": [
         "Lựa chọn và giao kết hợp đồng đại lý bảo hiểm đối với doanh nghiệp bảo hiểm, chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài, tổ chức tương hỗ cung cấp bảo hiểm vi mô theo quy định của pháp luật",
         "Yêu cầu doanh nghiệp bảo hiểm hoàn trả tiền ký quỹ hoặc tài sản thế chấp theo thỏa thuận tại hợp đồng đại lý bảo hiểm",
@@ -993,7 +993,7 @@
     {
       "examQue": "<p>Theo luật Kinh doanh bảo hiểm, phát biểu nào sau đây sai khi nói về nguyên tắc hoạt động của đại lý bảo hiểm</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Phát biểu này sai vì đại lý bảo hiểm chỉ là người đại diện thực hiện việc chào bán, thu xếp giao kết hợp đồng, không có thẩm quyền tự ý sửa đổi quy tắc hay điều khoản bảo hiểm.",
       "options": [
         "Cá nhân hoạt động đại lý bảo hiểm, nhân viên trong tổ chức hoạt động đại lý bảo hiểm chỉ được thực hiện hoạt động đại lý bảo hiểm đối với những sản phẩm bảo hiểm đã được đào tạo",
         "Tổ chức không được đồng thời làm đại lý bảo hiểm cho doanh nghiệp bảo hiểm khác nếu không được chấp thuận bằng văn bản của doanh nghiệp bảo hiểm mà tổ chức đó đang làm đại lý",
@@ -1006,7 +1006,7 @@
     {
       "examQue": "<p>Trong hợp đồng bảo hiểm tài sản, trừ trường hợp có thoả thuận khác trong hợp đồng bảo hiểm, số tiền bồi thường mà doanh nghiệp bảo hiểm phải trả cho người được bảo hiểm trong trường hợp người thứ ba gây thiệt hại được xác định trên cơ sở:</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo nguyên tắc bồi thường, số tiền bồi thường tài sản luôn được tính dựa trên giá thị trường tại thời điểm, nơi xảy ra tổn thất và mức độ thiệt hại thực tế để khôi phục đúng giá trị tài sản.",
       "options": [
         "Giá thị trường của tài sản được bảo hiểm tại thời điểm giao kết hợp đồng",
         "Thỏa thuận giữa bên mua bảo hiểm và người thứ ba gây thiệt hạ",
@@ -1019,7 +1019,7 @@
     {
       "examQue": "<p>Chọn phương án đúng nhất: Trong bảo hiểm sức khoẻ, ngoài các nội dung của hợp đồng bảo hiểm theo quy định chung của Luật Kinh Doanh bảo hiểm, hợp đồng bảo hiểm nhóm phải có nội dung nào sau đây</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Luật Kinh doanh bảo hiểm quy định hợp đồng bảo hiểm nhóm phải bao gồm điều kiện tham gia của người được bảo hiểm và thủ tục chuyển đổi sang hợp đồng cá nhân, không có quy định chuyển đổi sang nhóm khác.",
       "options": [
         "Điều kiện tham gia bảo hiểm đối với người được bảo hiểm",
         "Điều kiện, thủ tục chuyển đổi thành hợp đồng bảo hiểm cá nhân",
@@ -1033,7 +1033,7 @@
     {
       "examQue": "<p>Chọn phương án đúng nhất: Theo luật kinh doanh bảo hiểm, đối với hợp đồng bảo hiểm thiệt hại, bên mua bảo hiểm có quyền lợi có thể được bảo hiểm khi có</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, quyền lợi có thể được bảo hiểm trong bảo hiểm thiệt hại bao gồm quyền lợi tài chính, nghĩa vụ hoặc trách nhiệm tài chính và thiệt hại kinh tế đối với đối tượng bảo hiểm.",
       "options": [
         "Quyền lợi về tài chính đối với đối tượng bảo hiểm",
         "Nghĩa vụ, trách nhiệm về tài chính đối với đối tượng bảo hiểm",
@@ -1046,7 +1046,7 @@
     {
       "examQue": "<p>Chọn phương án đúng nhất về đặc trưng pháp lý của hợp đồng bảo hiểm</p>",
       "examAns": "E",
-      "examAnsDesc": "",
+      "examAnsDesc": "Hợp đồng bảo hiểm mang đầy đủ các đặc trưng pháp lý: là hợp đồng song vụ, thường là hợp đồng theo mẫu do doanh nghiệp bảo hiểm soạn sẵn và là sự thỏa thuận đóng phí - bồi thường giữa các bên.",
       "options": [
         "Hợp đồng bảo hiểm là hợp đồng song vụ, theo đó mỗi bên trong hợp đồng đều có nghĩa vụ đối với nhau",
         "Hợp đồng bảo hiểm là hợp đồng theo mẫu do doanh nghiệp bảo hiểm đưa ra",
@@ -1060,7 +1060,7 @@
     {
       "examQue": "<p>Chọn phương án sai</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Phương án D sai vì môi giới bảo hiểm là tổ chức đại diện cho quyền lợi của bên mua bảo hiểm, không phải đại diện cho doanh nghiệp bảo hiểm như đại lý bảo hiểm.",
       "options": [
         "Bên mua bảo hiểm có thể đồng thời là người được bảo hiểm hoặc người thụ hưởng",
         "Người được bảo hiểm có thể đồng thời là người thụ hưởng",
@@ -1073,7 +1073,7 @@
     {
       "examQue": "<p>Theo luật kinh doanh bảo hiểm, các loại hình bảo hiểm được chia thành</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định của Luật Kinh doanh bảo hiểm, các loại hình bảo hiểm được phân loại chính thức thành 3 nhóm cơ bản là: bảo hiểm nhân thọ, bảo hiểm phi nhân thọ và bảo hiểm sức khỏe.",
       "options": [
         "Bảo hiểm con người, bảo hiểm tài sản, bảo hiểm trách nhiệm dân sự",
         "Bảo hiểm nhân thọ, bảo hiểm phi nhân thọ, bảo hiểm sức khoẻ",
@@ -1086,7 +1086,7 @@
     {
       "examQue": "<p>Đáp án nào dưới đây sai</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Phương án C sai vì theo quy định, bên mua bảo hiểm và người được bảo hiểm hoàn toàn có quyền đồng thời là người thụ hưởng để nhận tiền bảo hiểm.",
       "options": [
         "Bên mua bảo hiểm là tổ chức, cá nhân giao kết hợp đồng bảo hiểm với doanh nghiệp bảo hiểm và đóng phí bảo hiểm",
         "Bên mua bảo hiểm có thể đồng thời là người được bảo hiểm hoặc người thụ hưởng",
@@ -1099,7 +1099,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, trong trường hợp hợp đòng bảo hiểm tài sản dưới giá trị được giao kết thì</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, đối với hợp đồng bảo hiểm tài sản dưới giá trị, doanh nghiệp bảo hiểm bồi thường theo tỷ lệ giữa số tiền bảo hiểm và giá thị trường của tài sản tại thời điểm giao kết.",
       "options": [
         "Doanh nghiệp bảo hiểm chỉ chịu trách nhiệm bồi thường thiệt hại theo tỷ lệ tương ứng với số tiền bảo hiểm và giá trị sổ sách của tài sản được bảo hiểm tại thời điểm giao kết hoặc thỏa thuận trong hợp đồng bảo hiểm.",
         "Doanh nghiệp bảo hiểm chỉ chịu trách nhiệm bồi thường thiệt hại theo tỷ lệ tương ứng với số tiền bảo hiểm và giá thị trường của tài sản được bảo hiểm tại thời điểm giao kết hoặc thỏa thuận trong hợp đồng bảo hiểm.",
@@ -1112,7 +1112,7 @@
     {
       "examQue": "<p>Theo Luật kinh doanh bảo hiểm, trong trường hợp địa lý bảo hiểm vi phạm hợp đồng đại lý bảo hiểm gây thiệt hại đến quyền và lợi ích hợp pháp của người được bảo hiểm thì doanh nghiệp bảo hiểm có phải chịu trách nhiệm thực hiện các nghĩa vụ theo thoả thuận trong hợp đồng bảo hiểm do đại lý boả hiểm thu xếp giao kết không</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, doanh nghiệp bảo hiểm vẫn phải chịu trách nhiệm đối với hợp đồng do đại lý thu xếp, sau đó có quyền yêu cầu đại lý bồi hoàn các thiệt hại do lỗi của đại lý gây ra.",
       "options": [
         "Có",
         "Không"
@@ -1123,7 +1123,7 @@
     {
       "examQue": "<p>Thep pháp luật VN về kinh doanh bảo hiểm, trong bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới, giới hạn trách nhiệm bảo hiểm đối với thiệt hại về sức khoẻ, tính mạng do xe cơ giới gây ra là</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định hiện hành về bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới, mức trách nhiệm bồi thường đối với thiệt hại về sức khỏe, tính mạng là 150 triệu đồng/người/vụ tai nạn.",
       "options": [
         "50 triệu đồng cho một người trong một vụ tai nạn",
         "100 triệu đồng cho một người trong một vụ tai nạn",
@@ -1136,7 +1136,7 @@
     {
       "examQue": "<p>Theo luật kinh doanh bảo hiểm, phát biểu nào sau đây đúng</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Pháp luật quy định hoa hồng đại lý bảo hiểm do các bên thỏa thuận nhưng không được vượt quá mức tối đa do Bộ Tài chính quy định, nên việc chi trả thấp hơn mức tối đa là hoàn toàn hợp lệ.",
       "options": [
         "Hoa hồng đại lý bảo hiểm được thoả thuận tại hợp đồng đại lý bảo hiểm. Mức hoa hồng đại lý bảo hiểm tối đa theo quy định của Bộ trưởng Bộ Tài chính",
         "Hoa hồng đại lý bảo hiểm do doanh nghiệp bảo hiểm chi trả có thể thấp hơn mức tối đa do Bộ trưởng Bộ tài chính quy định",
@@ -1149,7 +1149,7 @@
     {
       "examQue": "<p>Theo luật kinh doanh bảo hiểm, trường hợp bên mua bảo hiểm (...) cung cấp không đầy đủ thông tin nhằm giao két hợp đồng bảo hiểm được bồi thường, trả tiền bảo hiểm thì doanh nghiệp bảo hiểm có quyền</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, khi bên mua bảo hiểm cố ý cung cấp thông tin sai sự thật hoặc không đầy đủ nhằm trục lợi, doanh nghiệp bảo hiểm có quyền hủy bỏ hợp đồng bảo hiểm.",
       "options": [
         "Đơn phương đình chỉ thực hiện hợp đồng và thu phí đến thời điểm phát sinh hành vi lừa dối của bên mua bảo hiểm",
         "Đơn phương đình chỉ thực hiện hợp đồng và hoàn lại phí cho bên mua bảo hiểm tương ứng với thời gian còn lại của hđbh",
@@ -1162,7 +1162,7 @@
     {
       "examQue": "<p>Yếu tố nào dưới đây không liên quan đến việc tính phí bảo hiểm của sản phẩm bảo hiểm trách nhiệm nghề nghiệp</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Phí bảo hiểm trách nhiệm nghề nghiệp dựa trên mức độ rủi ro của công việc như quy mô và lĩnh vực, không phụ thuộc vào vị trí địa lý của văn phòng.",
       "options": [
         "Thu nhập hàng năm của người được bảo hiểm",
         "Vị trí đặt văn phòng, nơi làm việc của người được bảo hiểm",
@@ -1175,7 +1175,7 @@
     {
       "examQue": "<p>Người được bảo hiểm tham gia 2 hợp đồng bảo hiểm tai nạn (...) người tại hai doanh nghiệp bảo hiểm khác nhau và không may (...) dẫn đến tử vong. Quyền lợi bảo hiểm mà người thụ hưởng nhận trong trường hợp này là</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Bảo hiểm tai nạn con người áp dụng nguyên tắc khoán, nên người thụ hưởng được nhận tổng quyền lợi cộng dồn từ tất cả các hợp đồng đã giao kết.",
       "options": [
         "Số tiền bảo hiểm cao nhất trong 2 hợp đồng bảo hiểm",
         "Tổng số tiền bảo hiểm đã thoả thuận tại 2 hợp đồng bảo hiểm",
@@ -1187,7 +1187,7 @@
     {
       "examQue": "<p>Theo quy tắc bảo hiểm \"Mọi rủi ro tài sản\" của Hiệp hội bảo hiểmVương Quốc Anh (ABI), chi phúi khắc phục thiệt hại gây ra do vỡ hay tràn thoát nước từ các bể chứa, thiết bị chứa hay đường ống dẫn khi khu vực được bảo hiểm bị bỏ trống hay không được sử dụng có thuộc trách nhiệm bảo hiểm không</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Quy tắc ABI loại trừ rủi ro rò rỉ nước khi khu vực bảo hiểm bị bỏ trống, ngoại trừ trường hợp đó là hậu quả trực tiếp của một rủi ro được bảo hiểm khác.",
       "options": [
         "Có",
         "Không",
@@ -1199,7 +1199,7 @@
     {
       "examQue": "<p>Chọn phương án sai</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Nhận định này sai vì môi giới bảo hiểm hoạt động vì lợi ích và đại diện cho bên mua bảo hiểm, chứ không đại diện cho doanh nghiệp bảo hiểm.",
       "options": [
         "Bên mua bảo hiểm có thể đồng thời là người được bảo hiểm hoặc người thụ hưởng",
         "Người được bảo hiểm có thể đồng thời là người thụ hưởng",
@@ -1212,7 +1212,7 @@
     {
       "examQue": "<p>Theo Luật kinh doanh bảo hiẻm, trong trường hợp địa lý bảo hiểm vi phạm hợp đồng đại lý bảo hiểm gây thiệt hại đến quyền và lợi ích hợp pháp của người được bảo hiểm thì doanh nghiệp bảo hiểm có phải chịu trách nhiệm thực hiện các nghĩa vụ theo thoả thuận trong hợp đồng bảo hiểm do đại lý boả hiểm thu xếp giao kết không</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Doanh nghiệp bảo hiểm vẫn phải chịu trách nhiệm thực hiện hợp đồng với khách hàng, sau đó có quyền yêu cầu đại lý bồi hoàn các thiệt hại do lỗi của đại lý gây ra.",
       "options": [
         "Có",
         "Không"
@@ -1223,7 +1223,7 @@
     {
       "examQue": "<p>Chọn phương án sai, nguyên lý nào không phải nguyên lý cơ bản trong bảo hiểm</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Các nguyên lý cơ bản của hợp đồng bảo hiểm gồm trung thực tuyệt đối, quyền lợi có thể được bảo hiểm, bồi thường, thế quyền và nguyên nhân gần. 'Phân tán rủi ro' là cơ chế hoạt động, không phải là nguyên lý cơ bản.",
       "options": [
         "Nguyên tắc quyền lợi có thể được bảo hiểm",
         "Nguyên tắc phân tán rủi ro",
@@ -1236,7 +1236,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, người có quyền chiếm hữu đối với tài sản thì có “Quyền lợi có thể được bảo hiểm” đối với tài sản đó:</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, quyền lợi có thể được bảo hiểm đối với tài sản bao gồm quyền sở hữu, quyền chiếm hữu, quyền sử dụng và các quyền tài sản khác.",
       "options": [
         "Đúng.",
         "Sai."
@@ -1247,7 +1247,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, một trong các đối tượng bảo hiểm của hợp đồng bảo hiểm tài sản là:</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, đối tượng của bảo hiểm tài sản bao gồm vật có thực, tiền, giấy tờ trị giá được bằng tiền và các quyền tài sản.",
       "options": [
         "Trách nhiệm dân sự của người được bảo hiểm",
         "Quyền tài sản",
@@ -1260,7 +1260,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, chọn phương án đúng điền vào chỗ ______ trong câu sau:\n\"Hợp đồng bảo hiểm trùng là trường hợp có từ hai hợp đồng bảo hiểm trở lên để bảo hiểm cho cùng phạm vi, _______, thời hạn và sự kiện bảo hiểm mà tổng số tiền bảo hiểm vượt quá giá thị trường của tài sản được bảo hiểm tại thời điểm giao kết hợp đồng bảo hiểm\"</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, định nghĩa hợp đồng bảo hiểm trùng yêu cầu các hợp đồng phải bảo hiểm cho cùng phạm vi, cùng đối tượng, cùng thời hạn và cùng sự kiện bảo hiểm.",
       "options": [
         "Bên mua bảo hiểm",
         "Đối tượng",
@@ -1273,7 +1273,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, hợp đồng bảo hiểm trùng trong bảo hiểm tài sản là trường hợp có từ hai hợp đồng bảo hiểm trở lên mà tổng số tiền bảo hiểm vượt quá giá thị trường của tài sản được bảo hiểm tại thời điểm giao kết hợp đồng bảo hiểm để bảo hiểm cho</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định, hợp đồng bảo hiểm trùng phải hội tụ đủ các yếu tố là cùng phạm vi, cùng đối tượng, cùng thời hạn và cùng sự kiện bảo hiểm nên tất cả các phương án đều đúng.",
       "options": [
         "Cùng phạm vi, đối tượng bảo hiểm",
         "Cùng thời hạn bảo hiểm",
@@ -1286,7 +1286,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, vốn điều lệ của doanh nghiệp bảo hiểm là:</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định pháp luật, vốn điều lệ của doanh nghiệp bảo hiểm bao gồm cả vốn góp của công ty trách nhiệm hữu hạn và giá trị cổ phần của công ty cổ phần được ghi vào điều lệ.",
       "options": [
         "Tổng số tiền do thành viên đã góp hoặc cam kết góp khi thành lập công ty trách nhiệm hữu hạn và được ghi vào điều lệ của doanh nghiệp bảo hiểm",
         "Tổng giá trị mệnh giá cổ phần đã bán hoặc được đăng ký mua khi thành lập công ty cổ phần và được ghi vào điều lệ của doanh nghiệp bảo hiểm",
@@ -1298,7 +1298,7 @@
     {
       "examQue": "<p>DNBH không được phép chi hoa hồng đại lý bảo hiểm trong đấu thầu bảo hiểm. Theo bạn điều này có được quy định trong Luật kinh doanh bảo hiểm không</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Pháp luật kinh doanh bảo hiểm quy định rõ doanh nghiệp bảo hiểm không được phép chi trả hoa hồng đại lý đối với các hợp đồng bảo hiểm có được thông qua hình thức đấu thầu.",
       "options": [
         "Có",
         "Không"
@@ -1309,7 +1309,7 @@
     {
       "examQue": "<p>Trường hợp người được bảo hiểm không thực hiện các biện pháp bảo đảm an toàn cho đối tượng bảo hiểm, doanh nghiệp bảo hiểm có quyền:</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, doanh nghiệp bảo hiểm phải ấn định một thời hạn để người được bảo hiểm thực hiện các biện pháp an toàn trước khi áp dụng các chế tài khác.",
       "options": [
         "Tăng phí bảo hiểm ngay tại thời điểm phát hiện thấy người được bảo hiểm không thực hiện các biện pháp đảm bảo an toàn",
         "Đơn phương đình chỉ hợp đồng bảo hiểm ngay tại thời điểm phát hiện thấy người được bảo hiểm không thực hiện các biện pháp đảm bảo an toàn.",
@@ -1322,7 +1322,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, đối với bảo hiểm tài sản, trường hợp người được bảo hiểm không thực hiện các biện pháp bảo đảm an toàn cho đối tượng bảo hiểm thì doanh nghiệp bảo hiểm có quyền</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Luật Kinh doanh bảo hiểm quy định doanh nghiệp bảo hiểm được quyền ấn định thời hạn thực hiện biện pháp an toàn, nếu hết hạn mà vẫn vi phạm thì có thể tăng phí hoặc đơn phương chấm dứt hợp đồng.",
       "options": [
         "Ấn định một thời hạn để người được bảo hiểm thực hiện các biện pháp đảm bảo an toàn cho đối tượng bảo hiểm",
         "Nếu hết thời hạn để người được bảo hiểm thực hiện các biện pháp đảm bảo an toàn mà các biện pháp đó vẫn không được thực hiện thì doanh nghiệp bảo hiểm có quyền tăng phí bảo hiểm",
@@ -1335,7 +1335,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, doanh nghiệp bảo hiểm có nghĩa vụ:</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, doanh nghiệp bảo hiểm có nghĩa vụ bồi thường khi xảy ra sự kiện bảo hiểm và bắt buộc phải giải thích bằng văn bản nếu từ chối chi trả.",
       "options": [
         "Bồi thường, trả tiền bảo hiểm khi xảy ra sự kiện bảo hiểm",
         "Giải thích bằng văn bản lý do từ chối bồi thường, trả tiền bảo hiểm",
@@ -1347,7 +1347,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, doanh nghiệp bảo hiểm có quyền:</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, doanh nghiệp bảo hiểm có quyền kiểm tra, giám sát hoạt động của đại lý để đảm bảo tuân thủ hợp đồng. Các phương án khác sai vì việc chấp thuận đại lý làm cho công ty khác phải bằng văn bản và không được ép đại lý mua bảo hiểm.",
       "options": [
         "Kiểm tra, giám sát việc thực hiện hợp đồng đại lý bảo hiểm",
         "Chấp thuận mà không cần văn bản khi đại lý bảo hiểm của doanh nghiệp mình đồng thời làm đại lý cho nhiều doanh nghiệp bảo hiểm khác",
@@ -1360,7 +1360,7 @@
     {
       "examQue": "<p>Theo pháp luật VN về kinh doanh bảo hiểm, tỷ lệ hoa hồng đại lý bảo hiểm tối đa đối với HĐBH tài sản là</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định của pháp luật hiện hành về kinh doanh bảo hiểm, tỷ lệ hoa hồng đại lý tối đa đối với nghiệp vụ bảo hiểm tài sản được ấn định là 5% (tương đương 0.05).",
       "options": [
         "0.05",
         "0.1",
@@ -1373,7 +1373,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, đại lý bảo hiểm có quyền</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Đại lý bảo hiểm có quyền chính đáng là được hưởng hoa hồng theo thỏa thuận trong hợp đồng đại lý. Các hành vi xúi giục hủy hợp đồng, che giấu thông tin hay mua chuộc khách hàng đều là những hành vi bị pháp luật nghiêm cấm.",
       "options": [
         "Được hưởng hoa hồng đại lý bảo hiểm theo thỏa thuận tại hợp đồng đại lý bảo hiểm",
         "Tư vấn cho khách hàng huỷ bỏ hợp đồng bảo hiểm đang có hiệu lực để ký hợp đồng bảo hiểm mới",
@@ -1386,7 +1386,7 @@
     {
       "examQue": "<p>Theo quy định của pháp luật hiện hành, đại lý bảo hiểm không có các nghĩa vụ nào sau đây:</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Hợp đồng bảo hiểm là thỏa thuận giữa bên mua và doanh nghiệp bảo hiểm, do đó trách nhiệm thực hiện các cam kết trong hợp đồng này thuộc về doanh nghiệp bảo hiểm chứ không phải của đại lý.",
       "options": [
         "Tham gia các khóa đào tạo nâng cao trình độ do cơ sở đào tạo đại lý bảo hiểm tổ chức.",
         "Thực hiện cam kết trong hợp đồng bảo hiểm được ký giữa bên mua bảo hiểm và doanh nghiệp bảo hiểm",
@@ -1399,7 +1399,7 @@
     {
       "examQue": "<p>Theo nghị định 67 sản phẩm nào là nghiệp vụ bảo hiểm bắt buộc</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Nghị định 67/2023/NĐ-CP quy định chi tiết về các loại hình bảo hiểm bắt buộc, trong đó bao gồm đầy đủ cả bảo hiểm TNDS chủ xe cơ giới, bảo hiểm cháy nổ và bảo hiểm trong hoạt động đầu tư xây dựng.",
       "options": [
         "Bảo hiểm bắt buộc trách nhiệm dân sự của chủ xe cơ giới",
         "Bảo hiểm cháy, nổ bắt buộc",
@@ -1412,7 +1412,7 @@
     {
       "examQue": "<p>Ông A tham gia 2 hợp đồng bảo hiểm tại 2 doanh nghiệp bảo hiểm X và Y. Giới hạn chi trả chi phí bảo hiểm tại mỗi hợp đồng là 10 tr/lần nằm viện trong thời hạn bảo hiểm. Ông A nằm viện điều trị chi phí cho đợt nằm viện này là 6tr. Số tiền mà ông A sẽ được các doanh nghiệp chi trả chung đợt nằm viện này là</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo nguyên tắc bồi thường, tổng số tiền chi trả từ các hợp đồng bảo hiểm đối với chi phí y tế không được vượt quá chi phí thực tế phát sinh là 6 triệu đồng.",
       "options": [
         "6tr",
         "10tr",
@@ -1424,7 +1424,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, hợp đồng bảo hiểm tài sản trên giá trị là:</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, hợp đồng bảo hiểm tài sản trên giá trị là hợp đồng có số tiền bảo hiểm cao hơn giá thị trường của tài sản đó tại thời điểm giao kết.",
       "options": [
         "Hợp đồng trong đó số tiền bảo hiểm cao hơn giá trị của tài sản được bảo hiểm tại thời điểm giao kết hợp đồng",
         "Hợp đồng trong đó số tiền bảo hiểm cao hơn giá thị trường của tài sản được bảo hiểm tại thời điểm giao kết hợp đồng.",
@@ -1437,7 +1437,7 @@
     {
       "examQue": "<p>Mức miễn thường là phần tổn thất và/hoặc chi phí do sự kiện bảo hiểm gây ra mà người được bảo hiểm phải tự chịu. Mức miễn thường được áp dụng cho (chọn phương án đúng nhất):</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Mức miễn thường là phần tổn thất người được bảo hiểm tự chịu, thường được áp dụng trong các nghiệp vụ bảo hiểm phi nhân thọ như bảo hiểm tài sản và bảo hiểm sức khỏe.",
       "options": [
         "Bảo hiểm tài sản",
         "Bảo hiểm nhân thọ",
@@ -1450,7 +1450,7 @@
     {
       "examQue": "<p>Trong bảo hiểm tài sản, trường hợp áp dụng mức miễn thường có khấu trừ, nếu giá trị tổn thất lớn hơn mức khấu trừ thì:</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Đối với mức miễn thường có khấu trừ, doanh nghiệp bảo hiểm chỉ bồi thường phần giá trị tổn thất vượt quá mức miễn thường (tổng tổn thất trừ đi mức miễn thường).",
       "options": [
         "Số tiền bồi thường bằng giá trị tổn thất.",
         "Số tiền bồi thường bằng giá trị tổn thất trừ đi mức miễn thường."
@@ -1461,7 +1461,7 @@
     {
       "examQue": "<p>Theo luật kinh doanh bảo hiểm, bảo hiểm cháy nổ bắt buộc do cơ quan nào ban hành</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, Chính phủ là cơ quan có thẩm quyền quy định chi tiết và ban hành các quy định về các loại hình bảo hiểm bắt buộc như bảo hiểm cháy nổ.",
       "options": [
         "Chính phủ",
         "Bộ công thương",
@@ -1474,7 +1474,7 @@
     {
       "examQue": "<p>Theo luật kinh doanh bảo hiểm, hợp đồng bảo hiểm tài sản trên giá trị là</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, hợp đồng bảo hiểm tài sản trên giá trị là hợp đồng có số tiền bảo hiểm ghi trong hợp đồng cao hơn giá thị trường của tài sản đó tại thời điểm giao kết.",
       "options": [
         "Hợp đồng bảo hiểm trong đó số tiền bằng hoặc cao hơn giá trị của tài sản được bảo hiểm tại thời điểm giao kết hợp đồng",
         "Hợp đồng trong đó số tiền bảo hiểm cao hơn giá trị thị trường của tài sản được bảo hiểm tại thời điểm bảo hiểm giao kết hợp đồng",
@@ -1487,7 +1487,7 @@
     {
       "examQue": "<p>Trong bảo hiểm sức khỏe, chi phí y tế điều trị tai nạn của người được bảo hiểm được doanh nghiệp bảo hiểm chỉ trả theo nguyên tắc nào?</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Bảo hiểm chi phí y tế áp dụng nguyên tắc bồi thường, nghĩa là doanh nghiệp bảo hiểm chỉ chi trả dựa trên chi phí khám chữa bệnh thực tế phát sinh, không vượt quá số tiền bảo hiểm.",
       "options": [
         "Nguyên tắc khoán",
         "Nguyên tắc bồi thường",
@@ -1499,7 +1499,7 @@
     {
       "examQue": "<p>Ông A tham gia bảo hiểm chi phí y tế thời hạn 1 năm kể từ 01/01/2023. Hợp đồng bảo hiểm có thỏa thuận vẫn áp dụng thời gian chờ là 30 ngày đối với trường hợp điều trị bệnh thông thường. Câu 09. Ngày 15/01/2023, ông A bị đau dạ dày, phải vào viện phẫu thuật điều trị kéo dài 7 ngày. Trường hợp này doanh nghiệp bảo hiểm chi trả quyền lợi bảo hiểm nào sau đâ</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Sự kiện bảo hiểm xảy ra vào ngày 15/01/2023, tức là chỉ mới 14 ngày kể từ ngày hiệu lực hợp đồng, vẫn nằm trong thời gian chờ 30 ngày đối với bệnh thông thường nên doanh nghiệp bảo hiểm không chi trả.",
       "options": [
         "Quyền lợi trợ cấp nằm viện",
         "Quyền lợi chi phí ý tế thực tế",
@@ -1512,7 +1512,7 @@
     {
       "examQue": "<p>Theo PLVN về kinh doanh bảo hiểm, đối với bảo hiểm sức khỏe NĐBH bị tổn thương cơ thể từ bao nhiêu % trở lên theo xác nhận của cơ quan y tế, hoặc hội đồng giám định y khoa cấp tỉnh, TP trực thuộc trung ương, hoặc tổ chức giám định y tế kết hợp, hoặc tổ chức giám định y tế hợp pháp được DNBH chấp thuận đối với quyền lợi thương tật vĩnh viễn thì được xem xét chi trả</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo quy định, quyền lợi thương tật toàn bộ vĩnh viễn được xem xét chi trả khi người được bảo hiểm bị tổn thương cơ thể hoặc suy giảm khả năng lao động từ 81% trở lên.",
       "options": [
         "0.61",
         "0.71",
@@ -1525,7 +1525,7 @@
     {
       "examQue": "<p>Ông A tham gia 02 hợp đồng bảo hiểm chi phí y tế tại 02 doanh nghiệp bảo hiểm X và Y, giới hạn chi trả chi phí y tế tại mỗi hợp đồng bảo hiểm là 10 triệu đồng/ lần nằm viện. Trong thời hạn bảo hiểm, ông A nằm viện điều trị, chi phí cho đợt nằm viện này là 6 triệu đồng. Số tiền mà ông A sẽ được các doanh nghiệp bảo hiểm chi trả cho đợt nằm viện điều trị này là:</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Bảo hiểm chi phí y tế tuân theo nguyên tắc bồi thường, do đó tổng số tiền khách hàng nhận được từ tất cả các hợp đồng không được vượt quá chi phí y tế thực tế phát sinh là 6 triệu đồng.",
       "options": [
         "6 triệu đồng",
         "10 triệu đồng",
@@ -1537,7 +1537,7 @@
     {
       "examQue": "<p>Theo đơn bảo hiểm thiệt hại vật chất xe cơ giới, doanh nghiệp bảo hiểm không chịu trách nhiệm đối với những rủi ro xảy ra do:</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Các bộ phận phụ trợ hoặc dễ hao mòn như săm lốp, đề can thường bị loại trừ trách nhiệm bảo hiểm vật chất xe, trừ khi chúng bị hư hỏng do một tai nạn thực sự.",
       "options": [
         "Đâm va, lật đổ, chìm, rơi toàn bộ xe",
         "Hỏa hoạn, cháy, nổ.",
@@ -1550,7 +1550,7 @@
     {
       "examQue": "<p>Theo đơn bảo hiểm tai nạn lái, phụ xe và người ngồi trên xe, doanh nghiệp bảo hiểm sẽ trả tiền bảo hiểm cho người ngồi trên xe thiệt hại về thân thể, tính mạng do:</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Bảo hiểm tai nạn hành khách bao trùm các rủi ro xảy ra trong suốt quá trình xe tham gia giao thông, bao gồm cả khi đang ngồi trên xe và khi đang lên, xuống xe.",
       "options": [
         "Tai nạn xảy ra đối với người ngồi trên xe trong quá trình xe tham gia giao thông.",
         "Tai nạn xảy ra đối với người đang lên xuống xe trong quá trình xe tham gia giao thông.",
@@ -1563,7 +1563,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, đối với bảo hiểm tài sản, chi phí để xác định mức độ thiệt hại do đối tượng nào sau đây chi trả:</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, chi phí giám định để xác định nguyên nhân và mức độ thiệt hại của tài sản thuộc trách nhiệm chi trả của doanh nghiệp bảo hiểm.",
       "options": [
         "Doanh nghiệp bảo hiểm",
         "Bên mua bảo hiểm",
@@ -1576,7 +1576,7 @@
     {
       "examQue": "<p>Theo Quy tắc bảo hiểm “Mọi rủi ro tài sản’ của Hiệp hội bảo hiểm Vương quốc Anh (ABI), chi phí sửa chữa, khắc phục việc sụp hoặc nứt tòa nhà được bảo hiểm có thuộc trách nhiệm bảo hiểm không:</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Hiện tượng nứt hoặc sụp đổ tự nhiên bị loại trừ bảo hiểm, nhưng sẽ được chi trả nếu nguyên nhân trực tiếp dẫn đến hư hỏng là do hỏa hoạn hoặc các rủi ro được bảo hiểm khác.",
       "options": [
         "Không thuộc trách nhiệm bảo hiểm trong bất cứ trường hợp nào.",
         "Không thuộc trách nhiệm bảo hiểm, trừ khi có hỏa hoạn hay các rủi ro được bảo hiểm khác gây ra nứt hoặc sụp đổ đó."
@@ -1587,7 +1587,7 @@
     {
       "examQue": "<p>Theo luật kinh doanh bảo hiểm, bảo hiểm trách nhiệm của doanh nghiệp bảo hiểm chỉ phát sinh khi</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Đặc trưng của bảo hiểm trách nhiệm dân sự là nghĩa vụ bồi thường của doanh nghiệp bảo hiểm chỉ phát sinh khi người thứ ba chính thức yêu cầu người được bảo hiểm bồi thường thiệt hại.",
       "options": [
         "Người thứ 3 yêu cầu người được bảo hiểm bồi thường cho người thứ 3 trong thời gian bảo hiểm thiệt hại",
         "Người thứ 3 yêu cầu bảo hiểm bồi thường do có hành vi gây thiệt hại cho người thứ 3",
@@ -1600,7 +1600,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, trong trường hợp người thứ ba yêu cầu bên mua bảo hiểm bồi thường về những thiệt hại thuộc trách nhiệm bảo hiểm theo thoả thuận trong hợp đồng bảo hiểm thì thời hạn nộp hồ sơ yêu cầu bồi thường theo hợp đồng bảo hiểm là:</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, thời hạn nộp hồ sơ yêu cầu bồi thường là 1 năm kể từ ngày người thứ ba có yêu cầu bồi thường đối với bên mua bảo hiểm.",
       "options": [
         "1 năm kể từ ngày xảy ra sự kiện.",
         "1 năm kể từ ngày xảy ra tranh chấp.",
@@ -1613,7 +1613,7 @@
     {
       "examQue": "<p>Dự phòng nghiệp vụ bảo hiểm sức khỏe bao gồm</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Dự phòng nghiệp vụ bảo hiểm sức khỏe bao gồm dự phòng toán học và dự phòng phí chưa được hưởng, do đó cả A và B đều đúng.",
       "options": [
         "Dự phòng toán học",
         "Dự phòng phí chưa được hưởng",
@@ -1626,7 +1626,7 @@
     {
       "examQue": "<p>Theo Luật Kinh Doanh Bảo Hiểm, phát biểu nào sau đây sai</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Phát biểu C sai vì người thụ hưởng phải do bên mua bảo hiểm hoặc người được bảo hiểm chỉ định, doanh nghiệp bảo hiểm không có quyền chỉ định.",
       "options": [
         "Người được bảo hiểm là tổ chức, cá nhân có tài sản, trách nhiệm dân sự, sức khỏe, tính mạng, nghĩa vụ hoặc lợi ích kinh tế được bảo hiểm theo hợp đồng bảo hiểm",
         "Người thụ hưởng là tổ chức, cá nhân được bên mua bảo hiểm hoặc người được bảo hiểm chỉ định để nhận tiền bảo hiểm theo thỏa thuận trong hợp đồng bảo hiểm",
@@ -1639,7 +1639,7 @@
     {
       "examQue": "<p>Chọn phương án đúng nhất về đồng bảo hiểm</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Đồng bảo hiểm là việc nhiều doanh nghiệp cùng nhận bảo hiểm trên một hợp đồng (A đúng) và chia sẻ phí, trách nhiệm bồi thường theo tỷ lệ thỏa thuận (C đúng).",
       "options": [
         "Nhiều doanh nghiệp bảo hiểm cùng bảo hiểm cho một đối tượng bảo hiểm và thể hiện trên một hợp đồng bảo hiểm",
         "Một doanh nghiệp bảo hiểm đứng tên trên hợp đồng bảo hiểm, sau đó doanh nghiệp bảo hiểm này ký hợp đồng bảo hiểm với các doanh nghiệp bảo hiểm khác",
@@ -1653,7 +1653,7 @@
     {
       "examQue": "<p>Theo Luật Kinh Doanh Bảo Hiểm, các hình thức bảo hiểm của hợp đồng bảo hiểm tài sản là</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Đối tượng của bảo hiểm tài sản bao gồm quyền tài sản và thiệt hại do gián đoạn kinh doanh, còn trách nhiệm dân sự thuộc loại hình bảo hiểm trách nhiệm.",
       "options": [
         "Trách nhiệm dân sự của người được bảo hiểm",
         "Quyền tài sản",
@@ -1666,7 +1666,7 @@
     {
       "examQue": "<p>Theo pháp luật VN về KDBH, đối với bảo hiểm sức khoẻ, trong bảng câu hỏi kê khai sức khoẻ của người được bảo hiểm, việc kê khai lịch sử khám bệnh không vượt quá thời gian là</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo pháp luật kinh doanh bảo hiểm, bảng câu hỏi kê khai sức khỏe chỉ được yêu cầu người được bảo hiểm cung cấp lịch sử khám chữa bệnh trong giới hạn tối đa là 3 năm gần nhất.",
       "options": [
         "1 năm",
         "3 năm",
@@ -1679,7 +1679,7 @@
     {
       "examQue": "<p>Chọn phương án đúng nhất, theo quy định tại nghị định số 67 Bảo hiểm bắt buộc trong giai đoạn hoạt động đầu tư xây dựng bao gồm</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Nghị định 67/2023/NĐ-CP, bảo hiểm bắt buộc trách nhiệm dân sự đối với bên thứ ba là loại hình bảo hiểm bắt buộc được quy định áp dụng trong hoạt động đầu tư xây dựng.",
       "options": [
         "Bảo hiểm công trình trong thời gian xây dựng",
         "Bảo hiểm trách nhiệm nghề nghiệp tư vấn đầu tư xây dựng",
@@ -1693,7 +1693,7 @@
     {
       "examQue": "<p>Theo luật kinh doanh bảo hiểm, đối bảo hiểm tài sản, bên mua bảo hiểm và doanh nghiệp bảo hiểm có thể thoả thuận bồi thường dưới hình thức</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, các bên có thể thỏa thuận bồi thường thiệt hại tài sản thông qua cả 3 hình thức: sửa chữa, thay thế bằng tài sản khác hoặc trả tiền bồi thường.",
       "options": [
         "Sửa chữa tài sản bị thiệt hại",
         "Thay thế tài sản bị thiệt hại bằng tài sản khác",
@@ -1706,7 +1706,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, đối với doanh nghiệp bảo hiểm trách nhiệm, chọn đáp án đúng để điền vào chỗ____: “Doanh nghiệp bảo hiểm, chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài ____ thay mặt người được bảo hiểm để thương lượng với người thứ ba về mức độ bồi thường thiệt hại, trừ trường hợp có thoả thuận khác trong hợp đồng bảo hiểm”</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Luật Kinh doanh bảo hiểm quy định doanh nghiệp bảo hiểm 'có quyền' thay mặt người được bảo hiểm thương lượng với bên thứ ba, đây là quyền hạn chứ không phải nghĩa vụ bắt buộc.",
       "options": [
         "Không được",
         "Có quyền",
@@ -1719,7 +1719,7 @@
     {
       "examQue": "<p>Nguyên tắc đóng góp bồi thường là</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Nguyên tắc đóng góp bồi thường được áp dụng để phân chia trách nhiệm chi trả thiệt hại giữa các doanh nghiệp bảo hiểm trong cả hai trường hợp là đồng bảo hiểm và bảo hiểm trùng.",
       "options": [
         "Nguyên tắc phân chia gánh chịu thiệt hại giữa người bảo hiểm và người được bảo hiểm trong trường hợp bảo hiểm dưới giá trị",
         "Nguyên tắc phân chia bồi thường thiệt hại giữa các doanh nghiệp bảo hiểm khi tham gia đồng bảo hiểm",
@@ -1732,7 +1732,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, phát biểu nào sau đây đúng</p>",
       "examAns": "B",
-      "examAnsDesc": "",
+      "examAnsDesc": "Theo Luật Kinh doanh bảo hiểm, đại lý bảo hiểm có quyền tự do lựa chọn và giao kết hợp đồng đại lý với các doanh nghiệp bảo hiểm theo quy định. Các phương án khác sai vì đại lý không được tự ý sửa đổi điều khoản và hoa hồng không được chi trả cho bên mua bảo hiểm.",
       "options": [
         "Đại lý bảo hiểm có thể sửa đổi, bổ sung quy tắc, điều khoản bảo hiểm cho phù hợp với tình hình thực tế của khách hàng",
         "Đại lý bảo hiểm có quyền lựa chọn và giao kết hoạt động đại lý bảo hiểm đối với doanh nghiệp bảo hiểm, chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài, tổ chức tương hỗ cung cấp bảo hiểm vi mô theo quy định của pháp luật",
@@ -1745,7 +1745,7 @@
     {
       "examQue": "<p>Theo Luật Kinh doanh bảo hiểm, doanh nghiệp bảo hiểm có quyền</p>",
       "examAns": "A",
-      "examAnsDesc": "",
+      "examAnsDesc": "Doanh nghiệp bảo hiểm có quyền kiểm tra, giám sát hoạt động của đại lý để đảm bảo tuân thủ hợp đồng. Việc đại lý đồng thời làm cho doanh nghiệp khác phải được chấp thuận bằng văn bản và không được ép đại lý phải mua bảo hiểm.",
       "options": [
         "Kiểm tra, giám sát việc thực hiện hợp đồng đại lý bảo hiểm",
         "Chấp thuận mà không cần văn bản khi đại lý bảo hiểm của doanh nghiệp mình đồng thời làm đại lý cho nhiều doanh nghiệp bảo hiểm khác",
@@ -1758,7 +1758,7 @@
     {
       "examQue": "<p>Theo pháp luật VN về KDBH, hồ sơ bồi thường bảo hiểm bắt buộc công trình trong thời gian xây dựng phải có tài liệu nào sau đây</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Hồ sơ bồi thường bảo hiểm bắt buộc công trình xây dựng yêu cầu đầy đủ tài liệu về đối tượng bảo hiểm, chứng từ chứng minh thiệt hại và biên bản giám định để làm căn cứ giải quyết bồi thường chính xác.",
       "options": [
         "Tài liệu liên quan tới đối tượng bảo hiểm",
         "Tài liệu chứng minh thiệt hại về tài sản",
@@ -1771,7 +1771,7 @@
     {
       "examQue": "<p>Theo luật kinh doanh bảo hiểm, hợp đồng bảo hiểm tài sản trên giá trị là hợp đồng trong đó</p>",
       "examAns": "C",
-      "examAnsDesc": "",
+      "examAnsDesc": "Hợp đồng bảo hiểm tài sản trên giá trị được xác định khi số tiền bảo hiểm cao hơn giá thị trường của tài sản tại thời điểm giao kết hợp đồng, và pháp luật nghiêm cấm các bên cố ý giao kết loại hợp đồng này để tránh trục lợi.",
       "options": [
         "Số tiền bảo hiểm cao hơn giá thị trường của tài sản được bảo hiểm, doanh nghiệp bảo hiểm và bên mua bảo hiểm không được cố ý giao kết hợp đồng bảo hiểm tài sản trên giá trị",
         "Số tiền bảo hiểm cao hơn giá thị trường của tài sản được bảo hiểm, doanh nghiệp bảo hiểm và bên mua bảo hiểm không được giao kết hợp đồng bảo hiểm tài sản trên giá trị",
@@ -1784,7 +1784,7 @@
     {
       "examQue": "<p>Theo luật kinh doanh bảo hiểm, trong bảo hiểm trách nhiệm dân sự</p>",
       "examAns": "D",
-      "examAnsDesc": "",
+      "examAnsDesc": "Trong bảo hiểm trách nhiệm dân sự, người thứ ba không được trực tiếp yêu cầu bồi thường (trừ khi luật định), và doanh nghiệp bảo hiểm có quyền thay mặt người được bảo hiểm thương lượng mức bồi thường với người thứ ba.",
       "options": [
         "Người thứ ba không có quyền yêu cầu doanh nghiệp bảo hiểm, chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài bồi thường trừ trường hợp pháp luật quy định khác",
         "Người thứ ba được trực tiếp yêu cầu doanh nghiệp bồi thường",
