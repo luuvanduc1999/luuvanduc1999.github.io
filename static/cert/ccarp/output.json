@@ -1522,6 +1522,85 @@
       ],
       "isMultiple": true,
       "isNew": true
+    },
+    {
+      "examQue": "<p>You are comparing two configurations for an internal compliance Q &amp; A assistant. Configuration X reduces top-k retrieval and uses a lighter model, lowering p95 latency by 38 percent while producing a measured 2 percent reduction in the accuracy benchmark. Configuration Y retains the existing top-k retrieval setting and heavier model, with unchanged p95 latency and no measurable change in accuracy. The deployment's stated priorities are accuracy first and latency second.<br>Which configuration is the better recommendation?</p>",
+      "options": [
+        "Configuration X, because the 2 percent accuracy reduction falls within normal benchmark variance and is not a meaningful regression.",
+        "Configuration Y, because the deployment's stated priority is accuracy first, and Configuration X produces a measured reduction in accuracy.",
+        "Configuration X, because lower latency generally matters more than accuracy, regardless of the deployment's stated priorities.",
+        "Configuration X, because a 38 percent latency improvement outweighs a 2 percent accuracy reduction as a general rule across compliance deployments."
+      ],
+      "examAns": "B",
+      "examAnsDesc": "<p>Configuration Y is the appropriate recommendation because architectural optimization must follow the deployment's explicitly defined priorities and acceptance criteria. Accuracy is the primary requirement for this compliance assistant, and Configuration X introduces a measured two-percent accuracy regression. That reduction cannot be dismissed as ordinary benchmark variation unless repeated evaluation establishes that it is statistically insignificant.</p><p>In a compliance workload, even a small accuracy decline can increase incorrect guidance, missed policy requirements, human-review effort, and regulatory exposure. Configuration Y preserves the established accuracy level while maintaining the current latency profile. Although its latency does not improve, latency is explicitly the secondary objective. Configuration X could be reconsidered only if further testing eliminates the accuracy regression or stakeholders formally approve a revised trade-off.</p><p><strong>Tip:</strong> <code>accuracy first priority -> reject 2% accuracy regression despite 38% latency gain (Configuration Y)</code></p>",
+      "isMultiple": false,
+      "isNew": true
+    },
+    {
+      "examQue": "<p>You are defining where human review must remain in a planned automated pipeline. Which placement reflects sound human-in-the-loop design?</p>",
+      "options": [
+        "Place a human reviewer only after the irreversible action has already executed, making the review a post-hoc audit rather than a meaningful pre-action check or approval gate.",
+        "Place a human reviewer between the model's output and any high-impact, irreversible action, with explicit criteria for what the reviewer must check before approval.",
+        "Place a human reviewer in the loop for a randomly selected sample of requests, without defining criteria for what the reviewer should check or which output categories require mandatory review.",
+        "Remove all human review steps from the pipeline to maximize throughput, accepting that high-impact and irreversible actions will be taken without any human approval or oversight."
+      ],
+      "examAns": "B",
+      "examAnsDesc": "<p>Sound human-in-the-loop design places review before a high-impact or irreversible action occurs. The reviewer must receive sufficient context and explicit approval criteria so that the checkpoint functions as a meaningful control rather than a ceremonial step. This is especially important when Claude outputs could initiate financial transactions, publish sensitive material, alter access rights, affect employment decisions, or trigger other consequential actions.</p><p>Option A provides only retrospective auditing and cannot prevent harm. Option C may support monitoring or quality measurement, but random sampling does not protect every case that requires mandatory approval, particularly when review criteria are undefined. Option D removes the accountability and intervention mechanism entirely. Therefore, B provides the strongest design by combining risk-based placement, human authority, and clearly defined verification requirements before execution.</p><p><strong>Tip:</strong> <code>HITL placement: between model output and high-impact/irreversible action with explicit check criteria (B)</code></p>",
+      "isMultiple": false,
+      "isNew": true
+    },
+    {
+      "examQue": "<p>You are selecting the documentation set that should accompany a Claude-based deployment at handoff.<br>Which set is most complete?</p>",
+      "options": [
+        "Architecture overview, ADRs, component-level diagrams, runbooks for common operations, an on-call playbook, and a list of known limitations.",
+        "Code comments scattered across individual source files with no integrating architecture overview, no ADRs, no runbooks, and no on-call playbook to orient operators or new team members.",
+        "A single one-page architecture diagram with no ADRs, no runbooks, no on-call playbook, and no list of known limitations to support operators or future maintainers.",
+        "A verbal handover walkthrough conducted on the day of transition, with no written architecture overview, ADRs, runbooks, playbook, or known limitations captured for future reference."
+      ],
+      "examAns": "A",
+      "examAnsDesc": "<p>A complete handoff package must help different stakeholders understand, operate, troubleshoot, and evolve the Claude-based solution. An architecture overview explains the system's structure and responsibilities, while Architecture Decision Records (ADRs) document important decisions, alternatives, and trade-offs. Component-level diagrams provide implementation context without forcing maintainers to reconstruct dependencies from source code. Operational runbooks and an on-call playbook enable reliable incident detection, diagnosis, escalation, and recovery. Documenting known limitations is particularly important for Claude applications because model behavior can vary with prompts, context, input distribution, and external dependencies.</p><p>Options B, C, and D each provide only a partial or temporary understanding of the system. They would create knowledge gaps, increase operational risk, and make future maintenance dependent on individuals rather than durable organizational documentation.</p><p><strong>Tip:</strong> <code>Complete handoff doc set = Architecture overview + ADRs + component diagrams + runbooks + on-call playbook + known limitations (A)</code></p>",
+      "isMultiple": false,
+      "isNew": true
+    },
+    {
+      "examQue": "<p>A Claude architect is configuring a shared Claude Code environment for a twelve-person development team.<br>Which two configuration decisions most directly establish a consistent, secure team environment? (Select two.)</p>",
+      "options": [
+        "Commit shared MCP server definitions and tool permissions in project-scope configuration files alongside the repository.",
+        "Apply managed configuration to enforce non-overridable security and compliance policies across all team members.",
+        "Set editor theme and display preferences at the project scope so they are uniform across workstations.",
+        "Instruct each engineer to configure their preferred Claude model in personal user-scope settings.",
+        "Store the team's shared API key in the project-scope settings.json so all engineers use the same credential."
+      ],
+      "examAns": "A,B",
+      "examAnsDesc": "<p>Project-scope configuration is appropriate for shared MCP definitions, permissions, hooks, and other repository-specific behavior that every team member should receive consistently. Managed configuration complements this by enforcing organization-wide security and compliance requirements that individual developers cannot override. Together, these mechanisms separate collaborative project configuration from centrally controlled policy.</p><p>Editor themes are personal preferences and do not materially establish a secure environment. Allowing each engineer to select an arbitrary model can undermine consistency when model choice affects behavior, cost, or approved-use requirements. Storing a shared API key in a committed project file is a serious credential-management failure. Claude Code documentation identifies <code>.claude/settings.json</code> as the shared project file and managed settings as the highest-precedence organizational policy layer.</p><p><strong>Tip:</strong> <code>team config = project-scope MCP/tools in repo (A) + central managed non-overridable policies (B)</code></p>",
+      "isMultiple": true,
+      "isNew": true
+    },
+    {
+      "examQue": "<p>An engineer inadvertently commits an API key to the repository by placing it in .claude/settings.json.<br>Which configuration design principle was violated?</p>",
+      "options": [
+        "Project-scope configuration should always override user-scope configuration.",
+        "Managed configuration must be applied before project-scope configuration is read.",
+        "Credentials must be resolved at runtime from a secret store and never stored in version-controlled files.",
+        "MCP server definitions must reside in environment variables to prevent scope conflicts."
+      ],
+      "examAns": "C",
+      "examAnsDesc": "<p>A shared project settings file is intended to be committed so that team-level configuration can travel with the repository. Consequently, it must never contain API keys, access tokens, passwords, or comparable secrets.</p><p>Credentials should be injected at runtime through an approved secret-management mechanism, environment-specific credential provider, or delegated authentication flow. This separates distributable configuration from sensitive authentication material and supports rotation, revocation, auditing, and least privilege.</p><p>Options A and B concern configuration precedence rather than secret handling. Option D is incorrect because MCP server definitions may legitimately be stored in project configuration; only their sensitive credential values must remain outside version control. Because the key was exposed, the operational response should also include immediate revocation or rotation and investigation of repository history.</p><p><strong>Tip:</strong> <code>secrets principle = resolve at runtime from secret store, never store in VCS (C)</code></p>",
+      "isMultiple": false,
+      "isNew": true
+    },
+    {
+      "examQue": "<p>You are designing the prompt for a ticket-triage classifier with thirty well-defined categories and clear category descriptions in the prompt.<br>Which technique is most appropriate as the starting point?</p>",
+      "options": [
+        "A chain-of-thought prompt for a routing decision that does not require multi-step reasoning.",
+        "A zero-shot prompt that specifies the categories with their descriptions and the required output format.",
+        "A prompt that demands the model invent new categories when the supplied ones do not fit.",
+        "A prompt with no category descriptions, expecting the model to infer the category set."
+      ],
+      "examAns": "B",
+      "examAnsDesc": "<p>A clearly defined closed-set classification task should begin with a concise zero-shot prompt containing the permitted categories, unambiguous category descriptions, and the required output structure. This provides a simple, inexpensive baseline that can be measured against a representative evaluation set.</p><p>Chain-of-thought prompting adds unnecessary latency and token usage when the routing decision does not require substantive multi-step reasoning. Permitting Claude to invent categories would violate the closed-set contract and complicate downstream automation. Omitting descriptions would increase ambiguity among potentially overlapping labels. If evaluation later reveals persistent confusion between particular categories, the architect can introduce targeted examples or refine the definitions. Prompt complexity should be added in response to measured failure patterns, not assumed to be necessary before establishing baseline performance.</p><p><strong>Tip:</strong> <code>closed-set classification starting point = concise zero-shot prompt with clear category descriptions and output format (B)</code></p>",
+      "isMultiple": false,
+      "isNew": true
     }
   ]
 }
