@@ -1655,6 +1655,45 @@
       "examAnsDesc": "<p>Package 1 is designed for security and compliance review because its threat model identifies relevant threats and attack paths, its residual-risk register documents the risks remaining after controls, and its control-mapping table connects safeguards to organizational or regulatory requirements. Package 2 is designed for the product manager because delivered capabilities and roadmap dependencies directly support prioritization, release planning, sequencing, and lifecycle ownership.</p><p>An engineering implementation team would ordinarily need component diagrams, interface contracts, configuration schemas, deployment instructions, and operational runbooks rather than primarily risk-governance artifacts. An executive sponsor generally needs a concise outcome, cost, risk, and decision summary instead of feature-level dependency details. Effective architecture communication must therefore adapt the content and level of detail to each audience's responsibilities and decision rights.</p><p><strong>Tip:</strong> <code>Package 1 (threat model, residual risk, controls) → security &amp; compliance reviewer (C); Package 2 (capabilities, roadmap dependencies) → product manager (D)</code></p>",
       "isMultiple": true,
       "isNew": true
+    },
+    {
+      "examQue": "<p>A developer reports that Claude Code blocks a command that they believe should be permitted. The organization uses managed, command-line, local, project, and user-level permission settings. What is the safest first troubleshooting step?</p>",
+      "options": [
+        "Retry the same command repeatedly until Claude Code allows it.",
+        "Disable permission controls across all scopes to eliminate the denial.",
+        "Inspect the active permission rules across managed, command-line, local, project, and user scopes to identify the specific denying rule.",
+        "Grant unrestricted Bash access to bypass the denial."
+      ],
+      "examAns": "C",
+      "examAnsDesc": "<p>Cần kiểm tra các permission rule đang có hiệu lực trên toàn bộ scope (managed, command-line, local, project, user) để xác định rule nào đang từ chối hành động. Sau khi tìm ra rule cụ thể, mới đánh giá xem có nên điều chỉnh hay giữ nguyên. Không nên tắt toàn bộ cơ chế permission hoặc cấp quyền Bash không giới hạn chỉ để vượt qua lỗi.</p><p><strong>Tip:</strong> <code>blocked command troubleshooting = inspect active permission rules across all scopes to find denying rule (C)</code></p><p><em>Nguồn tham khảo: CertEmpire CCAR-P Practice Test, Q2.</em></p>",
+      "isMultiple": false,
+      "isNew": true
+    },
+    {
+      "examQue": "<p>You are designing a workflow in which Claude recommends rerouting a shipment. Once rerouted, the shipment cannot be returned to its original route without significant cost. Where should the human review step be placed?</p>",
+      "options": [
+        "After the shipment has already been rerouted, as a post-action audit.",
+        "Between Claude's recommendation and the execution of the reroute, with explicit review criteria and approval required before execution.",
+        "Only on a random sample of shipments, without mandatory review for high-impact actions.",
+        "Remove human review to preserve workflow throughput."
+      ],
+      "examAns": "B",
+      "examAnsDesc": "<p>Human review phải nằm giữa kết quả đề xuất của model và việc thực thi hành động có tác động lớn hoặc không thể đảo ngược (irreversible action). Reviewer cần có tiêu chí đánh giá rõ ràng để kiểm tra trước khi phê duyệt. Kiểm tra sau khi hành động đã chạy chỉ là hậu kiểm (post-hoc audit), không thể ngăn ngừa thiệt hại.</p><p><strong>Tip:</strong> <code>high-impact / irreversible action -> human review between recommendation and execution with explicit approval criteria (B)</code></p><p><em>Nguồn tham khảo: CertLibrary CCAR-P, Q14.</em></p>",
+      "isMultiple": false,
+      "isNew": true
+    },
+    {
+      "examQue": "<p>You are reviewing a draft Architecture Decision Record (ADR). It describes the selected architecture and includes technical implementation details, but it omits the alternatives considered and the trade-offs accepted. What should you ask the author to do before the ADR is published?</p>",
+      "options": [
+        "Delete the ADR and rely on the engineering team's collective memory.",
+        "Ask the author to document the alternatives considered and the trade-offs accepted before publishing.",
+        "Approve the ADR as written because documenting the selected decision is sufficient.",
+        "Replace the ADR with an unrelated architecture decision."
+      ],
+      "examAns": "B",
+      "examAnsDesc": "<p>ADR cần ghi lại không chỉ quyết định kiến trúc được chọn mà còn phải bao gồm các phương án đã cân nhắc (alternatives considered) và các đánh đổi đã chấp nhận (trade-offs accepted). Những thông tin này giúp các kỹ sư và đánh giá viên sau này hiểu rõ cơ sở ra quyết định, tránh lặp lại các giải pháp đã bị bác bỏ và có thể đánh giá lại khi bối cảnh thay đổi.</p><p><strong>Tip:</strong> <code>ADR requirement = document alternatives considered and trade-offs accepted before publishing (B)</code></p><p><em>Nguồn tham khảo: DumpsTool CCAR-P Q&amp;A, Q#9.</em></p>",
+      "isMultiple": false,
+      "isNew": true
     }
   ]
 }
