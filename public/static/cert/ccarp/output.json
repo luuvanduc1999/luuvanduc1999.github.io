@@ -1641,6 +1641,20 @@
       "examAnsDesc": "<p>Custom instructions in a Project are designed to define consistent behavioral rules and expectations across all chats in that Project. This includes defining the brand voice and tonal expectations (Option B) and the standard structure and length expectations for typical deliverables (Option E).</p><p>A representative sample of past writing (Option A) belongs in Project Knowledge / uploaded reference files rather than instructions directly. Personal manager preferences (Option C) or irrelevant personal message length preferences (Option D) should not dictate project-wide instructions.</p><p><strong>Tip:</strong> <code>Project custom instructions = brand voice & tone (B) + standard deliverable structure & length (E)</code></p>",
       "isMultiple": true,
       "isNew": true
+    },
+    {
+      "examQue": "<p>An architect at Trenova Systems, Inc. is reviewing two draft communication packages for the same architectural decision. Package 1 contains a threat model, residual-risk register, and control-mapping table. Package 2 contains a list of capabilities delivered and feature-level roadmap dependencies.<br>Which two audiences are correctly matched to these packages? (Select two.)</p>",
+      "options": [
+        "Package 1 → engineering implementation team",
+        "Package 2 → executive sponsor",
+        "Package 1 → security and compliance reviewer",
+        "Package 2 → product manager owning the roadmap",
+        "Package 2 → security and compliance reviewer"
+      ],
+      "examAns": "C,D",
+      "examAnsDesc": "<p>Package 1 is designed for security and compliance review because its threat model identifies relevant threats and attack paths, its residual-risk register documents the risks remaining after controls, and its control-mapping table connects safeguards to organizational or regulatory requirements. Package 2 is designed for the product manager because delivered capabilities and roadmap dependencies directly support prioritization, release planning, sequencing, and lifecycle ownership.</p><p>An engineering implementation team would ordinarily need component diagrams, interface contracts, configuration schemas, deployment instructions, and operational runbooks rather than primarily risk-governance artifacts. An executive sponsor generally needs a concise outcome, cost, risk, and decision summary instead of feature-level dependency details. Effective architecture communication must therefore adapt the content and level of detail to each audience's responsibilities and decision rights.</p><p><strong>Tip:</strong> <code>Package 1 (threat model, residual risk, controls) → security &amp; compliance reviewer (C); Package 2 (capabilities, roadmap dependencies) → product manager (D)</code></p>",
+      "isMultiple": true,
+      "isNew": true
     }
   ]
 }
