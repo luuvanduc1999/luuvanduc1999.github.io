@@ -1601,6 +1601,46 @@
       "examAnsDesc": "<p>A clearly defined closed-set classification task should begin with a concise zero-shot prompt containing the permitted categories, unambiguous category descriptions, and the required output structure. This provides a simple, inexpensive baseline that can be measured against a representative evaluation set.</p><p>Chain-of-thought prompting adds unnecessary latency and token usage when the routing decision does not require substantive multi-step reasoning. Permitting Claude to invent categories would violate the closed-set contract and complicate downstream automation. Omitting descriptions would increase ambiguity among potentially overlapping labels. If evaluation later reveals persistent confusion between particular categories, the architect can introduce targeted examples or refine the definitions. Prompt complexity should be added in response to measured failure patterns, not assumed to be necessary before establishing baseline performance.</p><p><strong>Tip:</strong> <code>closed-set classification starting point = concise zero-shot prompt with clear category descriptions and output format (B)</code></p>",
       "isMultiple": false,
       "isNew": true
+    },
+    {
+      "examQue": "<p>You are an operations lead choosing actions when a Claude conversation has degraded in quality. Which recovery action should be tried first when conversation quality degrades?</p>",
+      "options": [
+        "Summarize the current state and continue with a focused follow-up prompt.",
+        "Replace the model with a different vendor's model immediately.",
+        "Escalate to a senior architect for a manual review of the conversation history.",
+        "Discard the entire conversation and rebuild the work from the original prompt."
+      ],
+      "examAns": "A",
+      "examAnsDesc": "<p>Summarizing the state and narrowing the next request applies Anthropic prompting best practices directly. If quality remains poor after this step, the user can then start a new conversation using the summary as its initial context.</p><p>Replacing the model immediately or discarding the entire conversation loses useful progress, while escalating to a senior architect adds unnecessary overhead before basic prompt recovery tactics are attempted.</p><p><strong>Tip:</strong> <code>degraded conversation quality -> summarize current state and continue with focused follow-up (A)</code></p>",
+      "isMultiple": false,
+      "isNew": true
+    },
+    {
+      "examQue": "<p>A knowledge worker is explaining context-window basics to a teammate. Which statement most accurately describes a context window?</p>",
+      "options": [
+        "The subset of the conversation that the model determines is most relevant to the current input, which can be smaller than the full conversation.",
+        "A bounded amount of text the model can consider at once, including the conversation history, attached documents, and the current input.",
+        "The complete conversation history retained across sessions, which the model can reference whenever it produces a response in any chat.",
+        "An adjustable setting that determines how much of the conversation history the model includes in each response, configurable per chat."
+      ],
+      "examAns": "B",
+      "examAnsDesc": "<p>A context window is a bounded amount of text the model can consider at once (conversation history, attached documents, and current input). Understanding this helps preserve relevant context and reduces conflicts between current and obsolete instructions.</p><p>The context window does not automatically persist across independent sessions without external state storage, nor is it a dynamic subset selected autonomously by the model at inference time or a per-chat response-history slider.</p><p><strong>Tip:</strong> <code>context window = bounded amount of text the model can consider at once (history + documents + current input) (B)</code></p>",
+      "isMultiple": false,
+      "isNew": true
+    },
+    {
+      "examQue": "<p>You are a marketing manager deciding what to include in custom instructions for a writing-focused Project. Which two items belong in the custom instructions? (Select two.) Each correct answer presents a complete solution.</p>",
+      "options": [
+        "A representative sample of past writing that reflects the team's preferred style and structure.",
+        "The brand voice and tonal expectations the writing must follow.",
+        "The preferred writing style of the marketing manager who will review all final deliverables.",
+        "The prompt author's preferred response length for internal messages unrelated to external deliverables.",
+        "The standard structure and length expectations for typical deliverables."
+      ],
+      "examAns": "B,E",
+      "examAnsDesc": "<p>Custom instructions in a Project are designed to define consistent behavioral rules and expectations across all chats in that Project. This includes defining the brand voice and tonal expectations (Option B) and the standard structure and length expectations for typical deliverables (Option E).</p><p>A representative sample of past writing (Option A) belongs in Project Knowledge / uploaded reference files rather than instructions directly. Personal manager preferences (Option C) or irrelevant personal message length preferences (Option D) should not dictate project-wide instructions.</p><p><strong>Tip:</strong> <code>Project custom instructions = brand voice & tone (B) + standard deliverable structure & length (E)</code></p>",
+      "isMultiple": true,
+      "isNew": true
     }
   ]
 }
