@@ -1,0 +1,1513 @@
+{
+  "questions": [
+    {
+      "examQue": "<p>You are configuring tool permissions for a Claude-based assistant. The assistant's defined responsibilities require read access to a knowledge base and write access to a draft queue, and nothing else. Which scoping design best applies least privilege?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Least privilege = allow-list đúng những tool mà nhiệm vụ đã định nghĩa cần, và cưỡng chế BÊN NGOÀI model (orchestration layer).</p><p><strong>Distractors:</strong> A vẫn quá rộng (read toàn bộ). C giao trách nhiệm an ninh cho model. D phá huỷ chính năng lực được thiết kế.</p><p><strong>Tip:</strong> <code>least privilege → per-role allow-list @ orchestration</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Allow access to all tools with read permissions globally and restrict write permissions to the draftqueue tool, without scoping to only the specific tools required for defined tasks.",
+        "Per-role allow-list of exactly the read-knowledge-base and write-draft-queue tools, enforced at the orchestration layer.",
+        "Allow access to every tool in the catalog and rely on the model to decline tools it should not use.",
+        "Disable all tools entirely to achieve a minimal permission surface, accepting that the assistant can no longer perform the read-knowledge-base or write-draft-queue tasks it was designed for."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are running a controlled experiment to compare two prompts and must complete the design steps before executing the experiment. Which two steps must be completed BEFORE running the experiment with random assignment? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "A,C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Trước khi chạy phải có giả thuyết + metric chính (C) và thiết kế thống kê: effect size + sample size đạt power (A).</p><p><strong>Distractors:</strong> B, D, E đều là việc SAU khi có dữ liệu. Nhận diện: động từ analyze / decide / document = downstream.</p><p><strong>Tip:</strong> <code>BEFORE experiment = hypothesis + metric + power</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Determine the minimum detectable effect size and the sample size needed for power.",
+        "Decide whether to promote, reject, or iterate the candidate based on the analysis.",
+        "Define the hypothesis and the primary success metric for the comparison.",
+        "Analyze the results against the predefined success metric and significance threshold.",
+        "Document the recommendation, the trade-offs accepted, and the alternatives considered."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are reviewing a peer's Claude Code permission rules for an enterprise rollout. The rules grant unrestricted Bash access to all projects across all developers. Which response is most appropriate?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Nguyên tắc: allow-pattern hẹp theo đúng lệnh workflow cần + deny rule tường minh cho tác vụ nhạy cảm.</p><p><strong>Distractors:</strong> Ba phương án còn lại đều MỞ RỘNG bề mặt tấn công.</p><p><strong>Tip:</strong> <code>unrestricted Bash → narrow patterns + deny rules</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Add unrestricted access to additional tool categories as well, so that Bash is not asymmetrically more permissive than other tools, expanding the attack surface further in the name of consistency.",
+        "Approve the unrestricted Bash access as written on the grounds that narrowing the rules would add configuration complexity, accepting the full attack surface for all engineers across all projects.",
+        "Replace unrestricted Bash with narrowly scoped tool patterns that allow only the specific commands the workflows require, and add explicit deny rules for sensitive operations.",
+        "Disable all permission rules for the enterprise rollout so every command across every project runs without any tool-pattern scoping or explicit deny rules for sensitive operations."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A senior architect is managing stakeholder expectations for a Claude-based reporting assistant midway through development. Stakeholders have escalating concerns about response latency. Which two actions most directly address stakeholder expectation alignment in this situation? (Select two.)</p>",
+      "examAns": "A,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Căn chỉnh kỳ vọng = đưa SỰ THẬT ĐO ĐƯỢC (A) rồi THƯƠNG LƯỢNG LẠI cam kết (E).</p><p><strong>Distractors:</strong> B quá khích, C phủi trách nhiệm, D đổi kiến trúc mà không đánh giá.</p><p><strong>Tip:</strong> <code>expectation = measured data + renegotiate SLA</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Present measured p50 and p95 latency baselines against the agreed SLA thresholds so stakeholders have accurate data.",
+        "Pause all development and reallocate engineering resources entirely to latency optimization.",
+        "Communicate that latency concerns are a known LLM limitation and outside the architecture team's control.",
+        "Replace the current Claude model with a third-party model that may offer lower latency without evaluation.",
+        "Revise the SLA definition collaboratively with stakeholders if current targets are not achievable given production constraints."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are supporting a team whose Claude Code sessions consistently load 60 or more MCP tools from many servers, exhausting context budget before the session begins. Which adjustment most directly addresses this issue without removing capability?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Tool Search / deferred discovery: định nghĩa tool không nạp upfront mà tìm khi cần → giảm token, giữ nguyên năng lực.</p><p><strong>Distractors:</strong> B mất năng lực; C và D làm nặng thêm vấn đề.</p><p><strong>Tip:</strong> <code>too many tools → Tool Search / deferred loading</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Enable Tool Search so tool definitions are deferred and discovered on demand rather than loaded into context upfront.",
+        "Disable every MCP server in the configuration to free up context budget, accepting that the team loses all tool access and cannot perform any MCP-dependent task in the session.",
+        "Increase the prompt's verbosity with additional instructions and context, which consumes more of the context budget rather than reducing the tool-definition overhead causing the issue.",
+        "Add additional MCP servers to give the team more capability, which increases rather than reduces the number of tool definitions loaded into the session's context budget."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are reviewing an integration specification for security gaps. Which two findings constitute valid security gaps in the specification? (Select two.) Each correct answer presents a complete solution.</p>",
+      "examAns": "B,C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Credential trong prompt = lộ secret qua log/trace. RBAC chỉ ở tầng render = dữ liệu đã vào context, kiểm soát vô nghĩa.</p><p><strong>Distractors:</strong> A, D, E là practice ĐÚNG — cố tình đặt làm distractor.</p><p><strong>Tip:</strong> <code>secret trong prompt + RBAC sau model = gap</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Tool calls execute server-side under a least-privilege service principal scoped to the requested action.",
+        "Service credentials are placed in the prompt context, where they can leak into logs and traces.",
+        "Role-based access control is enforced only at the response-rendering layer after the model accesses restricted data.",
+        "Per-user OAuth tokens are exchanged with scope-restricted permissions and refreshed within the active session.",
+        "Tool inputs and outputs are encrypted in transit using transport-layer security between services."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are investigating an MCP server that fails on first launch but succeeds on subsequent runs. System permission dialogs appeared during the first launch. Which response is most appropriate?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Triệu chứng khớp hoàn toàn với one-time permission grant. Xử lý = ghi vào onboarding guide, không phải đại phẫu.</p><p><strong>Distractors:</strong> Các phương án còn lại vừa phá huỷ vừa không verify lại giả thuyết.</p><p><strong>Tip:</strong> <code>fail lần đầu + OS dialog = one-time grant, document it</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Recognize the first-run permission grant as the cause, document the expected behavior in onboarding guidance, and confirm that subsequent runs succeed.",
+        "Reinstall the operating system to clear all permission state without first confirming whether the one- time permission grant caused the failure.",
+        "Disable operating-system permission dialogs entirely, accept the resulting security implications, and proceed without confirming whether the failure recurs.",
+        "Treat the first-run failure as a permanent fault, replace the MCP server, and do not verify whether subsequent runs succeed."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A technical team is cataloguing risks specific to Claude's use in a document-grounded Q &amp; A system. Which two items represent failure modes intrinsic to LLM-based systems rather than generic software defects? (Select two.)</p>",
+      "examAns": "C,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Hai rủi ro đặc trưng của LLM: OVER-REFUSAL (C) và HALLUCINATION / ungrounded output (E).</p><p><strong>Distractors:</strong> A, B, D là lỗi hạ tầng generic — hệ thống nào cũng có, không đặc thù LLM.</p><p><strong>Tip:</strong> <code>LLM-intrinsic = hallucination + over-refusal</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "An expired TLS certificate blocks outbound API calls to Claude.",
+        "A database connection timeout causes retrieval to return an empty result set.",
+        "The model refuses a legitimate query because surface features trigger an overly broad safety pattern.",
+        "A misconfigured load balancer routes requests to a deprecated API version.",
+        "The model generates a plausible-sounding answer unsupported by any retrieved document."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are running a risk assessment on a planned Claude-based deployment and must complete the inventory steps before assessing threats against assets. Which two steps must be completed BEFORE assessing threats against assets to estimate likelihood and impact? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "C,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Trình tự: kiểm kê ASSET + độ nhạy cảm (C) → liệt kê THREAT ACTOR / VECTOR (E) → ghép lại mới tính được likelihood × impact.</p><p><strong>Distractors:</strong> A, B, D là output cuối của assessment, không phải điều kiện đầu vào.</p><p><strong>Tip:</strong> <code>asset inventory + threat enumeration trước</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Document the assessment outcome with risks, mitigations, residual risk, and acceptance owners.",
+        "Recommend mitigations and residual-risk acceptance for the risks that remain after analysis.",
+        "Identify the assets that the deployment touches, along with the sensitivity of each asset.",
+        "Recommend mitigations and residual-risk acceptance for risks that remain.",
+        "Enumerate the threat actors and attack vectors relevant to the deployment."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are compiling guardrail tactics for a customer-facing assistant. Which two tactics belong on the guardrail list? Each correct answer presents a complete solution.</p>",
+      "examAns": "C,D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Guardrail mạnh = DEFENSE IN DEPTH (D) + kiểm tra máy móc đầu ra trước khi hành động (C).</p><p><strong>Distractors:</strong> A tạo backdoor. B không phải guardrail. E là single point of failure — prompt-only luôn sai.</p><p><strong>Tip:</strong> <code>schema validation + layered (prompt + runtime)</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Embed approved override phrases that let trusted users relax guardrails on demand.",
+        "Lower sampling temperature globally to reduce the chance of off-policy completions.",
+        "Validate the model output against a structured schema before downstream actions are taken.",
+        "Layer prompt-level guardrails with runtime content checks rather than relying on either alone.",
+        "Rely on a single hardened system prompt that enumerates every disallowed behavior."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are diagnosing a Claude Code session whose subagent uses 50,000 tokens of context before the engineer types a single message. Which root cause is most likely?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Context bị tiêu trước khi có user message ⇒ chỉ có thể là nội dung nạp sẵn: tool definition từ nhiều MCP server, Tool Search chưa bật.</p><p><strong>Distractors:</strong> A, C, D vô nghĩa kỹ thuật — dạng đáp án rác, loại ngay.</p><p><strong>Tip:</strong> <code>context ẩn trước khi chat = tool definitions</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "The developer's keyboard layout or input-method configuration is the cause of the elevated context consumption, introducing extra tokens before the engineer types any message.",
+        "Many MCP servers are configured, each contributing tool definitions to the context budget; Tool Search is not enabled, so all definitions load upfront.",
+        "The model has internal personal preferences or default behaviors that silently consume large portions of context budget before any user message is processed, independent of tool configuration.",
+        "The font rendering or display-scaling settings of the IDE are converting visual output into additional context tokens, causing the high pre-session context consumption."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A team manager wants all engineers working on the same repository to share identical MCP server definitions without manual synchronization. Which configuration approach satisfies this requirement?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Chia sẻ theo REPO = project scope, commit vào version control, ai clone cũng có y hệt.</p><p><strong>Distractors:</strong> Managed (A) dành cho chính sách BẮT BUỘC toàn tổ chức, không phải chia sẻ theo repo. D là đồng bộ thủ công.</p><p><strong>Tip:</strong> <code>share theo repo → project scope committed</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "managed configuration pushed to all endpoints by the administrator",
+        "environment variables set at the operating-system level on each workstation",
+        "project-scope .claude/settings.json and .mcp.json files committed to the repository",
+        "each engineer maintains a personal ~/.claude/settings.json with the shared definitions"
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are supporting an engineer whose Claude Code session reports a permission denial when the engineer expected the action to be allowed. Which resolution step is most appropriate?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Chẩn đoán = đọc rule theo đúng thứ tự precedence trên tất cả scope, xác định rule nào deny và nó có cố ý hay không.</p><p><strong>Distractors:</strong> B và D phá bỏ kiểm soát để làm biến mất triệu chứng.</p><p><strong>Tip:</strong> <code>denied → inspect rules across ALL scopes</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Tell the engineer to retry the denied action verbatim repeatedly until the denial stops appearing, without inspecting the active permission rules to determine whether the denial is intentional.",
+        "Disable the permission system entirely across all scopes to remove the denial, eliminating all toolpattern and deny-rule controls rather than identifying and amending the specific rule.",
+        "Inspect the active permission rules across all scopes-managed, command-line, local, project, and user-to identify which rule is denying the action and confirm whether it should be amended or remain denied.",
+        "Grant the engineer unrestricted Bash access to bypass the specific rule causing the denial, removing all tool-pattern constraints rather than amending only the rule in question."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are integrating Claude Code into the team's pull-request workflow. The team wants AIassisted review without removing human approval. Which integration design best fits this requirement?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> AI đề xuất, NGƯỜI quyết định. Giữ nguyên gate branch-protection.</p><p><strong>Distractors:</strong> Bất cứ đáp án nào bỏ human approval đều sai, dù nghe hiệu quả đến đâu.</p><p><strong>Tip:</strong> <code>AI advises, human approves</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Claude Code reviews the pull request and posts a structured analysis as a comment, while a human reviewer retains the approval decision under the existing branch-protection rules.",
+        "Claude Code merges every pull request automatically after completing its analysis, bypassing human approval and the existing branch-protection rules.",
+        "Claude Code disables all existing branch-protection rules to streamline the merge process, removing human approval as a required gate.",
+        "Claude Code silently deletes pull requests it assesses as low quality without posting a comment or notifying the author."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A platform team operates a self-hosted multi-agent system on Kubernetes that orchestrates seven specialized agents for invoice processing. The team spends approximately 40 percent of engineering capacity on infrastructure maintenance, message bus reliability, and agent state recovery. The CFO has asked you to evaluate moving to managed agent infrastructure to reclaim engineering capacity. The security officer requires that all customer financial data remain within an approved network boundary. Which factor should most heavily influence your recommendation?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Ràng buộc BẮT BUỘC (network boundary do security yêu cầu) luôn được xét trước các yếu tố tối ưu (cost, pattern fit, topology).</p><p><strong>Distractors:</strong> A, B, C đều quan trọng nhưng chỉ là trade-off; D là điều kiện LOẠI.</p><p><strong>Tip:</strong> <code>hard constraint (security/compliance) thắng mọi trade-off</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Whether the current seven agents map cleanly to the patterns supported by managed agents.",
+        "Whether managed agents reduce per-invoice token costs across the existing processing volume.",
+        "Whether managed agents support the current bus topology used by the platform team.",
+        "Whether managed agent data handling satisfies the network boundary required by security."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are producing an architecture guide for a new deployment and must complete the planning steps before drafting each section. Which two steps must be completed BEFORE drafting each section of the guide? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "A,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Trước khi viết: biết VIẾT CHO AI và phải trả lời câu hỏi gì (A), rồi có OUTLINE khung section (E).</p><p><strong>Distractors:</strong> C là sau khi có draft. D là hạ tầng quản trị tài liệu, không phải điều kiện để viết từng section.</p><p><strong>Tip:</strong> <code>audience + outline trước khi draft</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Identify the audience and the questions the guide must answer for that audience.",
+        "Translate the guide into the supported regional languages for the candidate population.",
+        "Validate the guide with the implementation team and incorporate corrections.",
+        "Establish the document under version control with a defined review cadence and approver list.",
+        "Outline the guide sections covering the overview, components, contracts, flows, runbooks, and limitations."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are evaluating retrieval-strategy claims used by a peer team. For each claim, select yes if the statement is generally accurate. Otherwise, select no.</p><div class=\"tbl\"><table class=\"rowsq\"><thead><tr><th>#</th><th>Statement</th></tr></thead><tbody><tr><td>1</td><td>Dense vector retrieval is well suited to recovering paraphrased intent against unstructured text.</td></tr><tr><td>2</td><td>Sparse term-matching retrieval recovers exact terms (such as identifiers and rare tokens) more reliably than dense alone.</td></tr><tr><td>3</td><td>Structured query retrieval is the right fit for filter-and-aggregate workloads against a relational store with schema and indexes.</td></tr><tr><td>4</td><td>Hybrid retrieval is identical to dense-only retrieval and shares the same recall characteristics.</td></tr><tr><td>5</td><td>Random sampling of a data store is a sound retrieval strategy for production Q&amp;A.</td></tr></tbody></table></div><p class=\"need\">Options for each row: Yes / No</p>",
+      "examAns": "1 → Yes<br>2 → Yes<br>3 → Yes<br>4 → No<br>5 → No",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Bản đồ chuẩn: dense = ngữ nghĩa/paraphrase; sparse (BM25) = exact term, ID, rare token; structured/SQL = filter + aggregate; hybrid = kết hợp và recall TỐT HƠN dense-only; random = vô nghĩa.</p><p><strong>Distractors:</strong> Phát biểu chứa identical / always / can be ignored gần như chắc chắn là No.</p><p><strong>Tip:</strong> <code>dense=ý nghĩa, sparse=chữ, SQL=lọc-tính, hybrid>dense, random=never</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A Claude-based research assistant begins producing responses that confidently contradict its retrieved source documents despite no change to the retrieval pipeline. Which two diagnostic actions most directly identify the root cause of this behavior? (Select two.)</p>",
+      "examAns": "C,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Retrieval không đổi ⇒ biến số còn lại là MODEL VERSION (C) và SYSTEM PROMPT / grounding (E). Chẩn đoán = cô lập từng biến.</p><p><strong>Distractors:</strong> A, B, D là sửa bừa vào tầng retrieval/sampling — không cô lập được nguyên nhân.</p><p><strong>Tip:</strong> <code>retrieval không đổi → soi model version + grounding prompt</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Increase the context-window size to allow more retrieved chunks per query.",
+        "Switch the retrieval index to a denser embedding model to improve chunk-relevance scores.",
+        "Determine whether the failure reproduces on the previous model version to test for a model mismatch.",
+        "Reduce the temperature setting to lower response variance across all query types.",
+        "Inspect the system-prompt grounding instructions to determine whether citation constraints remain intact."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A solutions architect is analyzing stakeholder feedback collected after the first quarter of a Claude-powered procurement automation deployment. The feedback includes four statements: (1) \"Our procurement team is processing 3x more purchase orders per analyst per day.\" (2) \"We have eliminated the manual data entry role entirely and redeployed those staff to vendor relationship management.\" (3) \"The API integration costs are running 40% over the projected per-transaction budget.\" (4) \"Response latency during end-of-month batch runs is averaging 11 seconds, against our committed 5-second SLA.\" Which of the following correctly identifies the primary business value pillar each stakeholder statement represents?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Phát biểu 2 (xoá hẳn role + tái bố trí nhân sự) là dấu hiệu TRANSFORMATION rõ nhất — đây là mấu chốt phân biệt. Phát biểu 3 = Solution Cost, phát biểu 4 = Performance SLA. Phát biểu 1 (throughput cao hơn trên cùng nguồn lực) được xếp Efficiency.</p><p><strong>Distractors:</strong> Câu gây tranh luận: nếu đọc phát biểu 1 theo nghĩa 'output trên mỗi người' thì là Productivity, tức đáp án B. Nhưng B lại gán Efficiency cho việc XOÁ ROLE — sai rõ ràng hơn. Chọn A, và nhớ đối chiếu với Q90 để hiểu ranh giới efficiency/productivity.</p><p><strong>Tip:</strong> <code>xoá role / đổi cách vận hành = Transformation</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Statement 1: Efficiency; Statement 2: Transformation; Statement 3: Solution Cost; Statement 4: Performance SLA",
+        "Statement 1: Productivity; Statement 2: Efficiency; Statement 3: Solution Cost; Statement 4: Performance SLA",
+        "Statement 1: Transformation; Statement 2: Productivity; Statement 3: Solution Cost; Statement 4: Efficiency",
+        "Statement 1: Efficiency; Statement 2: Productivity; Statement 3: Performance SLA; Statement 4: Solution Cost"
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are a solution architect evaluating candidate use cases for a Claude-based program. For each scenario, select Yes if Claude is appropriate as the primary solution at the architectural level. Otherwise, select No.</p><div class=\"tbl\"><table class=\"rowsq\"><thead><tr><th>#</th><th>Statement</th></tr></thead><tbody><tr><td>1</td><td>drafting first-pass investigative reports from semi-structured incident logs for analyst review</td></tr><tr><td>2</td><td>computing real-time fraud scores at sub-50-millisecond latency on a streaming pipeline</td></tr><tr><td>3</td><td>long-context contract review with structured clause extraction and deviation flagging</td></tr><tr><td>4</td><td>replacing a vector index for semantic retrieval over a multi-million-document corpus</td></tr><tr><td>5</td><td>routing inbound support tickets into 30 categories with reasoning for the chosen routing</td></tr></tbody></table></div><p class=\"need\">Options for each row: Yes / No</p>",
+      "examAns": "1 → Yes<br>2 → No<br>3 → Yes<br>4 → No<br>5 → Yes",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Claude mạnh ở: sinh nội dung, trích xuất có cấu trúc, phân loại kèm lý giải. Claude KHÔNG phải: hệ scoring real-time dưới 50ms, cũng không phải vector index / search engine.</p><p><strong>Distractors:</strong> Nhận diện nhanh: có latency mili-giây hoặc 'thay thế hạ tầng dữ liệu' → No.</p><p><strong>Tip:</strong> <code>No khi: real-time ms hoặc thay thế index/DB</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are an architect supporting the iteration phase of a deployed Claude-based system. Which activity most directly fits this phase?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Iteration = đo lường (telemetry + sampled eval + feedback) → chọn thay đổi impact cao nhất → lên kế hoạch đối chiếu cùng evaluation framework.</p><p><strong>Distractors:</strong> Ba phương án còn lại đều là biến thể của 'ngừng đo lường' hoặc 'bỏ công cụ đo'.</p><p><strong>Tip:</strong> <code>iterate = telemetry + sampled eval + feedback → highest-impact change</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Rebuild the entire system architecture from scratch at the start of every iteration cycle regardless of what production telemetry, evaluations, and stakeholder feedback indicate is needed.",
+        "Stop measuring production outcomes once the deployment has successfully launched, treating the go- live milestone as the end of the evaluation and iteration cycle.",
+        "Discard the evaluation framework and reference set once the deployment is in production, accepting that future iterations will have no structured basis for measuring the impact of changes.",
+        "Review production telemetry, sampled output evaluations, and stakeholder feedback to identify the highest-impact change for the next cycle, then plan the change against the evaluation framework ."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are classifying chunking strategies by the corpus type each is best suited to. For each chunking strategy, select the appropriate corpus type: \"Long Structured Documents,\" \"Heterogeneous Short Records,\" or \"Code or Hierarchical Specifications.\"</p><div class=\"tbl\"><table class=\"rowsq\"><thead><tr><th>#</th><th>Statement</th></tr></thead><tbody><tr><td>1</td><td>function-level or section-level chunking for code modules</td></tr><tr><td>2</td><td>tree-aware chunking that follows code or specification hierarchy</td></tr><tr><td>3</td><td>per-record chunking where each record is one chunk</td></tr><tr><td>4</td><td>semantic chunking along clause or paragraph boundaries</td></tr><tr><td>5</td><td>fixed-size chunking with overlap for short records of similar length</td></tr><tr><td>6</td><td>hierarchical chunking that mirrors document section structure</td></tr></tbody></table></div><p class=\"need\">Options for each row: Code or Hierarchical Specifications / Heterogeneous Short Records / Long Structured Documents</p>",
+      "examAns": "1 → Code or Hierarchical Specifications<br>2 → Code or Hierarchical Specifications<br>3 → Heterogeneous Short Records<br>4 → Long Structured Documents<br>5 → Heterogeneous Short Records<br>6 → Long Structured Documents",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Quy tắc duy nhất: chunk theo ĐƠN VỊ Ý NGHĨA TỰ NHIÊN của corpus — function/tree cho code, record cho bản ghi ngắn, clause/section cho tài liệu dài.</p><p><strong>Distractors:</strong> Chỉ cần bắt keyword trong tên strategy: code/tree → Code; record → Short Records; clause/section/hierarchical document → Long Documents.</p><p><strong>Tip:</strong> <code>chunk theo đơn vị ý nghĩa tự nhiên của corpus</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are evaluating prompting claims in a peer's design document. For each claim, select yes if the claim reflects sound practice. Otherwise, select no.</p><div class=\"tbl\"><table class=\"rowsq\"><thead><tr><th>#</th><th>Statement</th></tr></thead><tbody><tr><td>1</td><td>Zero-shot is appropriate as a starting point for closed-set classification when categories and descriptions are provided in the prompt.</td></tr><tr><td>2</td><td>Adding a few-shot example set with exact field names anchors output formatting on extraction tasks.</td></tr><tr><td>3</td><td>Chain-of-thought should be the default on every task regardless of complexity.</td></tr><tr><td>4</td><td>Leading-question framing is best mitigated by asking for an even-handed comparison with stated criteria.</td></tr><tr><td>5</td><td>Behavioral differences across model versions can be ignored once a prompt has been validated on one version.</td></tr></tbody></table></div><p class=\"need\">Options for each row: Yes / No</p>",
+      "examAns": "1 → Yes<br>2 → Yes<br>3 → No<br>4 → Yes<br>5 → No",
+      "examAnsDesc": "<p><strong>Explanation:</strong> CoT tốn token và latency nên chỉ dùng khi task cần suy luận nhiều bước. Mọi prompt phải RE-VALIDATE khi đổi model version.</p><p><strong>Distractors:</strong> Chữ every / always / can be ignored → gần như luôn No.</p><p><strong>Tip:</strong> <code>CoT không mặc định; đổi version phải test lại</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are assessing a Claude-based system whose dominant risk is silent quality drift on safetyrelevant outputs after a model-version upgrade. Which assessment activity most directly addresses this risk?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Phát hiện drift cần BASELINE ỔN ĐỊNH: cùng một bộ test, chấm điểm gắn theo version, gate trước khi promote.</p><p><strong>Distractors:</strong> B nghe hợp lý nhưng đổi bộ test làm mất khả năng so sánh — không còn đo được drift nữa.</p><p><strong>Tip:</strong> <code>drift → stable adversarial set + version-attributed scoring</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Disable adversarial evaluation entirely during model-version upgrade cycles to reduce evaluation cost, accepting that safety drift will go undetected until it appears in production.",
+        "Rotate adversarial inputs randomly so no two upgrades are scored on the same set.",
+        "Skip evaluation on each model-version upgrade and rely on user-submitted complaints to surface safety drift after the upgraded model has already served production traffic.",
+        "Maintain an adversarial evaluation set with version-attributed scoring so each upgrade is measured against the same set before promotion."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are responding to an adversarial input pattern in which users include text claiming admin authority and instructing the model to bypass safety restrictions. Which combination of controls most effectively mitigates this attack pattern?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Prompt injection cần nhiều tầng: coi input là dữ liệu untrusted, classifier runtime, quyền KHÔNG thể leo thang từ nội dung user, và audit log.</p><p><strong>Distractors:</strong> A là 'tin model'; C, D là tự sát. Ở dạng câu này, phương án liệt kê nhiều lớp phòng thủ thường là đáp án.</p><p><strong>Tip:</strong> <code>injection → untrusted data + classifier + non-escalatable scope + audit</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Trusting that the model will intrinsically recognize and reject all bypass attempts without promptlevel instructions, runtime classifiers, scoped permissions, or audit logging.",
+        "Prompt-level instructions that treat user content as untrusted data, runtime classifiers that detect override attempts, scoped tool permissions that cannot be elevated by user content, and audit logging of attempts.",
+        "Removing all safety restrictions and guardrails to eliminate the attack surface that bypass attempts target, accepting that this makes the assistant unrestricted for all inputs.",
+        "Granting users any privilege level they assert in their message content, on the assumption that cooperative behavior requires honoring self-declared authority without independent verification."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>An operations engineer reports that a Claude-based pipeline began returning malformed JSON responses after a scheduled maintenance window, causing downstream processing failures. Which two investigative steps most directly isolate the root cause? (Select two.)</p>",
+      "examAns": "B,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Lỗi xuất hiện sau một thay đổi ⇒ DIFF cấu hình so với bản tốt cuối (B) và REPLAY input cũ để tách lỗi model/config với lỗi parser downstream (E).</p><p><strong>Distractors:</strong> A, C, D là shotgun debugging — thay đổi nhiều biến cùng lúc, không cô lập được gì.</p><p><strong>Tip:</strong> <code>lỗi sau thay đổi → diff config + replay input cũ, đọc raw output</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Clear the prompt cache and resubmit all pending requests to eliminate stale cached prefixes.",
+        "Compare the current system prompt and output schema configuration against the last known good version from before the maintenance window.",
+        "Switch to a different Claude model tier to rule out provider-side changes as a contributing factor.",
+        "Increase the max_tokens limit to determine whether output truncation is causing incomplete JSON structures.",
+        "Replay a set of premaintenance requests against the current configuration and inspect the raw model output before downstream parsing."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>Engineering leadership wants to roll out Claude Skills to 280 developers across 14 teams. Skills will encode internal coding standards, code-review checklists, and incident-postmortem templates. Leadership has asked how to govern Skill authorship so that Skills remain trustworthy without bottlenecking on a single central team. Which governance model should you recommend?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Federated authorship + central review gate = vừa scale được cho 14 team, vừa giữ được độ tin cậy.</p><p><strong>Distractors:</strong> B nghẽn ở một team, A và C mất kiểm soát chất lượng. Nhớ công thức: phân quyền tác giả + gate xuất bản.</p><p><strong>Tip:</strong> <code>scale + trust = federated authorship + central gate</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Per-developer authorship across the 280 engineers with no team-level coordination required.",
+        "Centralized authorship by a single platform team responsible for every Skill produced.",
+        "Fully decentralized authorship across the 14 teams with no review before publication.",
+        "Federated authorship across the 14 teams with a central review and publication gate."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are transitioning a Claude-based deployment from design into implementation. Which handoff package most directly supports a clean transition?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Handoff sạch = đủ 7 hiện vật: architecture overview, ADR, component contract, evaluation framework + reference set, runbook, on-call playbook, known limitations.</p><p><strong>Distractors:</strong> Dạng câu này lặp lại ở Q64 và Q76 — đáp án luôn là bộ tài liệu ĐẦY ĐỦ nhất.</p><p><strong>Tip:</strong> <code>handoff = overview+ADR+contracts+eval+runbook+playbook+limits</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "The most recent set of design presentation slides without component-level diagrams, interface contracts, an evaluation framework with a reference set, runbooks, or a known-limitations register.",
+        "A verbal walkthrough conducted on the day of handoff with no written architecture overview, ADRs, component contracts, evaluation framework, runbooks, playbook, or known limitations.",
+        "Architecture overview, ADRs, component contracts, evaluation framework with reference set, runbooks, on-call playbook, and known limitations.",
+        "Source code alone with no integrating architecture overview, ADRs, component contracts, evaluation framework, runbooks, on-call playbook, or known-limitations register to support the delivery team."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A security audit uncovers two issues: (1) all end users share a single API key, and (2) tool calls are executed without logging the initiating user. Which two mitigations directly address these specific findings? (Select two.)</p>",
+      "examAns": "D,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Sửa ĐÚNG hai phát hiện: shared API key → per-user OAuth có scope (E); thiếu log actor → actor attribution trong tool-call log (D).</p><p><strong>Distractors:</strong> A, B, C đều là biện pháp tốt nhưng KHÔNG trả lời hai finding cụ thể. Bẫy kinh điển: best practice đúng nhưng lệch đề.</p><p><strong>Tip:</strong> <code>map mitigation 1-1 với finding</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Validate structured outputs against a schema before downstream actions are executed.",
+        "Enforce RBAC at the retrieval layer before content enters the model context.",
+        "Move credentials out of the prompt context and resolve them from a server-side secret store.",
+        "Add actor attribution to tool-call logs so each call records the initiating user identity.",
+        "Replace the shared API key with per-user OAuth tokens carrying scope-restricted permissions."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>An architect is reviewing a Claude-based candidate-screening tool prior to deployment. A stakeholder asserts that because the model was not trained on company data, no bias evaluation is necessary. Which two responses most accurately challenge this assertion? (Select two.)</p>",
+      "examAns": "C,D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Bias đến từ PRETRAINING (C) và chỉ phát hiện được bằng cách ĐO CHÊNH LỆCH KẾT QUẢ theo nhóm được bảo vệ (D), không suy ra từ nguồn gốc dữ liệu.</p><p><strong>Distractors:</strong> A, B, E đẩy trách nhiệm sang disclosure, điều kiện dữ liệu, hoặc policy của vendor.</p><p><strong>Tip:</strong> <code>bias từ pretraining → đo outcome disparity trước deploy</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Transparency obligations are satisfied by disclosing that an AI system is in use, without further evaluation.",
+        "Fairness testing is required only when the training dataset is known to contain protected-class labels.",
+        "The model may carry demographic biases from pretraining that manifest in screening outcomes regardless of fine-tuning.",
+        "The system should be evaluated on outcome-disparity metrics across protected groups before deployment.",
+        "Bias evaluation is unnecessary when the model provider has published a responsible-use policy."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are distinguishing functional from non-functional requirements during discovery. Which item is a non-functional requirement?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Functional = hệ thống LÀM GÌ. Non-functional = làm tốt/nhanh/an toàn ĐẾN MỨC NÀO (latency, throughput, availability, security, cost).</p><p><strong>Distractors:</strong> A, B, C đều là hành vi nghiệp vụ ⇒ functional.</p><p><strong>Tip:</strong> <code>NFR = con số chất lượng (latency/throughput/uptime)</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "The system must extract a defined set of specific fields from invoice attachments and populate a downstream data record.",
+        "The system must produce a draft response that a human reviewer can edit before sending.",
+        "The system must classify inbound tickets into a defined set of categories.",
+        "The system must respond at p95 latency under 800 milliseconds at the expected request volume."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are sequencing decomposed components in an invoice-processing pipeline. For each of the decomposed components, select the execution layer it belongs to: \"Pre-Processing,\" \"Model Stage,\" or \"Post-Processing.\"</p><div class=\"tbl\"><table class=\"rowsq\"><thead><tr><th>#</th><th>Statement</th></tr></thead><tbody><tr><td>1</td><td>Claude-based classification of invoice type</td></tr><tr><td>2</td><td>persistence of validated records to the system of record</td></tr><tr><td>3</td><td>schema validation of the extracted fields</td></tr><tr><td>4</td><td>Claude-based extraction of structured invoice fields</td></tr><tr><td>5</td><td>PII redaction on extracted text prior to model invocation</td></tr><tr><td>6</td><td>optical character recognition on scanned invoice images</td></tr></tbody></table></div><p class=\"need\">Options for each row: Model Stage / Post-Processing / Pre-Processing</p>",
+      "examAns": "1 → Model Stage<br>2 → Post-Processing<br>3 → Post-Processing<br>4 → Model Stage<br>5 → Pre-Processing<br>6 → Pre-Processing",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Mọi thứ chuẩn bị INPUT trước khi gọi model = Pre (OCR, redaction). Claude suy luận = Model. Kiểm tra và lưu SAU khi có output = Post (validation, persistence).</p><p><strong>Distractors:</strong> Schema validation dễ bị nhầm là Pre — nó validate OUTPUT nên thuộc Post.</p><p><strong>Tip:</strong> <code>trước model=Pre, Claude suy luận=Model, validate/lưu=Post</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A pilot AI assistant for procurement specialists shows 89 percent first-response acceptance, but follow-up surveys reveal that specialists frequently override the assistant's vendor recommendations after considering criteria the assistant did not evaluate. The pilot owner wants to ship the assistant unchanged because of the strong acceptance rate. Which two Discernment-competency observations should you raise BEFORE approving the launch? (Select two.)</p>",
+      "examAns": "C,D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Discernment = phân biệt metric BỀ MẶT (acceptance) với chất lượng thực. Thiếu tiêu chí đầu vào = scope gap (C); acceptance không đồng nghĩa với đúng (D).</p><p><strong>Distractors:</strong> B nói về thống kê nghe học thuật nhưng không phải vấn đề trung tâm; A chính là quan điểm sai cần bác.</p><p><strong>Tip:</strong> <code>acceptance ≠ correctness; missing criteria = scope gap</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "The acceptance rate alone proves readiness for general production use.",
+        "The survey response rate may not be statistically representative of all specialists.",
+        "The unconsidered criteria represent a scope gap in the assistant's input space.",
+        "Acceptance does not establish whether recommendations remain correct after specialist review.",
+        "The pilot duration was probably too short to demonstrate reliability across the full year."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A revenue projection assistant has missed its monthly cost target by 38 percent. Profiling shows three contributors: a 6,000-token policy preamble repeated on every call (45 percent of cost), retrieval of historical sales chunks averaging 3,000 tokens per call (30 percent), and inference on a flagship-tier model (25 percent). Stakeholders require that projection accuracy remain unchanged. Which two optimizations should you sequence first to reduce cost without affecting accuracy? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "C,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Ràng buộc 'accuracy không đổi' loại bỏ mọi phương án CẮT NỘI DUNG hoặc HẠ MODEL. Caching giảm token bị bill mà không đổi input model nhìn thấy.</p><p><strong>Distractors:</strong> A, B, D đều giảm cost nhưng ĐỔI input/model ⇒ có thể ảnh hưởng accuracy. Nhớ: caching = giảm cost, giữ chất lượng.</p><p><strong>Tip:</strong> <code>accuracy phải giữ → chỉ được caching, không cắt/không hạ tier</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Reduce the number of historical sales chunks retrieved across each query run.",
+        "Truncate the policy preamble to remove non-essential clauses from the prompt.",
+        "Enable prompt caching on the static policy preamble across the recurring calls.",
+        "Switch the workload to a smaller, faster Claude model tier across all queries.",
+        "Cache common retrieved sales chunks accessed across many of the daily queries."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A technical team is debating whether to implement a new capability for generating regulatory filings from internal data as a Claude Skill or as an MCP server. The capability requires a fixed authoring procedure with embedded examples, does not need to call live external systems, and must be portable across three Claude deployments: claude.ai, an internal API integration, and Claude Code. Which factor most strongly favors implementing the capability as a Skill?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Skill = TRI THỨC THỦ TỤC đóng gói (hướng dẫn + ví dụ), portable qua claude.ai / API / Claude Code. MCP = kết nối HỆ THỐNG SỐNG (DB, API, auth).</p><p><strong>Distractors:</strong> A và C là dấu hiệu cần MCP. B không phân biệt được vì cả hai đều dùng được từ CLI.</p><p><strong>Tip:</strong> <code>Skill = procedure/knowledge; MCP = live system + auth</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "The capability needs to query a live database for the most recent regulatory filings.",
+        "The capability must also be callable from a developer's command-line interface.",
+        "The capability requires direct authentication against the corporate identity provider.",
+        "The capability is procedural knowledge with no live external-system calls required."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are auditing a procurement-assistant agent whose defined responsibility is to draft purchase requests for review. For each tool currently configured on the agent, select yes if the tool should remain after a leastprivilege audit. Otherwise, select no if it should be removed.</p><div class=\"tbl\"><table class=\"rowsq\"><thead><tr><th>#</th><th>Statement</th></tr></thead><tbody><tr><td>1</td><td>a read-only catalog lookup tool that returns vendor and SKU information</td></tr><tr><td>2</td><td>an inbox-send tool that emails purchase requests to vendors directly</td></tr><tr><td>3</td><td>a draft-write tool that creates purchase-request drafts in the review queue</td></tr><tr><td>4</td><td>a production-database admin tool unrelated to procurement</td></tr><tr><td>5</td><td>A read-only policy-document tool that returns the relevant procurement policies</td></tr></tbody></table></div><p class=\"need\">Options for each row: Yes / No</p>",
+      "examAns": "1 → Yes<br>2 → No<br>3 → Yes<br>4 → No<br>5 → Yes",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Chiếu theo trách nhiệm ĐÃ ĐỊNH NGHĨA: đọc dữ liệu cần để soạn + ghi vào DRAFT QUEUE. Gửi email cho vendor là hành động ngoài phạm vi và không thể hồi lại. Admin DB không liên quan.</p><p><strong>Distractors:</strong> Tool 'đôi khi hữu ích' hoặc 'sau này có thể cần' → luôn XOÁ.</p><p><strong>Tip:</strong> <code>giữ đúng tool phục vụ trách nhiệm đã định nghĩa</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are evaluating model-selection claims used by a peer team. For each statement, select yes if the statement is generally true. Otherwise, select no.</p><div class=\"tbl\"><table class=\"rowsq\"><thead><tr><th>#</th><th>Statement</th></tr></thead><tbody><tr><td>1</td><td>Heavier-reasoning models typically consume more of the rate limit and run more slowly than lighter models on the same input.</td></tr><tr><td>2</td><td>A representative-sample evaluation on the target workload is the right basis for confirming a model selection.</td></tr><tr><td>3</td><td>The most capable model is always the right choice regardless of the workload profile.</td></tr><tr><td>4</td><td>Tiered routing can serve routine traffic with a lighter model while reserving a heavier model for traffic that needs its capability.</td></tr><tr><td>5</td><td>Selecting a model based on which version was most recently announced is the right basis for production decisions.</td></tr></tbody></table></div><p class=\"need\">Options for each row: Yes / No</p>",
+      "examAns": "1 → Yes<br>2 → Yes<br>3 → No<br>4 → Yes<br>5 → No",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Quy trình chọn model: định nghĩa yêu cầu → chọn ứng viên → ĐO trên mẫu đại diện → chọn model NHẸ NHẤT đạt quality bar. Tiered routing là pattern chuẩn.</p><p><strong>Distractors:</strong> always / regardless / most recently announced → No.</p><p><strong>Tip:</strong> <code>model nhẹ nhất đạt quality bar + tiered routing</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>The engineering lead at Trenova Systems, Inc. is evaluating two proposals for improving developer workflows using Claude-assisted tooling. Proposal A adds Claude Code to the IDE for inline code generation and review. Proposal B routes all code-generation requests through a shared Slack bot without IDE integration. Which two observations most accurately evaluate these proposals against workflow-improvement objectives? (Select two.)</p>",
+      "examAns": "B,C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Đánh giá theo MỤC TIÊU workflow: điểm tích hợp quyết định ma sát. IDE = ít context switching; Slack = buộc rời công cụ đang làm việc.</p><p><strong>Distractors:</strong> E là bẫy phổ biến: 'model giống nhau nên tương đương' — bỏ qua hoàn toàn integration point.</p><p><strong>Tip:</strong> <code>integration point quyết định, không phải model</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Proposal B is superior because centralizing requests in Slack creates an auditable log of all codegeneration activity.",
+        "Proposal B introduces workflow friction by requiring developers to leave the IDE, undermining the productivity objective.",
+        "Proposal A reduces context switching by providing AI assistance at the point of development without requiring a separate tool.",
+        "Proposal B improves workflow velocity because Slack notifications create an asynchronous review queue.",
+        "Both proposals are equivalent because the model capabilities are identical regardless of the integration point."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A document analysis service processes legal filings averaging 80,000 tokens each. Each filing is queried by attorneys an average of 14 times during a case. The current architecture sends the full filing on every query. The CFO has asked you to reduce per-query costs while preserving response quality. The security officer requires that filing contents not be stored outside Fabrikam's tenancy. Which optimization approach should you recommend?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Cùng một nội dung lớn được query lặp nhiều lần trong thời gian ngắn = đúng định nghĩa PROMPT CACHING. Giữ nguyên chất lượng (model vẫn thấy toàn văn) và không đẩy dữ liệu ra ngoài tenancy.</p><p><strong>Distractors:</strong> A mất thông tin; C thêm hạ tầng lưu trữ bên ngoài (rủi ro tenancy) và có thể mất ngữ cảnh; D hạ chất lượng.</p><p><strong>Tip:</strong> <code>cùng context + nhiều query = prompt caching</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Summarize each filing once at intake and run all subsequent queries against the summary.",
+        "Cache the filing as the prompt prefix for reuse across the 14 queries per case.",
+        "Index filings in a vector store and retrieve only the relevant passages per query.",
+        "Move the workload to a smaller Claude model to reduce the per-token cost paid."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are designing a test strategy for a Claude-based pipeline that handles sensitive financial data. Which two test types should be prioritized to cover both safety under attack and cross-component correctness? (Select two.)</p>",
+      "examAns": "A,D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Đề nêu đúng hai mục tiêu: an toàn dưới tấn công → adversarial (A); đúng đắn xuyên component → integration (D). Đọc đúng yêu cầu là xong.</p><p><strong>Distractors:</strong> B, C là test tốt nhưng trả lời mục tiêu KHÁC (regression drift, availability).</p><p><strong>Tip:</strong> <code>attack=adversarial, cross-component=integration</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Adversarial tests using prompt-injection and malformed-input cases.",
+        "Regression tests against a stable reference set of previously known-good outputs.",
+        "Smoke tests that verify core paths after each deployment.",
+        "Integration tests that verify end-to-end pipeline behavior across all components.",
+        "Unit tests targeting only individual prompt-template rendering logic."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>The platform team at Trenova Systems, Inc. needs to reduce per-query cost and p95 latency for a high-volume Claude pipeline without degrading output quality on the core use case. Which two optimizations directly target both cost and latency simultaneously? (Select two.)</p>",
+      "examAns": "A,B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Caching = ít token bị bill và ít token phải xử lý (nhanh hơn). Tiered routing = model nhẹ cho phần lớn traffic. Cả hai đánh đồng thời cost và latency.</p><p><strong>Distractors:</strong> C, D, E đều TĂNG token ⇒ tăng cả cost lẫn latency.</p><p><strong>Tip:</strong> <code>cost+latency cùng lúc = caching + tiered routing</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Enable prompt caching on the static system-prompt prefix to reduce billable input tokens on repeated calls.",
+        "Route straightforward query types to a smaller, faster Claude model and reserve the full model for complex cases.",
+        "Increase max_tokens to reduce the frequency of truncated responses requiring follow-up calls.",
+        "Add a retrieval step that fetches the full source corpus into the context window before generation.",
+        "Expand the system prompt to include additional few-shot examples on every request."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are evaluating a Claude-based deployment for adherence to a specific regulation. Which two steps must be completed BEFORE mapping deployment data flows to specific regulatory clauses? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "B,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Trước khi map: xác định APPLICABILITY của quy định (B) và kiểm kê những affordance ĐANG CÓ từ vendor (E). Sau đó mới map → gap → remediation → sign-off.</p><p><strong>Distractors:</strong> A, C, D nằm sau bước mapping.</p><p><strong>Tip:</strong> <code>applicability + inventory trước khi map clause</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Compare the in-place controls against the regulatory requirements to identify any compliance gaps.",
+        "Identify the applicability of the regulation based on data types, jurisdiction, and audience.",
+        "Schedule the remediation work with the engineering team based on the prioritized gap findings.",
+        "Document the identified gaps along with recommended remediations and residual risk for signoff.",
+        "Inventory the vendor-provided compliance tooling and confirm which compliance affordances are in place."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A research summarization assistant has been deployed for six months. A user has flagged that a generated summary contained a fabricated citation. The product team has asked whether the incident requires architectural action or whether it is an isolated case. Which two Diligence-competency actions should you take? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "A,C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Diligence = biến một ca lẻ thành dữ liệu: đo TẦN SỐ trên mẫu (A) và kiểm tra CONTROL grounding có tồn tại trong pipeline hay không (C).</p><p><strong>Distractors:</strong> E xem nhẹ, B quá khích, D là nói dối kỹ thuật (LLM luôn có khả năng fabricate).</p><p><strong>Tip:</strong> <code>1 sự cố → sample để đo tỷ lệ + audit control</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Sample recent summaries to estimate the fabrication frequency across the population.",
+        "Disable the assistant immediately for all current users without any prior diagnostic analysis.",
+        "Review whether citation-grounding controls exist anywhere in the current generation pipeline.",
+        "Communicate to users that the assistant does not fabricate output as a matter of design.",
+        "Treat the incident as an anecdotal isolated case and take no further investigative action."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A security team is evaluating two proposed controls. Control A adds an outbound tool allowlist with destination restrictions and per-call review. Control B scores responses against a stable adversarial evaluation set after each model-version change. Which two risk categories are correctly matched to these controls? (Select two.)</p>",
+      "examAns": "C,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Chặn đường RA (outbound allowlist + destination restriction) = chống EXFILTRATION. Chấm điểm trên bộ test ổn định theo version = phát hiện DRIFT.</p><p><strong>Distractors:</strong> A hấp dẫn vì injection cũng liên quan tool, nhưng allowlist không ngăn injection xảy ra — chỉ ngăn dữ liệu đi ra đích lạ.</p><p><strong>Tip:</strong> <code>outbound allowlist=exfil; stable eval per version=drift</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Control A - prompt injection from adversarial content in retrieved data",
+        "Control A - silent quality drift after a model-version upgrade",
+        "Control A - data exfiltration via outbound tool calls",
+        "Control B - data exfiltration via outbound tool calls",
+        "Control B - silent quality drift after a model-version upgrade"
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are selecting a model for a new production workload and must complete the upstream steps before testing candidate models empirically. Which two steps must be completed BEFORE running a representative sample on a candidate model? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "C,D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Trình tự: định nghĩa YÊU CẦU (D: quality bar, latency, volume) → chọn ỨNG VIÊN theo profile (C) → đo trên mẫu → chọn model nhẹ nhất đạt bar (A) → retest khi có version mới (B).</p><p><strong>Distractors:</strong> A là KẾT QUẢ của việc đo, không phải bước upstream.</p><p><strong>Tip:</strong> <code>requirements → candidates → measure</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Select the lightest model that consistently meets the quality bar across the sample.",
+        "Retest the model choice when a new model version becomes available.",
+        "Choose a candidate model based on the requirements profile and known capabilities.",
+        "Define the quality bar, latency tolerance, and expected volume for the workload.",
+        "Sign off the production rollout plan with the platform and security teams."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are preparing an operational runbook for a Claude-based service. Which content is essential to include in the runbook?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Runbook = đủ 4 thành phần: alert + triage steps, escalation path, rollback procedure, tham chiếu dashboard/log.</p><p><strong>Distractors:</strong> Dạng 'only X without Y' luôn sai. Chọn phương án liệt kê đầy đủ.</p><p><strong>Tip:</strong> <code>runbook = alert+triage+escalation+rollback+refs</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Dashboard and log references only, without alert definitions, triage steps, escalation paths, or rollback procedures for the on-call engineer to act on.",
+        "Common alerts and their triage steps, escalation paths, rollback procedures, and references to the relevant dashboards and logs.",
+        "Alert definitions and triage steps only, without escalation paths, rollback procedures, or references to dashboards and logs for on-call use.",
+        "Escalation paths and rollback procedures only, without alert definitions, triage steps, or dashboard references to guide initial incident response."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are designing a feedback session for a deployment in flight. Which structure best supports productive stakeholder feedback?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Feedback hiệu quả = chuẩn bị trước + agenda tập trung + BIÊN BẢN quyết định + owner + deadline.</p><p><strong>Distractors:</strong> C chỉ khác B ở chỗ 'phát artifact trước hay tại chỗ' — đúng điểm phân biệt đang được chấm.</p><p><strong>Tip:</strong> <code>pre-read + agenda + written decisions + owners/dates</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Hold an open-ended meeting with no pre-distributed agenda or artifacts, and rely on participants' memory to carry decisions and follow-up owners forward.",
+        "Define a focused agenda, share the artifacts in advance, capture decisions and follow-ups in writing, and confirm action owners and dates.",
+        "Distribute artifacts at the session start rather than in advance, so stakeholders review materials in real time without preparation before the discussion begins.",
+        "End the session without recording decisions, follow-up items, action owners, or dates, relying on participant memory to carry the session's outcomes forward."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are integrating AI-assisted tooling into the team's documentation workflow. The team wants generated documentation that stays grounded in the actual code. Which integration approach best fits this requirement?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Grounding = ĐỌC NGUỒN THẬT (filesystem + code-search tool) và vẫn giữ nguyên gate review của người.</p><p><strong>Distractors:</strong> B bỏ review; A và D bỏ grounding.</p><p><strong>Tip:</strong> <code>grounded doc = đọc code thật + vẫn qua review</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Generate documentation from the model's training-data recall without reading any of the actual repository code, accepting that the output will not reflect the current implementation.",
+        "Have the subagents publish generated documentation directly to the public-facing site without passing through the team's normal review workflow or any human approval step.",
+        "Configure subagents that read the relevant code files via filesystem and code-search tools, generate the documentation, and emit changes through the team's normal review workflow.",
+        "Disable all filesystem and code-search tools so the subagents cannot read any repository code, accepting that documentation generation will be entirely disconnected from the actual implementation."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are reviewing a peer's end-to-end design for a Claude-based platform expected to scale to thousands of concurrent users. For each statement, indicate Yes if it reflects sound architectural practice. Otherwise, select No.</p><div class=\"tbl\"><table class=\"rowsq\"><thead><tr><th>#</th><th>Statement</th></tr></thead><tbody><tr><td>1</td><td>Authentication and authorization run before retrieval so retrieval can filter by identity.</td></tr><tr><td>2</td><td>An asynchronous queue absorbs bursty traffic between intake and the model invocation layer.</td></tr><tr><td>3</td><td>Tax computation is encoded directly in the system prompt rather than in code.</td></tr><tr><td>4</td><td>Conversation logs include unredacted government identifiers to maximize signal for tuning.</td></tr></tbody></table></div><p class=\"need\">Options for each row: Yes / No</p>",
+      "examAns": "1 → Yes<br>2 → Yes<br>3 → No<br>4 → No",
+      "examAnsDesc": "<p><strong>Explanation:</strong> AuthZ trước retrieval và queue chống burst đều đúng. Logic tính toán xác định (thuế) PHẢI nằm trong code, không đặt trong prompt. Log PII thô là vi phạm.</p><p><strong>Distractors:</strong> Nhớ nguyên tắc: deterministic logic → code; prompt không phải nơi lưu quy tắc tính toán.</p><p><strong>Tip:</strong> <code>authZ trước retrieval; math ở code; log phải redact</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are presenting an architectural decision to a mixed audience that includes an executive sponsor and the engineering leads who will implement the decision. Which presentation strategy best serves both audiences?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Cấu trúc kim tự tháp: quyết định → business outcome → trade-off (cho exec), rồi mới đến chi tiết kỹ thuật (cho engineer).</p><p><strong>Distractors:</strong> D nghe công bằng nhưng thực tế không phục vụ được ai.</p><p><strong>Tip:</strong> <code>decision + outcome + trade-off trước, chi tiết sau</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Open with a deep dive into low-level implementation details targeted at engineering leads, and stop there without addressing the business outcomes or trade-offs the executive sponsor needs.",
+        "Lead with the decision, the business outcomes it serves, and the trade-offs accepted; follow with the technical rationale, alternatives, and implementation implications for the engineering audience.",
+        "Skip the rationale, alternatives, and trade-off discussion entirely and simply announce the chosen decision, leaving both audiences without the context needed to implement or validate it.",
+        "Present a single undifferentiated narrative that addresses technical and business concerns with equal weight throughout, treating both audiences as requiring the same depth on every section."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are selecting a pattern for a compliance Q &amp; A assistant that must answer policy questions with citations to the authoritative internal source set. Latency, cost, and audit predictability are prioritized. Which pattern is the best fit?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Trả lời có dẫn nguồn từ một corpus cố định = RAG (Augmented LLM). Pattern đơn giản nhất đạt yêu cầu ⇒ rẻ, nhanh, dễ audit.</p><p><strong>Distractors:</strong> B quá nặng và không dự đoán được chi phí; C mất tính 'authoritative'; D nổ context và đắt.</p><p><strong>Tip:</strong> <code>citation từ corpus nội bộ = RAG, không phải multi-agent</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Augmented LLM with retrieval-augmented generation over the indexed authoritative corpus and citation rendering on each answer.",
+        "Multi-agent orchestration with a planner, researcher, and writer agent for every query.",
+        "A pure agent loop with open web-browsing tools to surface the most current policy information, without constraining retrieval to the authoritative internal corpus.",
+        "A static prompt with the entire policy corpus concatenated into every request."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are a platform architect designing an internal Claude-based assistant that serves both finance analysts and external auditors. Each population must access only documents permitted by its role. Where should role-based access control be enforced in the pipeline?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Dữ liệu không được phép KHÔNG BAO GIỜ được vào context. Cưỡng chế ở tầng retrieval là trung tâm của cả bộ đề.</p><p><strong>Distractors:</strong> D quên rằng một khi dữ liệu đã vào context là đã lọt. A và C giao an ninh cho model.</p><p><strong>Tip:</strong> <code>RBAC @ retrieval, trước khi vào context</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Inside the system prompt as a natural-language instruction for Claude to ignore unauthorized documents.",
+        "At the retrieval layer, before any role-restricted content reaches the prompt-construction step or the model.",
+        "Nowhere in the pipeline; rely on the model's general refusal behavior to reject unauthorized document access without any enforced access control.",
+        "After the response is generated, by post-filtering content that should not have been retrieved."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are designing a content moderation classifier that processes high volumes of usergenerated comments under a tight per-message latency budget using well-defined classification labels. Which model selection best aligns with the workload?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Task định nghĩa rõ + volume lớn + latency chặt = model NHẸ. Nguyên tắc: model nhẹ nhất đạt quality bar.</p><p><strong>Distractors:</strong> Mọi phương án lý giải bằng 'vì luôn cần suy luận sâu' đều sai theo nguyên tắc tiered routing.</p><p><strong>Tip:</strong> <code>high volume + tight latency + label rõ = Haiku</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Opus, because every moderation decision requires maximum reasoning depth regardless of classification complexity.",
+        "Haiku, because its latency and cost profile align with high-volume classification workloads that require limited reasoning depth.",
+        "Sonnet, because larger general-purpose models are preferred even when workload latency requirements are strict.",
+        "Sonnet with extended thinking enabled, because deeper reasoning should be applied to every moderation request to improve edge-case handling."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A Claude architect is implementing safety controls for a customer-facing advice assistant that must never provide regulated investment recommendations. Which two guardrail implementations most directly enforce this constraint? (Select two.)</p>",
+      "examAns": "B,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Tầng prompt (E: định nghĩa out-of-scope + refusal cố định) kết hợp tầng runtime (B: output classifier chặn). Đúng dạng layered guardrail.</p><p><strong>Distractors:</strong> D chỉ phát hiện SAU khi đã xảy ra, không ngăn được. A và C không liên quan tới nội dung bị cấm.</p><p><strong>Tip:</strong> <code>never-do = prompt scope + output classifier</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Increase response temperature to introduce variability that reduces the likelihood of specific recommendations.",
+        "Add an output classifier that detects and blocks responses containing regulated investmentrecommendation language.",
+        "Limit session length to reduce the volume of queries processed per user per day.",
+        "Log all user queries to a SIEM for post-hoc compliance review.",
+        "Define explicit out-of-scope categories in the system prompt with fixed refusal phrasing for investment advice requests."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are responding to a stakeholder request that adds significant scope to a deployment already in flight. Which response best aligns expectations while respecting the stakeholder's underlying need?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Công thức: ghi nhận nhu cầu + minh bạch hệ quả + đưa LỰA CHỌN (defer / descope / extend) cho stakeholder quyết.</p><p><strong>Distractors:</strong> Đáp án đúng luôn bảo vệ CẢ quan hệ CẢ kế hoạch — không phải chỉ nói không.</p><p><strong>Tip:</strong> <code>acknowledge + impact + options (defer/descope/extend)</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Hide the scope-addition request from the broader delivery team to avoid a difficult conversation, allowing the change to proceed without team awareness of its timeline implications.",
+        "Decline the request outright without acknowledging the stakeholder's underlying need or offering alternatives such as deferral, descoping, or timeline extension.",
+        "Acknowledge the request, describe the scope and timeline implications transparently, and propose options-defer it, descope something else, or extend the timeline-for the stakeholder to choose.",
+        "Accept the additional scope into the current release without describing the timeline or descoping implications, allowing the delivery plan to absorb unacknowledged changes until they surface as delays."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are assessing data-exfiltration risk in a Claude-based assistant that has tools for both internal-document retrieval and outbound HTTP calls. Which scenario most directly indicates a data-exfiltration risk?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Exfiltration = dữ liệu nội bộ đi ra đích KHÔNG được phép, thường qua injection trong nội dung retrieve kết hợp tool outbound.</p><p><strong>Distractors:</strong> A, B, D đều là hành vi bình thường của hệ thống.</p><p><strong>Tip:</strong> <code>injection trong doc + outbound tool = exfil</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "The outbound HTTP tool returns a 200 response when the assistant calls an allow-listed domain to fulfil a user-initiated data-lookup request.",
+        "The user submits a routine question and receives a routine answer.",
+        "Adversarial content in a retrieved document instructs the model to call the outbound HTTP tool and send sensitive content to an attacker-controlled URL.",
+        "The internal-document retrieval tool returns a document that the user is authorized to view."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are building an ethics-review checklist for deployments supported by artificial intelligence. Which two checks belong on the list? (Select two.) Each correct answer presents a complete solution.</p>",
+      "examAns": "B,C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Ethics review = (1) không khái quát về con người mà dữ liệu không chống lưng, (2) human accountability cho quyết định ảnh hưởng lớn.</p><p><strong>Distractors:</strong> A là legal, E là performance, D đặt điều kiện tuỳ tiện theo confidence.</p><p><strong>Tip:</strong> <code>ethics = no unsupported generalization + human accountability</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Confirm that vendor licensing terms permit the planned production use of the model.",
+        "Verify that outputs do not rely on generalizations about people that the underlying data does not support.",
+        "Confirm that high-impact decisions retain human accountability rather than being attributed to the model.",
+        "Restrict ethics review to outputs that exceed a defined model-confidence threshold.",
+        "Confirm that latency and throughput targets are met across supported user populations."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are listing characteristics of robust guardrail design for an enterprise deployment. Which two characteristics belong on the list? (Select two.) Each correct answer presents a complete solution.</p>",
+      "examAns": "B,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Guardrail bền vững = CHẶN TRƯỚC KHI CHẠY (B) + ĐO LƯỜNG liên tục bằng adversarial eval có regression tracking (E).</p><p><strong>Distractors:</strong> A và C là hậu kiểm (sau khi đã xảy ra). D chỉ là sửa câu chữ. Xem thêm Q109 — cùng nội dung, khác chữ cái.</p><p><strong>Tip:</strong> <code>preventive enforcement + adversarial eval regression</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Centralized log retention for guardrail violations with quarterly review by the security team.",
+        "Per-role tool allow-lists enforced at the orchestration layer before any tool call executes.",
+        "User feedback channels that route reported guardrail failures into the product backlog for triage.",
+        "Periodic refresh of the system prompt wording to keep refusal language current and clear.",
+        "Adversarial-input coverage in the evaluation set with regression tracking on guardrail performance."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are integrating human review into a high-volume classification pipeline where reviewing every output is infeasible. Which sampling strategy best balances throughput with quality oversight?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Phân bổ nguồn lực review theo RỦI RO: review toàn bộ cái ít tin cậy + ảnh hưởng lớn, cộng một mẫu ngẫu nhiên nhỏ để bắt blind spot.</p><p><strong>Distractors:</strong> D bất khả thi (đề đã nói), A vô trách nhiệm, C đảo ngược logic rủi ro.</p><p><strong>Tip:</strong> <code>risk-stratified: low-confidence + high-impact + random sample</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "No sampling, relying entirely on user complaints to reveal quality and safety problems after they affect users.",
+        "Risk-stratified sampling that reviews all low-confidence and high-impact outputs and a smaller random sample of high-confidence routine outputs.",
+        "Inverse sampling that reviews only high-confidence routine outputs and skips low-confidence and high- impact outputs.",
+        "Universal review of every output regardless of confidence or throughput impact."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A business sponsor has requested an AI solution to \"improve customer experience.\" The sponsor cannot articulate which customer journey is failing, which metric reflects the failure, or which decisions the AI should support. The sponsor is asking you to begin design work next week. Which delegation-competency action should you take first?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Yêu cầu mơ hồ ⇒ không prototype, không tự đoán scope: FACILITATE một buổi discovery có cấu trúc để tìm quyết định đang lỗi và metric mục tiêu.</p><p><strong>Distractors:</strong> A đẩy việc về sponsor (không hỗ trợ gì); B và C bắt đầu xây trên cát.</p><p><strong>Tip:</strong> <code>yêu cầu mơ hồ → facilitate structured discovery</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Recommend that the sponsor revise the request and resubmit it later for evaluation.",
+        "Begin prototyping a generic assistant against the broad request before the next deadline.",
+        "Propose a fixed scope that you commit to by default based on your own assumptions.",
+        "Facilitate a structured discovery to define the failing decision and the target metric."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A loan pre-qualification assistant shows 94 percent approval recommendations that match the human underwriter decision. The fairness team has reviewed approval rate parity across protected groups and reported no significant difference. A board member has asked whether this evidence is sufficient to declare the assistant fair. Which two Discernment-competency findings should you report? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "A,B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Hai lỗ hổng logic: (1) parity tỷ lệ duyệt không bao gồm parity SAI SỐ (false positive/negative theo nhóm); (2) ground truth là con người ⇒ kế thừa bias của underwriter.</p><p><strong>Distractors:</strong> D, E là phỏng đoán không có căn cứ trong đề bài.</p><p><strong>Tip:</strong> <code>approval parity ≠ error parity; human baseline có bias</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Approval rate parity does not by itself assess error rate parity across protected groups.",
+        "Match with human underwriters does not establish freedom from underwriter-introduced bias.",
+        "The 94 percent match rate is sufficient evidence of fairness for the assistant's decisions.",
+        "The fairness team's review process likely missed at least some of the protected groups studied.",
+        "A larger sample is needed before any meaningful fairness claim can be made about the model."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are operating an interactive assistant whose dominant performance constraint is perturn latency. Quality on routine turns is already acceptable. Which configuration adjustment most directly improves latency without disproportionately damaging quality?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Latency giảm bằng cách GIẢM TOKEN PHẢI XỬ LÝ: cắt retrieval về top-k đủ dùng + cache phần prompt ổn định.</p><p><strong>Distractors:</strong> A hiểu sai caching (caching GIẢM latency, không gây stale). C và D làm chậm hơn.</p><p><strong>Tip:</strong> <code>latency = trim top-k + cache prefix</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Disable prompt caching entirely to ensure fresh context processing on every request, preventing stale prefix content from affecting latency-sensitive interactions.",
+        "Reduce retrieval depth to the top-k passages that historically cover the answer, and cache stable system- prompt content.",
+        "Increase retrieval depth to the corpus maximum to improve recall regardless of latency.",
+        "Switch every turn to the heaviest available model to maximize output quality, accepting that the increased model latency will worsen the per-turn SLO rather than improve it."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are building a feedback-and-alignment routine for a multi-stakeholder deployment. Which two practices belong in the routine? (Select two.) Each correct answer presents a complete solution.</p>",
+      "examAns": "D,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Alignment bền vững = nhịp xem lại định kỳ khi điều kiện thay đổi (D) + xử lý minh bạch xung đột thay vì cho qua (E).</p><p><strong>Distractors:</strong> B thoái trách nhiệm lên cấp trên; A và C là logistics, không tạo alignment.</p><p><strong>Tip:</strong> <code>cadence + reconcile divergence explicitly</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Record each session and distribute the recording to stakeholders who could not attend live.",
+        "Escalate any disagreement among stakeholders to the executive sponsor for binding resolution.",
+        "Rotate facilitation among the participating stakeholder groups to share ownership of the routine.",
+        "Set a regular cadence for revisiting expectations and assumptions as conditions evolve over time.",
+        "Reconcile divergent stakeholder positions explicitly rather than papering over them in the moment."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>An architect is reviewing a set of architecture documentation packages before handing off a Claude-based pipeline to an implementation team. Which two characteristics indicate that a documentation package is sufficient to support implementation without ongoing architect involvement? (Select two.)</p>",
+      "examAns": "A,B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Đủ để team tự chạy = CONTRACT rõ ràng (A) + LÝ DO quyết định được ghi lại (B, để team suy luận trong tình huống mới).</p><p><strong>Distractors:</strong> D chính là dấu hiệu tài liệu CHƯA đủ (phải hỏi người). E thiếu kết luận.</p><p><strong>Tip:</strong> <code>contracts + decision log = self-sufficient docs</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "The document specifies integration contracts, configuration schemas, and expected input/output shapes for each component.",
+        "The document includes a decision log that records the rationale for key architectural choices and the alternatives rejected.",
+        "The document provides a high-level narrative description of the business problem without component- level detail.",
+        "The document includes the architect's contact information for questions arising during implementation.",
+        "The document lists all Claude models that were evaluated but does not specify which was selected or why."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are reviewing a peer's draft system prompt that contains contradictory instructions: one section says never to speculate beyond the supplied source, while another says to confidently fill in any gaps. Which response is most appropriate?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Mâu thuẫn trong prompt phải được GỠ BỎ ở cấp thiết kế, không để model phán xử từng lượt.</p><p><strong>Distractors:</strong> A và D đều là 'để model tự chọn' — luôn sai trong bộ đề này.</p><p><strong>Tip:</strong> <code>prompt contradiction → rewrite, không để model tự chọn</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Add a priority instruction directing the model to evaluate all instructions and apply whichever appears most contextually appropriate on each request.",
+        "Remove or rewrite the gap-filling instruction so the prompt consistently constrains the model to source- supported content.",
+        "Increase temperature so output randomness masks the contradiction.",
+        "Keep both instructions and rely on the model to decide which one to follow on each request."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are comparing patterns for a batch document-classification job that follows fixed steps: extract metadata, classify, summarize, and persist. Which pattern is the best fit and why?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Các bước cố định, dự đoán được → WORKFLOW (rẻ hơn, ổn định hơn, dễ audit). Agent chỉ dùng khi đường đi không biết trước.</p><p><strong>Distractors:</strong> A đúng kết luận nhưng LÝ DO sai (agent vẫn gọi được tool) ⇒ loại. Luôn kiểm tra cả phần 'because'.</p><p><strong>Tip:</strong> <code>fixed steps = workflow; unknown path = agent</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "A workflow pattern, because agentic patterns do not support tool invocations and therefore cannot execute the persist step that writes results to the downstream store.",
+        "An agentic pattern, because the open-ended planning capability of agents produces more consistent structured outputs than a fixed workflow graph on classification tasks.",
+        "An agentic pattern, because agents are categorically more accurate than workflows and therefore always preferable regardless of step predictability.",
+        "A workflow pattern, because the steps are well-defined and predictable per-request token cost is preferred over flexibility."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A managed agent deployment for claims triage has grown from 6 tools to 34 tools over 18 months as product teams added capabilities. Triage accuracy has declined from 91 percent to 78 percent, and average tool- selection latency has increased by 2.3 seconds. A junior engineer has proposed adding a tool-router agent in front of the current agent to filter the tool list per request. Which two findings should you present to justify capability decomposition before adding the router? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "A,C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Decomposition được biện minh khi tool set có RANH GIỚI TỰ NHIÊN (C: bốn domain) và khi mô tả tool trùng lặp gây chọn sai tool (A: chính là nguyên nhân accuracy giảm 91→78%).</p><p><strong>Distractors:</strong> B biện minh cho PRUNING chứ không phải decomposition; E là phản biện chống router, không phải bằng chứng cho decomposition; D là argument from authority.</p><p><strong>Tip:</strong> <code>decompose khi có domain boundaries + overlapping tool descriptions</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Tool descriptions overlap across multiple claim categories within the agent's tool set.",
+        "Several tools have not been invoked across the most recent 90 days of traffic.",
+        "The 34 tools serve four distinct claim-workflow domains within the triage scope.",
+        "The router pattern is well documented across publicly available agent literature.",
+        "The proposed router introduces an additional model call on every incoming request."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A Claude architect needs to ensure that a security-hardening flag cannot be disabled by any individual engineer after it is set. Which configuration scope correctly enforces this requirement?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Chỉ MANAGED config (enterprise policy) có precedence cao nhất và có thể đánh dấu non-overridable.</p><p><strong>Distractors:</strong> Project scope commit vào repo vẫn có thể bị local scope ghi đè.</p><p><strong>Tip:</strong> <code>không thể tắt = managed, non-overridable</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "User scope (~/.claude/settings.json) on each engineer's machine",
+        "Environment variable defined in the CI/CD pipeline only",
+        "Managed configuration applied centrally and marked as non-overridable",
+        "Project scope (.claude/settings.json) committed to the repository"
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A Claude architect is auditing configuration scope assignments. Which two statements correctly identify an appropriate use of user-scope configuration versus other scopes? (Select two.)</p>",
+      "examAns": "A,B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> User scope = SỞ THÍCH CÁ NHÂN theo NGƯỜI, đi theo mọi project (theme, ngôn ngữ trả lời).</p><p><strong>Distractors:</strong> C là managed. D là project. E sai hoàn toàn: API key thuộc secret store / env, không bao giờ nằm trong settings file.</p><p><strong>Tip:</strong> <code>user scope = personal preference across projects</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Persisting personal editor theme preferences that follow an engineer across projects.",
+        "Saving a preferred Claude response language that applies to all repositories the engineer uses.",
+        "Enforcing a company-wide policy that disables a feature for all engineers.",
+        "Defining MCP server endpoints shared by all contributors to a specific repository.",
+        "Storing API authentication keys so they are not committed to version control."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are compiling factors that should drive the choice between Model Context Protocol (MCP), direct API integration, and agent-to-agent handoff. Which two factors belong on the list? (Select two.) Each correct answer presents a complete solution.</p>",
+      "examAns": "D,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Hai trục quyết định: portability qua nhiều AI client (MCP thắng) và bản chất tương tác (stateless + latency-sensitive → direct API; stateful + chạy dài → agent handoff).</p><p><strong>Distractors:</strong> A, B, C là yếu tố phụ trợ — protocol nào cũng có thể thoả mãn, nên không phân biệt được.</p><p><strong>Tip:</strong> <code>portability + stateless/stateful</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Whether the vendor publishes detailed reference documentation for each candidate protocol.",
+        "Whether the team has prior implementation experience with any of the candidate protocols.",
+        "Whether the underlying transport supports encryption in transit between the integrated services.",
+        "Whether the integration must be portable across multiple AI clients in the ecosystem.",
+        "Whether the interaction is stateless and latency-sensitive or stateful and longer-running."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are selecting a protocol for a single low-latency stateless tool call from a Claude-based assistant to an internal pricing service that already exposes a stable HTTP API. Which integration mechanism is the most appropriate?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Đã có API ổn định + gọi một lần + stateless ⇒ direct API là đơn giản và nhanh nhất. Không thêm tầng.</p><p><strong>Distractors:</strong> D thêm một model call vô ích (tăng cả chi phí lẫn latency).</p><p><strong>Tip:</strong> <code>stateless 1-call + API sẵn có = direct API</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "A direct API call to the existing endpoint with the appropriate scoped credentials.",
+        "A long-lived stateful session protocol for a stateless single-call interaction.",
+        "A bespoke streaming protocol layered over an unrelated asynchronous message bus.",
+        "An agent-to-agent handoff that introduces another Claude-based agent in front of the pricing service."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A Claude architect observes that after a recent model-version upgrade, grounded responses began including claims not supported by the retrieved source documents. Which mitigation is most directly targeted at this failure mode?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Failure mode là UNGROUNDED CLAIM ⇒ chữa trực tiếp bằng grounding constraint + bắt buộc citation + bước verification.</p><p><strong>Distractors:</strong> B chỉ PHÁT HIỆN drift chứ không sửa failure mode; D chữa injection; C chữa access control. So sánh kỹ với Q86 — hai failure mode khác nhau.</p><p><strong>Tip:</strong> <code>ungrounded → grounding + citation + verify</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Constrain responses to source-supported content, require citations, and add a verification step.",
+        "Score each new model version against a stable adversarial evaluation set.",
+        "Replace the shared API key with per-user OAuth tokens to restrict data access.",
+        "Treat retrieved data as untrusted and apply input classifiers at ingestion time."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are defining escalation criteria for ambiguous cases in an automated workflow. Which set of criteria best supports consistent escalation?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Escalation nhất quán cần tiêu chí RÕ RÀNG, ĐO ĐƯỢC: ngưỡng confidence + nhóm quyết định high-impact + ambiguity flag + user chủ động yêu cầu.</p><p><strong>Distractors:</strong> Ba phương án còn lại đều là 'không có tiêu chí' dưới các hình thức khác nhau.</p><p><strong>Tip:</strong> <code>escalate = threshold + impact + ambiguity + user ask</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "No escalation criteria; the model decides independently on every turn whether to escalate, without explicit confidence thresholds, impact categories, or classifier-based ambiguity flags.",
+        "Escalation only after an affected customer has contacted support to complain, after the automated workflow has already completed without human review.",
+        "Escalation at the discretion of whoever is available when the team's on-call engineer has spare capacity, without a defined threshold, category, or ambiguity criterion.",
+        "A confidence score below a defined threshold, presence of high-impact decision categories, ambiguity flags raised by content classifiers, and the user's explicit request for review."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>After a prompt-template update, several previously passing test cases now produce unexpected outputs. Which test type is specifically designed to detect this category of failure?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Hành vi TỪNG ĐÚNG giờ sai = regression ⇒ regression test trên reference set ổn định.</p><p><strong>Distractors:</strong> Nhớ bản đồ: regression = hành vi cũ bị phá; adversarial = tấn công; integration = liên component; smoke = còn sống sau deploy.</p><p><strong>Tip:</strong> <code>từng pass giờ fail = regression test</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Integration tests that validate cross-component pipeline behavior.",
+        "Adversarial tests that probe for prompt-injection vulnerabilities.",
+        "Regression tests scored against a stable reference set of known-good behavior.",
+        "Smoke tests that confirm high-level system availability after the change."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A Claude architect at a health services organization is defining evaluation metrics for a clinical-summary pipeline. The pipeline must remain within a per-query cost ceiling and must never surface patient data to unauthorized roles. Which two metrics directly address these requirements? (Select two.)</p>",
+      "examAns": "B,D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Mỗi yêu cầu ứng một metric: trần chi phí → per-query token cost (D); không lộ dữ liệu → RBAC enforcement rate đo trên red-team set (B).</p><p><strong>Distractors:</strong> A, C, E là metric hợp lệ nhưng đo thứ khác. Bẫy 'metric tốt nhưng lệch requirement'.</p><p><strong>Tip:</strong> <code>metric phải map 1-1 với requirement đã nêu</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "BLEU score computed against a human-annotated reference summary set",
+        "Role-based access-control enforcement rate measured on a red-team dataset",
+        "Throughput measured as successful requests processed per minute",
+        "Per-query token cost measured against the defined cost ceiling",
+        "Response latency at the 95th percentile across a one-week sample window"
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are choosing the level of detail for an implementation guide. The audience is a delivery team that will build the deployment. Which guidance composition best serves them?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Đối tượng là người BUILD ⇒ cần đủ: trách nhiệm component, contract, sequence diagram các luồng chính, configuration parameter kèm default, runbook.</p><p><strong>Distractors:</strong> Dạng 'only ... without ...' luôn là đáp án thiếu. Chọn bộ đầy đủ nhất.</p><p><strong>Tip:</strong> <code>guide cho builder = contracts + flows + config + runbook</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Component responsibilities, contracts between components, sequence diagrams of the dominant flows, configuration parameters with defaults, and operational runbooks.",
+        "Component responsibilities and interface contracts only, without sequence diagrams of the dominant flows, configuration parameters with defaults, or runbooks to guide operational tasks.",
+        "An architecture overview and sequence diagrams for the dominant flows, without interface contracts, configuration-parameter tables, or operational runbooks for the delivery team to follow.",
+        "An architecture overview and a list of known limitations, without component-level diagrams, interface contracts, configuration parameters, or operational runbooks to support implementation."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are identifying the highest-impact optimization for a deployment whose token cost is dominated by a long, repeated system prompt and a large retrieved context per request. Which optimization most directly targets the dominant cost driver?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Đánh đúng hai cost driver: phần tĩnh lặp lại → cacheable prefix; phần retrieved lớn → trim về span liên quan.</p><p><strong>Distractors:</strong> Các phương án khác đều làm TĂNG chính cost driver đã được nêu.</p><p><strong>Tip:</strong> <code>cache phần tĩnh + trim phần động</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Increase retrieval depth on every request to maximize recall, worsening the dominant cost driver by adding more retrieved tokens per request rather than reducing them.",
+        "Add additional repeated content to the system prompt to give the model more guidance.",
+        "Move the long, repeated system prompt into a cacheable prefix and trim retrieved context to the spans relevant to each query.",
+        "Switch every request to the heaviest available model to maximize output quality, accepting that higher per-request inference cost compounds rather than addresses the dominant cost driver."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are defining transparency practices for a customer-facing assistant whose responses are materially shaped by AI. Which transparency practice most directly supports responsible deployment?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Minh bạch = tiết lộ cho CHÍNH NGƯỜI BỊ ẢNH HƯỞNG + có đường đến gặp người thật khi cần.</p><p><strong>Distractors:</strong> D nghe như 'có công bố' nhưng sai đối tượng — công bố nội bộ không phải transparency với end user.</p><p><strong>Tip:</strong> <code>disclose to end user + path to a human</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Misrepresent the AI's role in producing responses in order to make the assistant feel more trustworthy or more human, undermining informed user consent and organizational transparency.",
+        "Refuse to answer any user question about how the responses were produced or whether AI was involved, treating the AI's role as confidential operational information.",
+        "Disclose AI involvement to end users in line with the organization's transparency policy and provide a documented path to reach a human when needed.",
+        "Disclose AI involvement only to internal staff and operators while withholding that information from the end users whose interactions are materially shaped by the AI system."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>An engineering organization is adopting Claude Code across 200 developers. A team lead proposes that AI- generated pull requests bypass standard code review for changes under 50 lines because small changes are considered low risk and review capacity is constrained. Which two Diligence-competency objections should you raise? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "A,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Hai lập luận: (1) review CHÍNH LÀ cơ chế verification cho output do AI sinh; (2) số dòng không tương quan với rủi ro (một dòng đổi config có thể phá production).</p><p><strong>Distractors:</strong> B, C, D đều là đề xuất cực đoan hoặc không trả lời đúng lỗi logic của đề xuất gốc.</p><p><strong>Tip:</strong> <code>review = verification; LOC ≠ risk</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Removing review eliminates the verification mechanism required for AI-generated output across the workflow.",
+        "Code-review capacity should be expanded to handle every code change submitted across the team.",
+        "The threshold should be increased to 200 lines to capture more changes.",
+        "AI-generated pull requests should be rejected by default across the organization.",
+        "Line count is a poor proxy for the actual risk introduced by a code change."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are defining an SLA for a Claude-based assistant. Which SLA definition is most operationally meaningful?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> SLA hoàn chỉnh = 4 thành phần: METRIC + THRESHOLD + EVALUATION WINDOW + HẬU QUẢ khi vi phạm.</p><p><strong>Distractors:</strong> D là bẫy tinh vi: đúng một nửa (có metric + threshold) nhưng thiếu window và consequence.</p><p><strong>Tip:</strong> <code>SLA = metric + threshold + window + consequence</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "A target tied to a stakeholder sentiment measure such as \"the team feels satisfied,\" which cannot be measured objectively or used to trigger a documented breach response.",
+        "A measurable target with a defined metric, threshold, evaluation window, and consequence for breach- for example, \"p95 per-request latency under 800 ms over a 28-day window.\"",
+        "A qualitative commitment such as \"the system will be fast and reliable,\" which names no metric, threshold, or evaluation window.",
+        "A target that names the metric and threshold but omits the evaluation window and breach consequence, leaving compliance periods and remediation triggers undefined."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A Claude architect is designing a HIPAA-compliant pipeline that processes patient records. Which two design decisions directly support HIPAA compliance requirements? (Select two.)</p>",
+      "examAns": "C,D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> HIPAA = kiểm soát truy cập PHI (C) + ràng buộc hợp đồng và data handling với provider, tức BAA (D).</p><p><strong>Distractors:</strong> A, B, E là tối ưu kỹ thuật/UX, không liên quan tới compliance.</p><p><strong>Tip:</strong> <code>HIPAA = RBAC trên PHI + BAA / không dùng PHI để train</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Setting max_tokens to a low value to minimize the volume of text generated per request.",
+        "Selecting the highest-capability Claude model to maximize diagnostic accuracy.",
+        "Enforcing role-based access controls so that PHI is retrievable only by authorized personnel.",
+        "Ensuring patient data is never included in training feedback loops sent to the model provider without a BAA in place.",
+        "Using streaming responses to reduce perceived latency for clinical users."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are designing a human-in-the-loop validation workflow for a new Claude-based deployment and must complete the design steps before piloting the workflow. Which two steps must be completed BEFORE piloting the workflow with a representative subset of traffic? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "A,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Hai bước THIẾT KẾ cốt lõi: xác định điểm cần người theo IMPACT và REVERSIBILITY (E), rồi định nghĩa sampling strategy + escalation criteria tại từng điểm đó (A).</p><p><strong>Distractors:</strong> B rõ ràng là sau pilot. C và D là triển khai/tài liệu hoá dựa trên A+E, không phải bước thiết kế gốc.</p><p><strong>Tip:</strong> <code>oversight points (impact+reversibility) + sampling/escalation</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Define the sampling strategy and the escalation criteria at each oversight point in the pipeline.",
+        "Iterate the workflow design based on observed pilot findings before broader rollout to production.",
+        "Onboard the reviewer pool with role-specific training on the check criteria and escalation procedures.",
+        "Document the workflow with check criteria, escalation paths, and service-level agreements (SLAs) for each step.",
+        "Identify the decision points in the pipeline that require human oversight by impact and reversibility."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are compiling team-setup practices for a Claude Code rollout across an engineering organization. Which two practices belong on the list? (Select two.) Each correct answer presents a complete solution.</p>",
+      "examAns": "A,B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Bản đồ scope: chia sẻ theo repo → project (commit); bắt buộc toàn tổ chức → managed; cá nhân → user.</p><p><strong>Distractors:</strong> C, D, E là ba kiểu đặt sai scope. Học thuộc bản đồ scope là loại được ngay.</p><p><strong>Tip:</strong> <code>project=team share, managed=bắt buộc, user=cá nhân</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Use project scope for team-shared Model Context Protocol (MCP) servers and permission rules under version control.",
+        "Apply managed configuration centrally for security-critical settings that must not be overridden by individual engineers.",
+        "Use local scope for security-critical permission rules so each engineer can adapt them to ongoing work.",
+        "Use user scope for team-shared MCP servers so every engineer on the team has consistent access.",
+        "Use project scope for personal editor preferences so the preferences apply consistently within the project."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are reviewing a customer-support agent's configuration. Each candidate tool falls into one of four categories: (1) required to complete defined tasks, (2) frequently used and reduces handoffs, (3) occasionally useful for unrelated work, (4) speculative future utility. Which categories should typically remain in the agent configuration?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Least privilege thực dụng: giữ tool phục vụ task ĐÃ ĐỊNH NGHĨA + tool giảm handoff thường xuyên. Bỏ tool 'đôi khi' và 'sau này có thể'.</p><p><strong>Distractors:</strong> D là quan niệm 'nhiều tool thì tốt hơn' — luôn sai: tốn token, giảm độ chính xác chọn tool, tăng bề mặt tấn công.</p><p><strong>Tip:</strong> <code>giữ nhóm 1+2, bỏ speculative và unrelated</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Only category 3, because occasionally useful tools for unrelated work provide broader coverage and should take priority over tools required for the agent's defined tasks.",
+        "Only category 4, because speculative future-utility tools provide the most flexibility and should be configured even when no defined task currently requires them.",
+        "Categories 1 and 2 only, because they map to defined tasks and the agent's regular hand-offs.",
+        "All four categories, because broader tool access is categorically better for agent performance regardless of whether the tools map to defined tasks or regular hand-offs."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are documenting an architectural decision to support future audit and onboarding. Which artifact is the strongest fit?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> ADR là định dạng chuẩn: 5 thành phần giúp người sau hiểu vì sao, đã cân nhắc gì, hệ quả gì.</p><p><strong>Distractors:</strong> Dạng câu này xuất hiện nhiều biến thể — chỉ cần nhớ 'ADR + 5 thành phần'.</p><p><strong>Tip:</strong> <code>ADR = context+decision+alternatives+consequences+date/authors</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "A slide deck in a presentation folder with no accompanying written rationale.",
+        "A code comment in a single file that contains an opinion of one engineer.",
+        "An Architecture Decision Record that states the context, the decision, the alternatives considered, the consequences, and the date and authors.",
+        "A short verbal note shared during a hallway conversation with no written record."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>During an architectural review, the security team identifies a risk that adversarial content injected into retrieved documents could manipulate the model's behavior. Which mitigation most directly addresses this threat?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Indirect prompt injection ⇒ chữa tại NGUỒN: coi toàn bộ retrieved content là untrusted input, lọc đầu vào + validate đầu ra.</p><p><strong>Distractors:</strong> So với Q72: 'claim không được source hỗ trợ' → grounding; còn 'nội dung adversarial điều khiển model' → untrusted input. HAI failure mode khác nhau, đọc kỹ đề.</p><p><strong>Tip:</strong> <code>injection → untrusted input + classifier + output validation</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Treat all retrieved content as untrusted input and apply input classifiers with output validation.",
+        "Require citations for each claim and constrain responses to source-supported content.",
+        "Restrict outbound tool calls to an approved destination allow-list.",
+        "Score outputs against a stable adversarial evaluation set on each model-version change."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are evaluating an evaluation set used to score a Claude-based hiring-support tool. The set is drawn from one geographic region and one tenure band. Which response is most appropriate?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Eval set phải ĐẠI DIỆN cho population thực tế sẽ dùng. Mở rộng → chấm điểm lại → rồi mới release rộng hơn.</p><p><strong>Distractors:</strong> D là bẫy 'điểm đang cao nên giữ' — điểm cao trên tập không đại diện thì vô nghĩa.</p><p><strong>Tip:</strong> <code>eval set phải đại diện population; mở rộng rồi rescore</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Discard all quantitative evaluation and replace it with qualitative impressions collected from a small, convenience-selected group that may not represent the tool's full user population.",
+        "Expand the evaluation set to cover the geographic regions and tenure bands the tool will serve, and rescore the system on the expanded set before broader release.",
+        "Reduce the evaluation set further to a single demographic subgroup to simplify score interpretation, narrowing coverage rather than expanding it to match the intended user population.",
+        "Continue using the narrow evaluation set drawn from one region and one tenure band because the existing benchmark scores are already high on that subset."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You must present an architectural recommendation to deploy a Claude-based contract review assistant to a steering committee that includes the CFO, the general counsel, and the CIO. Each stakeholder cares about different aspects of the decision. How should you structure the recommendation document?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Decision-first, rồi phân đoạn theo audience (CFO: cost/ROI; general counsel: rủi ro pháp lý; CIO: vận hành/tích hợp).</p><p><strong>Distractors:</strong> A và B mở đầu bằng quan tâm của MỘT nhóm duy nhất; C không phân tầng.</p><p><strong>Tip:</strong> <code>decision first + section theo từng stakeholder</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Lead with the technical architecture diagram and the full component list before any other section.",
+        "Lead with detailed cost projections across the full multi-year horizon before the rationale section.",
+        "Present the same dense narrative throughout with no stakeholder differentiation in any section.",
+        "Lead with the architectural decision, then address each stakeholder's primary concerns directly."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are compiling a diagnostic toolkit for Claude Code operational issues. Which two diagnostic actions belong in the toolkit? (Select two.) Each correct answer presents a complete solution.</p>",
+      "examAns": "C,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Chẩn đoán = tái hiện tối giản, cô lập một biến mỗi lần (C) + kiểm tra trạng thái thành phần cụ thể (E: liệt kê MCP server và server status).</p><p><strong>Distractors:</strong> B nhảy bước (mở ticket trước khi có bằng chứng); D thay đổi môi trường trước khi hiểu; A phi lý.</p><p><strong>Tip:</strong> <code>minimal repro + kiểm tra MCP list/status</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Increase the model sampling temperature so that intermittent issues surface more frequently for analysis.",
+        "File a support ticket with vendor support before any local reproduction or evidence collection.",
+        "Reproduce the issue with a minimal reproduction case that isolates one variable at a time.",
+        "Roll back to the previous Claude Code version immediately to confirm whether the issue is version specific.",
+        "List the configured Model Context Protocol (MCP) servers and inspect server status to identify connection failures."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A Claude Architect is reviewing a post-deployment performance report for an AI-assisted legal-document summarization system. The report includes these observations: * Average summarization time decreased from 47 minutes to 6 minutes per document. * Associates spend less time on summaries, but overall billable output has not measurably changed. * Infrastructure costs increased by 22% because redundant retry logic generated additional API calls. * Some summaries require attorney correction, adding an average of 8 minutes of review per document. Which analysis correctly attributes each observation to the appropriate business-value pillar?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Bản đồ pillar: thời gian trên mỗi tác vụ = EFFICIENCY; kết quả nghiệp vụ thực (billable output) = PRODUCTIVITY; chi phí hạ tầng = SOLUTION COST; 8 phút sửa thêm = efficiency loss bù trừ một phần.</p><p><strong>Distractors:</strong> Bẫy lớn nhất của cả bộ đề: coi 'tiết kiệm thời gian' = 'tăng năng suất'. Tiết kiệm thời gian mà output không đổi ⇒ productivity CHƯA hiện thực hoá.</p><p><strong>Tip:</strong> <code>time saved = efficiency; business output = productivity</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Observations 1 and 2 both indicate efficiency gains; Observation 3 is a solution-cost issue; Observation 4 is a performance-SLA issue.",
+        "Observation 1 is a transformation outcome; Observation 2 is an efficiency gain; Observation 3 is a performance-SLA degradation; Observation 4 is a solution-cost issue.",
+        "Observations 1 and 4 together indicate a net performance-SLA improvement; Observation 2 is a transformation gap; Observation 3 is a productivity drain from over-engineering.",
+        "Observation 1 indicates an efficiency gain; Observation 2 shows that productivity has not yet been realized; Observation 3 is a solution-cost issue; Observation 4 is an efficiency loss that partially offsets Observation 1."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are supporting an engineer whose newly added MCP server does not appear in their Claude Code session. Which diagnostic step should be tried first?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Kiểm tra rẻ nhất và có khả năng cao nhất: server đã registered chưa, session đã reload cấu hình chưa.</p><p><strong>Distractors:</strong> Nguyên tắc chẩn đoán: đi từ rẻ/không phá huỷ đến đắt/phá huỷ.</p><p><strong>Tip:</strong> <code>list servers → reconnect/restart session</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Disable every MCP server in the configuration to isolate the issue, removing all tool access rather than confirming whether the new server is registered.",
+        "Switch the team to a different Claude product family unrelated to the existing workflow, abandoning the current configuration rather than diagnosing the registration issue.",
+        "Verify the MCP server is registered using the listing command, then reconnect the session if needed, since configuration changes typically require a restart to take effect.",
+        "Reinstall the developer's operating system from scratch, discarding all local configuration and tool state before attempting any targeted diagnostic steps."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are a solution architect designing a Claude-based assistant with access to 60 internal tools across multiple business domains. Loading every tool definition on every request increases token usage and time to first response. Which design pattern best addresses this issue without sacrificing capability breadth?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Progressive / deferred tool discovery: giữ ĐẦY ĐỦ năng lực nhưng chỉ trả giá token cho tool liên quan tới task hiện tại.</p><p><strong>Distractors:</strong> D giảm token nhưng MẤT năng lực — đề bài yêu cầu rõ 'không hy sinh capability breadth'. Câu này trùng hoàn toàn với Q108.</p><p><strong>Tip:</strong> <code>60 tools → progressive tool discovery</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Apply progressive tool discovery so a curated initial subset is exposed and additional tools are loaded on demand based on the task.",
+        "Use a separate model call to summarize all 60 tool definitions before each user turn.",
+        "Increase the maximum context length and load all 60 tool definitions on every request, accepting the higher token cost and latency as necessary for full capability.",
+        "Hard-code a fixed set of five tools per request to reduce token usage, regardless of whether those tools are relevant to the current task."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>The compliance team at a firm has approved a Claude Skill that generates client-facing investment summaries. The Skill includes the firm's required disclaimers and prohibited-language list. A product manager has asked whether additional guardrails are needed at the application layer or whether the Skill alone is sufficient. Which two guardrail responsibilities should remain at the application layer rather than the Skill? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "A,B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Skill chứa nội dung/thủ tục (disclaimer, từ cấm, format). Application layer giữ AUTHZ (ai được phép gọi) và AUDIT LOG (ghi lại đã sinh gì) — hai thứ Skill không thể tự bảo đảm.</p><p><strong>Distractors:</strong> C, D, E đều là nội dung thủ tục ⇒ thuộc Skill, không phải application layer.</p><p><strong>Tip:</strong> <code>Skill=nội dung; app layer=authz + audit logging</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Log every generated summary to the firm's compliance audit trail for retention.",
+        "Verify the requesting user is authorized to generate investment summaries at all.",
+        "Format output sections according to the firm's standardized house style guidelines.",
+        "Apply the disclaimer template that the compliance team has standardized firm-wide.",
+        "Apply the prohibited-language list that the compliance team maintains and updates."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are supporting an EU-based deployment with GDPR obligations. Which combination of measures best supports the deployment's GDPR posture?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> GDPR = cơ sở hợp đồng (DPA) + data minimization/redaction + retention xác định + quy trình xử lý quyền chủ thể dữ liệu (DSAR).</p><p><strong>Distractors:</strong> D vi phạm cùng lúc purpose limitation và data minimization dù nghe như 'cho Claude đủ ngữ cảnh'.</p><p><strong>Tip:</strong> <code>GDPR = DPA + minimization + retention + DSAR</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "enterprise-tier deployment with a signed Data Processing Addendum, defined data-retention configuration, redaction of personal data not needed for the task, and documented data-subjectrights handling",
+        "disabling all data-retention configuration, redaction controls, and data-subject-rights handling to simplify day-to-day operations, accepting the resulting GDPR compliance exposure",
+        "using a personal Claude account tier for processing EU personal data at scale, with no signed Data Processing Addendum and no documented data-subject-rights handling procedure",
+        "pasting full EU personal data into every prompt to \"give Claude complete context\" without considering purpose limitation, data minimization, or the organization's Data Processing Addendum obligations"
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are reviewing instrumentation in a multi-agent system. Which two findings constitute valid observability gaps in the instrumentation? (Select two.) Each correct answer presents a complete solution.</p>",
+      "examAns": "D,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Gap = THIẾU thứ cần có: không biết turn nào chạy model/version nào (D) và không nối được chuỗi call của cùng một request (E).</p><p><strong>Distractors:</strong> A, B, C là instrumentation ĐÚNG — dạng đề 'tìm cái sai trong danh sách phần lớn đúng'.</p><p><strong>Tip:</strong> <code>gap = thiếu model/version + thiếu correlation ID</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Trace spans for each agent step are exported to the shared distributed-tracing backend.",
+        "Latency and token usage on every span are emitted to the central metrics pipeline.",
+        "Tool-call payloads and outcomes are recorded with redaction applied to known sensitive fields.",
+        "Model identity and version on each turn are not recorded with the turn artifacts.",
+        "Request-scoped correlation identifiers do not propagate across agent and tool calls."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>When communicating an architectural decision to a security and compliance reviewer, which content set is most aligned with that audience's primary concerns?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Đối tượng security/compliance cần: threat model, control mapping vào yêu cầu, tiêu chí chấp nhận residual risk, và audit traceability.</p><p><strong>Distractors:</strong> D là gói cho EXECUTIVE; B cho engineering; A cho product. Cùng một quyết định, khác gói nội dung theo audience.</p><p><strong>Tip:</strong> <code>security audience = threat model + controls + residual risk + audit trail</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Feature delivery schedule, roadmap dependencies, and scope boundaries for the product manager.",
+        "Implementation timeline, component interfaces, and deployment sequence for the engineering team.",
+        "Threat model, control mappings, residual-risk acceptance criteria, and audit traceability.",
+        "Decision rationale, business outcomes, and high-level risk summary for executive review."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are defining when to introduce a project subagent versus relying on Claude Code's general capabilities. Which scenario most directly justifies a dedicated subagent?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Subagent được biện minh khi hội đủ: task LẶP LẠI + cần system prompt tập trung + tool permission hẹp + model chỉ định.</p><p><strong>Distractors:</strong> B, C, D đều là tình huống không cần subagent (ad hoc, không lặp, generic).</p><p><strong>Tip:</strong> <code>subagent = recurring + specialized prompt/tools/model</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "The team has a recurring specialized task, such as database schema review, that requires a focused system prompt, narrow tool permissions, and a specific model selection across many sessions.",
+        "The team has a one-time ad hoc question that will not recur and does not require a focused system prompt, narrow tool permissions, or dedicated model selection.",
+        "The team has no recurring specialized tasks and uses Claude Code only for isolated generalpurpose work that does not justify a dedicated system prompt or tool scope.",
+        "The team wants every Claude Code interaction to use the same generic system prompt with no task- specific specialization, narrow tool permissions, or dedicated model selection."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are identifying signals that a deployment should re-enter design rather than continue iterating in place. Which signal most directly indicates the need for a new design cycle?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Tiêu chí rành mạch: phải đổi TRÁCH NHIỆM COMPONENT hoặc CORE CONTRACT ⇒ cần design cycle mới. Còn lại là content/config/doc change.</p><p><strong>Distractors:</strong> Câu này lặp y nguyên ở Q105 nhưng đảo thứ tự đáp án. Học theo TIÊU CHÍ, đừng học chữ cái.</p><p><strong>Tip:</strong> <code>đổi component responsibility/contract = re-design</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "A minor copy edit is requested in a customer-facing string within the existing UI, which can be handled as a localized content change without altering component responsibilities or contracts.",
+        "A dashboard alert threshold needs a small numerical adjustment to reduce false-positive noise, which can be handled as an operational configuration change without a new design cycle.",
+        "A runbook step requires a clarification edit to improve on-call guidance accuracy, which can be handled as a documentation update without changes to component responsibilities or core contracts.",
+        "The system's current architecture cannot meet the new requirements without changes to component responsibilities or core contracts."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are rolling out monitoring for a Claude-based deployment and must complete the specification steps before instrumenting the deployment. Which two steps must be completed BEFORE instrumenting the deployment to emit metrics and traces? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "A,C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Phải biết ĐO GÌ (metric + slice, gồm cả traffic adversarial) và MỨC NÀO LÀ ĐẠT (SLO + error budget) trước khi cắm sensor.</p><p><strong>Distractors:</strong> B cần dữ liệu đã quan sát nên phải sau. D, E xây trên metric đã định nghĩa.</p><p><strong>Tip:</strong> <code>metric+slices và SLO+error budget trước khi instrument</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Define the metrics and the slices the deployment will monitor across normal and adversarial traffic.",
+        "Tune the alert thresholds based on observed normal-state distributions to reduce false positives.",
+        "Define the service-level objectives (SLOs) and the error budgets the deployment will be held to.",
+        "Build the dashboards that surface metrics across slices at the cadence the team operates on.",
+        "Document the dashboards, alerts, and runbooks for the on-call rotation that will respond."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are integrating Claude Code into a team workflow and must complete the design and configuration steps before piloting the integrated workflow with a small group. Which two steps must be completed BEFORE piloting the integrated workflow? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "B,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Trước pilot: (1) THIẾT KẾ — AI thêm giá trị ở đâu, thẩm quyền con người giữ ở đâu (B); (2) CẤU HÌNH kỹ thuật theo thiết kế đó (E).</p><p><strong>Distractors:</strong> D rõ ràng sau pilot. A là tài liệu hoá, C là quản trị tổ chức — không phải điều kiện kỹ thuật để pilot.</p><p><strong>Tip:</strong> <code>design (AI vs human authority) + configure project scope</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Document the integrated workflow with handoff criteria, permission boundaries, and on-call runbooks.",
+        "Identify the workflow steps where AI-assisted tooling adds value and where human authority must remain.",
+        "Negotiate the workflow change with affected teams and obtain formal sign-off from each manager.",
+        "Iterate the integrated workflow based on pilot findings before broader rollout to the team.",
+        "Configure the project-scope MCP servers, permissions, subagents, and persistent project context."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are preparing a HIPAA-eligible deployment for a healthcare customer. Which configuration supports HIPAA compliance using Anthropic-offered tools?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Ba trụ: hợp đồng (BAA), dữ liệu (Zero Data Retention), và vết audit (audit logging).</p><p><strong>Distractors:</strong> C nhầm lẫn nguy hiểm: KHÔNG log không phải là kiểm soát — HIPAA yêu cầu audit trail.</p><p><strong>Tip:</strong> <code>HIPAA = Enterprise + BAA + ZDR + audit logging</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Claude Free with no contractual addendum, since consumer products meet HIPAA requirements out of the box.",
+        "Claude Enterprise with a signed Business Associate Agreement, Zero Data Retention enabled, and audit logging configured for compliance tracking.",
+        "Disabling all audit logging so that no PHI is recorded in any log store, on the assumption that the absence of logs satisfies HIPAA requirements without a signed BAA.",
+        "An ad-hoc personal Claude account used by individual clinicians for PHI-related tasks, with no Business Associate Agreement, no Zero Data Retention, and no audit logging configured."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are listing characteristics of strong architectural-decision communication. Which two characteristics belong on the list? (Select two.) Each correct answer presents a complete solution.</p>",
+      "examAns": "A,D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Quyết định tốt = có thể ĐÁNH GIÁ LẠI (owner + review cadence) và có thể KIỂM CHỨNG (alternatives + tiêu chí đánh giá).</p><p><strong>Distractors:</strong> C ngược hoàn toàn — bỏ alternatives là bỏ đúng giá trị lớn nhất của một ADR. E chỉ là hình thức.</p><p><strong>Tip:</strong> <code>owner+cadence, alternatives+criteria</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Ownership and review cadence for revisiting the decision when conditions or assumptions change.",
+        "Distribution to a standing review forum with mandatory attendance from senior engineering leaders.",
+        "Omission of rejected alternatives to keep the decision document focused and concise for readers.",
+        "Alternatives considered along with the criteria that were used to evaluate each alternative.",
+        "Use of a consistent template across the team to standardize the visual presentation of decisions."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are integrating Claude Code into a workflow that runs against a production database. Which guardrail design most directly preserves safety on data-modifying operations?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Ba lớp: credential read-only mặc định + tool scope read-only cho subagent + human confirmation cho mọi operation làm thay đổi dữ liệu.</p><p><strong>Distractors:</strong> Công thức chung cần nhớ: default an toàn + scope hẹp + human gate cho hành động không thể hồi lại.</p><p><strong>Tip:</strong> <code>read-only default + scoped tools + human confirm on writes</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Allow Claude Code to write directly to the production database without subagent scoping, readonly credential defaults, or human confirmation gates on data-modifying operations.",
+        "Configure the database MCP server with a fully privileged credential that can perform any read or write operation, and allow all operations to proceed without explicit human confirmation.",
+        "Disable all logging and auditing on database operations through the MCP server to reduce alert noise, removing the observability needed to detect unintended data modifications.",
+        "Configure the database MCP server with a read-only credential by default, restrict the subagent's tool list to read-only operations, and require explicit human confirmation on any operation that would modify data."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are building an evaluation pipeline for a Claude-based deployment and must complete the specification steps before running the deployment against the dataset. Which two steps must be completed BEFORE running the deployment against the evaluation dataset? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "B,D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Trình tự: định nghĩa metric + slice (D) → curate và label dataset theo slice (B) → chạy → chấm điểm (E) → review với SME (C) → dashboard/gate (A).</p><p><strong>Distractors:</strong> C hấp dẫn nhưng cần failure case, tức phải có kết quả trước.</p><p><strong>Tip:</strong> <code>define metrics/slices → curate labeled dataset</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Publish the aggregated metrics to a dashboard and gate releases on threshold checks.",
+        "Curate and label the evaluation dataset to match the defined slices.",
+        "Review failure cases with subject matter experts to refine the scoring rubric.",
+        "Define the metrics and slices the framework will report across representative, edge, and adversarial cases.",
+        "Score the deployment outputs against the reference labels and aggregate the metrics."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are identifying signals that a deployment should re-enter design rather than continue iterating in place. Which signal most directly indicates the need for a new design cycle?</p>",
+      "examAns": "D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Giống hệt Q98, chỉ đảo thứ tự đáp án. Tiêu chí duy nhất: có chạm vào component responsibility / core contract hay không.</p><p><strong>Distractors:</strong> Bộ đề có ít nhất 3 cặp câu trùng đã đảo chữ cái (92≡108, 98≡105, 58≡109). Tuyệt đối không học theo chữ cái.</p><p><strong>Tip:</strong> <code>đổi component responsibility/contract = re-design</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "A runbook step requires a clarification edit to improve on-call guidance accuracy, which can be handled as a documentation update without changes to component responsibilities or core contracts.",
+        "A dashboard alert threshold needs a small numerical adjustment to reduce false-positive noise, which can be handled as an operational configuration change without a new design cycle.",
+        "A minor copy edit is requested in a customer-facing string within the existing UI, which can be handled as a localized content change without altering component responsibilities or contracts.",
+        "The system's current architecture cannot meet the new requirements without changes to component responsibilities or core contracts."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are rolling out a standardized Claude Code configuration to an engineering team and must complete the planning steps before piloting the configuration. Which two steps must be completed BEFORE piloting the configuration with a small group of engineers? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "A,D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Trước pilot: PHÂN TÍCH (D: workflow, security boundary, phân chia managed vs project) rồi ĐỊNH NGHĨA BASELINE (A).</p><p><strong>Distractors:</strong> B, C, E đều nằm phía sau pilot.</p><p><strong>Tip:</strong> <code>analyze workflow/boundaries → define baseline</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Define the project-scope baseline covering Model Context Protocol (MCP) servers, permission rules, and subagents.",
+        "Onboard every engineer in the organization to the new configuration through mandatory training sessions.",
+        "Roll out the stabilized configuration to additional teams with documentation and a defined support channel.",
+        "Identify the team workflows, security boundaries, and which decisions belong to managed configuration versus project scope.",
+        "Iterate the configuration based on the pilot findings and stabilize the baseline before broader rollout."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A healthcare organization is evaluating two Claude-powered AI architectures for a clinical documentation assistant. Architecture X produces higher output quality scores but costs $0.18 per documentation session and averages 4.2 seconds per response. Architecture Y scores slightly lower on quality metrics but costs $0.09 per session and averages 2.1 seconds per response. The stated SLA requires responses under 3 seconds, and the annual volume is projected at 2 million documentation sessions. Which evaluation approach correctly applies business value pillar analysis to this decision?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Trình tự đúng: RÀNG BUỘC BẮT BUỘC (SLA dưới 3s) loại ứng viên trước, rồi mới so sánh các pillar còn lại trên ứng viên còn hợp lệ.</p><p><strong>Distractors:</strong> B phá SLA và hứa 'sửa sau khi deploy'; A bỏ qua chất lượng; D đề xuất hybrid mà không phân tích.</p><p><strong>Tip:</strong> <code>loại theo hard constraint trước, rồi mới trade-off</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Select Architecture Y based solely on the 50% cost reduction, since solution cost is the most important value pillar in healthcare budget-constrained environments.",
+        "Select Architecture X because the higher quality scores justify the cost premium, and any SLA gap can be addressed through infrastructure optimization after deployment.",
+        "Eliminate Architecture X on SLA grounds, then evaluate Architecture Y against the efficiency and solution cost pillars by calculating annual cost difference and assessing whether the quality delta materially impacts clinical workflow productivity.",
+        "Recommend a hybrid approach using Architecture X for complex cases and Architecture Y for routine cases, without additional analysis, since this preserves quality where it matters most."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are a solution architect designing a Claude-based assistant with access to 60 internal tools across multiple business domains. Loading every tool definition on every request increases token usage and time to first response. Which design pattern best addresses this issue without sacrificing capability breadth?</p>",
+      "examAns": "A",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Y hệt Q92: progressive tool discovery giữ được capability breadth trong khi giảm token và time-to-first-response.</p><p><strong>Distractors:</strong> Câu lặp lại nguyên văn — đáp án nội dung giống nhau.</p><p><strong>Tip:</strong> <code>progressive tool discovery</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Apply progressive tool discovery so a curated initial subset is exposed and additional tools are loaded on demand based on the task.",
+        "Use a separate model call to summarize all 60 tool definitions before each user turn.",
+        "Increase the maximum context length and load all 60 tool definitions on every request, accepting the higher token cost and latency as necessary for full capability.",
+        "Hard-code a fixed set of five tools per request to reduce token usage, regardless of whether those tools are relevant to the current task."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are listing characteristics of robust guardrail design for an enterprise deployment. Which two characteristics belong on the list? (Select two.) Each correct answer presents a complete solution.</p>",
+      "examAns": "D,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Giống Q58: phòng ngừa trước khi tool chạy (D) + đo lường liên tục bằng adversarial eval có regression tracking (E).</p><p><strong>Distractors:</strong> Chữ cái đã đổi từ B/E (Q58) thành D/E — bằng chứng rõ nhất cho việc phải học nội dung, không học chữ cái.</p><p><strong>Tip:</strong> <code>preventive enforcement + adversarial regression</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Centralized log retention for guardrail violations with quarterly review by the security team.",
+        "Periodic refresh of the system prompt wording to keep refusal language current and clear.",
+        "User feedback channels that route reported guardrail failures into the product backlog for triage.",
+        "Per-role tool allow-lists enforced at the orchestration layer before any tool call executes.",
+        "Adversarial-input coverage in the evaluation set with regression tracking on guardrail performance."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are explaining the precedence of Claude Code configuration scopes to the team. Which precedence ordering, from highest to lowest, is correct?</p>",
+      "examAns": "C",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Managed (enterprise policy) cao nhất → command-line arguments → local (settings.local.json) → project (settings.json commit) → user (~/.claude). Càng gần tổ chức càng cao, càng cá nhân càng thấp; CLI cao vì ghi đè tức thì.</p><p><strong>Distractors:</strong> Học thuộc chuỗi M–C–L–P–U. Bất cứ đáp án nào để user hoặc project cao nhất → loại ngay.</p><p><strong>Tip:</strong> <code>Managed > CLI > Local > Project > User</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Local > managed > user > command-line arguments > project",
+        "Project > user > managed > local > command-line arguments",
+        "Managed > command-line arguments > local > project > user",
+        "User > project > local > command-line arguments > managed"
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A Claude architect is leading the discovery phase for a new AI-powered customer service solution. Which two activities are characteristic of structured discovery and requirement gathering for a Claude-based deployment? (Select two.)</p>",
+      "examAns": "A,D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Discovery = thu thập RÀNG BUỘC từ stakeholder (A) + chốt TIÊU CHÍ THÀNH CÔNG/THẤT BẠI đo được để gate production (D).</p><p><strong>Distractors:</strong> B quyết định kỹ thuật trước khi có yêu cầu; C thay requirement bằng prototype; E hoãn đúng việc cốt lõi của discovery.</p><p><strong>Tip:</strong> <code>discovery = constraints workshop + success/failure criteria</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Facilitating stakeholder workshops to surface latency, accuracy, and compliance constraints before scoping begins.",
+        "Selecting the Claude model tier based on the architect's prior project experience before stakeholder input is collected.",
+        "Generating an initial prototype and iterating based on user reaction rather than written requirements.",
+        "Documenting explicit success criteria and failure thresholds that will gate production deployment.",
+        "Deferring constraint documentation until the integration design phase to avoid scope creep."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are classifying token-management tactics by where each tactic applies in the request lifecycle: \"Input Preparation,\" \"Prompt Construction,\" or \"Output Handling.\"</p><div class=\"tbl\"><table class=\"rowsq\"><thead><tr><th>#</th><th>Statement</th></tr></thead><tbody><tr><td>1</td><td>Persist the validated output for downstream consumption and audit.</td></tr><tr><td>2</td><td>Order the prompt sections so cacheable content sits before per-request content.</td></tr><tr><td>3</td><td>Summarize prior conversation history when full history is no longer needed.</td></tr><tr><td>4</td><td>Validate the model's structured output against the expected schema.</td></tr><tr><td>5</td><td>Move stable repeated content into a cacheable prefix at the head of the prompt.</td></tr><tr><td>6</td><td>Trim retrieved passages to spans relevant to the user's question.</td></tr></tbody></table></div><p class=\"need\">Options for each row: Output Handling / Prompt Construction / Input Preparation</p>",
+      "examAns": "1 → Output Handling<br>2 → Prompt Construction<br>3 → Input Preparation<br>4 → Output Handling<br>5 → Prompt Construction<br>6 → Input Preparation",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Quy tắc: xử lý NGUYÊN LIỆU trước khi lắp prompt (summarize history, trim passage) = Input Preparation. Bố trí bên trong prompt (thứ tự section, cacheable prefix) = Prompt Construction. Sau khi model trả về (validate, persist) = Output Handling.</p><p><strong>Distractors:</strong> 'Cacheable prefix' và 'thứ tự section' dễ bị nhầm sang Input Preparation — nhưng cả hai là QUYẾT ĐỊNH BỐ CỤC PROMPT.</p><p><strong>Tip:</strong> <code>chuẩn bị nguyên liệu=Input; bố cục prompt=Construction; validate/lưu=Output</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>A customer support team has proposed delegating customer refund decisions to a Claudedriven workflow with no human review for refunds under 50 USD. The team's reasoning is that small refunds are low-risk and human review would erase the efficiency gain. Which Delegation-competency principle should guide your response?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Delegation đúng = phân loại theo BẢN CHẤT rủi ro (khả năng hồi phục, rủi ro pháp lý/danh tiếng, tính hệ thống), không theo con số giao dịch.</p><p><strong>Distractors:</strong> A và D cực đoan (bỏ hết hiệu quả), C cực đoan ngược lại. Đáp án đúng luôn là nguyên tắc ở giữa.</p><p><strong>Tip:</strong> <code>delegation scope theo LOẠI rủi ro, không theo số tiền</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Delegation should always include human review on every decision the workflow produces.",
+        "Delegation scope should reflect the type of risk involved, not the transaction size alone.",
+        "Delegation scope should be set primarily by maximizing efficiency gains across the workflow.",
+        "Delegation should be avoided entirely wherever financial transactions occur in the workflow."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are identifying inefficiency in a Claude Code workflow where each engineer manually re-explains the project's conventions and architecture in every session. Which adjustment most directly removes this inefficiency?</p>",
+      "examAns": "B",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Persistent project context (CLAUDE.md) commit vào repo = viết một lần, mọi session của mọi người đều tự nạp.</p><p><strong>Distractors:</strong> Các phương án khác là joke-distractor — dấu hiệu câu dễ, không nên mất thời gian cân nhắc.</p><p><strong>Tip:</strong> <code>lặp lại context → CLAUDE.md trong repo</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Forbid the use of Claude Code on the project entirely to avoid the session-initialization overhead, accepting that the team loses all AI-assisted development productivity for this codebase.",
+        "Capture the project's conventions and architecture in a project-scoped CLAUDE.md (or equivalent persistent project-context file) committed to the repository, so each session loads it automatically.",
+        "Tell each engineer to retype the project conventions and architecture context more quickly at the start of each session, reducing time lost without eliminating the repeated manual effort.",
+        "Remove all documented project conventions and architectural standards so engineers have nothing to re- explain at session start, accepting the loss of consistency and shared coding standards."
+      ],
+      "isMultiple": false,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>The compliance team has authored a regulatory disclosure procedure that must be applied identically across customer service, sales, and onboarding workflows. The procedure changes when regulators issue updates, currently four to six times per year. You are designing how the procedure will be packaged for use by Claude across all three workflows. Which two design decisions should you include? (Select two.) Each correct answer presents part of the solution.</p>",
+      "examAns": "A,E",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Yêu cầu: áp dụng y hệt + đổi 4–6 lần/năm + một chủ sở hữu ⇒ một Skill duy nhất do compliance team sở hữu (A), được cả ba workflow tham chiếu (E). Sửa một chỗ, áp dụng mọi nơi.</p><p><strong>Distractors:</strong> B tạo 3 bản copy (drift ngay lần cập nhật đầu). C biến procedure thành dữ liệu tra cứu, không bảo đảm áp dụng y hệt. D là drift có hệ thống.</p><p><strong>Tip:</strong> <code>identical procedure + đổi thường xuyên = 1 Skill, 3 nơi tham chiếu</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Package the procedure as a Claude Skill owned directly by the compliance team.",
+        "Embed the procedure text into each workflow's system prompt at integration time.",
+        "Store the procedure in a shared retrieval corpus accessed by all three workflows.",
+        "Have each workflow team rewrite the procedure for its own context.",
+        "Reference the same Claude Skill from all three workflow integrations."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    },
+    {
+      "examQue": "<p>You are compiling continuity practices that span the deployment lifecycle. Which two practices belong on the list? (Select two.) Each correct answer presents a complete solution.</p>",
+      "examAns": "B,D",
+      "examAnsDesc": "<p><strong>Explanation:</strong> Continuity = TÀI SẢN ĐO LƯỜNG được mang đi (B: eval framework + reference set) + TRI THỨC được chuyển tiếp giữa các pha (D: lessons learned).</p><p><strong>Distractors:</strong> E chống lại chính tinh thần iteration. A và C là lưu trữ/thông báo, không tạo tính liên tục thực chất.</p><p><strong>Tip:</strong> <code>carry forward eval framework + lessons learned</code></p><p><em>Theo lời giải trong bộ đề gốc (chưa đối chiếu lại với tài liệu của Anthropic).</em></p>",
+      "options": [
+        "Maintain a stakeholder register and notify the listed parties at every phase transition event.",
+        "Carry the evaluation framework and reference set forward across iterations rather than rebuilding each time.",
+        "Archive every phase deliverable in long-term storage to preserve a record of what was produced.",
+        "Capture lessons learned at the end of each phase and surface them as inputs to the next phase.",
+        "Lock decisions made in early phases to prevent revisiting them as later phases begin."
+      ],
+      "isMultiple": true,
+      "isNew": false
+    }
+  ]
+}

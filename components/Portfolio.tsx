@@ -347,12 +347,17 @@ function renderCertificates(certs: any) {
     if (!certs || certs.length === 0) return;
     
     container.innerHTML = `<ul style="list-style: none; padding-left: 0;">` + 
-        certs.map((c: any) => `
+        certs.map((c: any) => {
+            const nameEl = c.link
+                ? `<a href="${c.link}" style="text-decoration: none; color: inherit; font-weight: bold; border-bottom: 1.5px solid #d97757; transition: color 0.15s;" onmouseover="this.style.color='#d97757'" onmouseout="this.style.color='inherit'">${c.name} 🔗</a>`
+                : `<strong>${c.name}</strong>`;
+            return `
             <li style="margin-bottom: 10px; display: flex; justify-content: space-between; border-bottom: 1px dashed #eee; padding-bottom: 5px;">
-                <span><strong>${c.name}</strong> (${c.org})</span>
+                <span>${nameEl} (${c.org})</span>
                 <span style="font-family: var(--font-code); color: #6b7280;">${c.year}</span>
             </li>
-        `).join('') + `</ul>`;
+            `;
+        }).join('') + `</ul>`;
 }
 
 function setText(id: string, text: string) {
